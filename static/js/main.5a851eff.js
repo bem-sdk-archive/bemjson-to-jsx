@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "/bemjson-to-jsx/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -12810,7 +12810,7 @@
 	
 	var ReactComponentTreeHook;
 	
-	if (typeof process !== 'undefined' && ({"NODE_ENV":"production","PUBLIC_URL":""}) && ("production") === 'test') {
+	if (typeof process !== 'undefined' && ({"NODE_ENV":"production","PUBLIC_URL":"/bemjson-to-jsx"}) && ("production") === 'test') {
 	  // Temporary hack.
 	  // Inline requires don't work well with Jest:
 	  // https://github.com/facebook/react/issues/7240
@@ -19259,7 +19259,7 @@
 	
 	var ReactComponentTreeHook;
 	
-	if (typeof process !== 'undefined' && ({"NODE_ENV":"production","PUBLIC_URL":""}) && ("production") === 'test') {
+	if (typeof process !== 'undefined' && ({"NODE_ENV":"production","PUBLIC_URL":"/bemjson-to-jsx"}) && ("production") === 'test') {
 	  // Temporary hack.
 	  // Inline requires don't work well with Jest:
 	  // https://github.com/facebook/react/issues/7240
@@ -21968,4 +21968,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.5448965b.js.map
+//# sourceMappingURL=main.5a851eff.js.map
