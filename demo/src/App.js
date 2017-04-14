@@ -14,7 +14,6 @@ class App extends Component {
     }
     onBemjsonChange(newValue, e) {
         try {
-            debugger;
             var bemjson = eval(newValue);
             var jsx = BemjsonToJSX().process(bemjson).JSX
             this.setState({jsx});
@@ -35,16 +34,14 @@ class App extends Component {
                 <span className='App__editor bemjson'>
                     <MonacoEditor {...{
                         language: 'javascript',
-                        width: '50%',
                         options: options,
                         onChange: this.onBemjsonChange,
-                        value: code
+                        defaultValue: code
                     }}/>
                 </span>
                 <span className='App__editor jsx'>
                     <MonacoEditor {...{
                         language: 'jsx',
-                        width: '50%',
                         options: options,
                         value: jsx
                     }}/>

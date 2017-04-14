@@ -2,6 +2,7 @@
   "name": "demo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://bem-sdk.github.io",
   "devDependencies": {
     "autoprefixer": "6.7.2",
     "babel-core": "6.22.1",
@@ -43,7 +44,7 @@
     "whatwg-fetch": "2.0.2"
   },
   "dependencies": {
-    "bemjson-to-jsx": "^0.0.1",
+    "bemjson-to-jsx": "git+https://github.com/bem-sdk/bemjson-to-jsx.git#v0.1.1",
     "copy-webpack-plugin": "^4.0.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
