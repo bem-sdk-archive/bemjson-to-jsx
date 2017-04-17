@@ -9373,6 +9373,9 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
+	var defaultCode = '({\n    block: \'button\',\n    text: \'Hello world\'\n})';
+	var defaultJSX = '<button text=\'Hello world\' />';
+	
 	var App = function (_Component) {
 	    _inherits(App, _Component);
 	
@@ -9382,7 +9385,7 @@
 	        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 	
 	        _this.state = {
-	            jsx: '<Button text=\'Hello world\' />'
+	            jsx: undefined
 	        };
 	
 	        _this.onBemjsonChange = _this.onBemjsonChange.bind(_this);
@@ -9404,7 +9407,6 @@
 	            var options = {
 	                scrollBeyondLastLine: false
 	            };
-	            var code = '({\n    block: \'button\',\n    text: \'Hello world\'\n})';
 	            var jsx = this.state.jsx;
 	            return _react2.default.createElement(
 	                'div',
@@ -9416,7 +9418,7 @@
 	                        language: 'javascript',
 	                        options: options,
 	                        onChange: this.onBemjsonChange,
-	                        defaultValue: code
+	                        defaultValue: defaultCode
 	                    })
 	                ),
 	                _react2.default.createElement(
@@ -9425,7 +9427,8 @@
 	                    _react2.default.createElement(_reactMonacoEditor2.default, {
 	                        language: 'jsx',
 	                        options: options,
-	                        value: jsx
+	                        value: jsx,
+	                        defaultValue: defaultJSX
 	                    })
 	                )
 	            );
@@ -21985,4 +21988,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.eb874ec1.js.map
+//# sourceMappingURL=main.9347d07c.js.map
