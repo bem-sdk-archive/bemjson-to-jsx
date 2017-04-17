@@ -21636,16 +21636,27 @@
 	    this.tag = tag || 'div';
 	    this.props = props || {};
 	    this.children = children || [];
+	    this.isText = false;
+	    this.simpleText = '';
 	}
 	
-	var propsToStr = props => Object.keys(props).map(k => `${k}={${valToStr(props[k])}}`).join(' ');
+	var propsToStr = props => Object.keys(props).reduce((acc, k) => {
+	        if (typeof props[k] === 'string') {
+	            return acc + ` ${k}=${valToStr(props[k])}`
+	        } else {
+	            return acc + ` ${k}={${valToStr(props[k])}}`
+	        }
+	    }, '');
 	var tagToClass = tag => reactMappings[tag] ? tag : tag.slice(0, 1).toUpperCase() + tag.slice(1);
 	
 	JSXNode.prototype.toString = function() {
+	    if (this.isText) {
+	        return this.simpleText;
+	    }
 	    var tag = tagToClass(this.tag);
 	    var str = this.children ?
-	        `<${tag} ${propsToStr(this.props)}>${[].concat(this.children).join('\n')}</${tag}>` :
-	        `<${tag} ${propsToStr(this.props)}/>`;
+	        `<${tag}${propsToStr(this.props)}>\n${[].concat(this.children).join('\n')}\n</${tag}>` :
+	        `<${tag}${propsToStr(this.props)}/>`;
 	    return str;
 	};
 	
@@ -21655,6 +21666,12 @@
 	    }
 	
 	    var node = new JSXNode();
+	
+	    if (typeof bemjson === 'string') {
+	        node.isText = true;
+	        node.simpleText = bemjson;
+	        return node;
+	    }
 	    bemjson.block && (node.tag = bemjson.block);
 	    bemjson.block && bemjson.elem && (node.tag = bemjson.block + '__' + bemjson.elem);
 	    bemjson.tag && (node.tag = bemjson.tag);
@@ -21968,4 +21985,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.a4b9b536.js.map
+//# sourceMappingURL=main.eb874ec1.js.map
