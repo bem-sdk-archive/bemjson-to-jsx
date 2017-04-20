@@ -23633,8 +23633,21 @@
 	                var content = json.content;
 	                if (content) {
 	                    if (Array.isArray(content)) {
-	                        // flatten
-	                        json.content = content = content.concat.apply([], content);
+	                        // content: [[[{}, {}, [{}]]]]
+	                        var flatten;
+	                        do {
+	                            flatten = false;
+	                            for (i = 0; i < content.length; i++) {
+	                                if (Array.isArray(content[i])) {
+	                                    flatten = true;
+	                                    break;
+	                                }
+	                            }
+	                            if (flatten) {
+	                                json.content = content = content.concat.apply([], content);
+	                            }
+	                        } while (flatten);
+	
 	                        for (i = 0; i < content.length; i++) {
 	                            nodes.push({ json: content[i], id: i, tree: jsx.children, blockName: blockName });
 	                        }
@@ -24403,4 +24416,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.0eaef997.js.map
+//# sourceMappingURL=main.3bac3b0a.js.map
