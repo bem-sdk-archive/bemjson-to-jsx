@@ -67,8 +67,8 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(92);
-	module.exports = __webpack_require__(95);
+	__webpack_require__(82);
+	module.exports = __webpack_require__(85);
 
 
 /***/ },
@@ -1215,7 +1215,7 @@
 
 /***/ },
 /* 12 */
-[219, 3],
+[220, 3],
 /* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -1231,10 +1231,10 @@
 	
 	'use strict';
 	
-	var DOMNamespaces = __webpack_require__(32);
+	var DOMNamespaces = __webpack_require__(33);
 	var setInnerHTML = __webpack_require__(28);
 	
-	var createMicrosoftUnsafeLocalFunction = __webpack_require__(40);
+	var createMicrosoftUnsafeLocalFunction = __webpack_require__(41);
 	var setTextContent = __webpack_require__(75);
 	
 	var ELEMENT_NODE_TYPE = 1;
@@ -1567,7 +1567,7 @@
 	
 	'use strict';
 	
-	var ReactRef = __webpack_require__(152);
+	var ReactRef = __webpack_require__(142);
 	var ReactInstrumentation = __webpack_require__(8);
 	
 	var warning = __webpack_require__(2);
@@ -1741,16 +1741,16 @@
 	
 	var _assign = __webpack_require__(4);
 	
-	var ReactChildren = __webpack_require__(182);
-	var ReactComponent = __webpack_require__(47);
-	var ReactPureComponent = __webpack_require__(187);
-	var ReactClass = __webpack_require__(183);
-	var ReactDOMFactories = __webpack_require__(184);
+	var ReactChildren = __webpack_require__(172);
+	var ReactComponent = __webpack_require__(48);
+	var ReactPureComponent = __webpack_require__(177);
+	var ReactClass = __webpack_require__(173);
+	var ReactDOMFactories = __webpack_require__(174);
 	var ReactElement = __webpack_require__(17);
-	var ReactPropTypes = __webpack_require__(186);
-	var ReactVersion = __webpack_require__(188);
+	var ReactPropTypes = __webpack_require__(176);
+	var ReactVersion = __webpack_require__(178);
 	
-	var onlyChild = __webpack_require__(191);
+	var onlyChild = __webpack_require__(181);
 	var warning = __webpack_require__(2);
 	
 	var createElement = ReactElement.createElement;
@@ -2220,9 +2220,9 @@
 	
 	var _prodInvariant = __webpack_require__(3);
 	
-	var EventPluginRegistry = __webpack_require__(33);
-	var EventPluginUtils = __webpack_require__(34);
-	var ReactErrorUtils = __webpack_require__(38);
+	var EventPluginRegistry = __webpack_require__(34);
+	var EventPluginUtils = __webpack_require__(35);
+	var ReactErrorUtils = __webpack_require__(39);
 	
 	var accumulateInto = __webpack_require__(69);
 	var forEachAccumulated = __webpack_require__(70);
@@ -2501,7 +2501,7 @@
 	'use strict';
 	
 	var EventPluginHub = __webpack_require__(20);
-	var EventPluginUtils = __webpack_require__(34);
+	var EventPluginUtils = __webpack_require__(35);
 	
 	var accumulateInto = __webpack_require__(69);
 	var forEachAccumulated = __webpack_require__(70);
@@ -2692,7 +2692,7 @@
 	
 	var SyntheticEvent = __webpack_require__(10);
 	
-	var getEventTarget = __webpack_require__(43);
+	var getEventTarget = __webpack_require__(44);
 	
 	/**
 	 * @interface UIEvent
@@ -2755,12 +2755,12 @@
 	
 	var _assign = __webpack_require__(4);
 	
-	var EventPluginRegistry = __webpack_require__(33);
-	var ReactEventEmitterMixin = __webpack_require__(144);
+	var EventPluginRegistry = __webpack_require__(34);
+	var ReactEventEmitterMixin = __webpack_require__(134);
 	var ViewportMetrics = __webpack_require__(68);
 	
-	var getVendorPrefixedEventName = __webpack_require__(176);
-	var isEventSupported = __webpack_require__(44);
+	var getVendorPrefixedEventName = __webpack_require__(166);
+	var isEventSupported = __webpack_require__(45);
 	
 	/**
 	 * Summary of `ReactBrowserEventEmitter` event handling:
@@ -3088,7 +3088,7 @@
 	var SyntheticUIEvent = __webpack_require__(23);
 	var ViewportMetrics = __webpack_require__(68);
 	
-	var getEventModifierState = __webpack_require__(42);
+	var getEventModifierState = __webpack_require__(43);
 	
 	/**
 	 * @interface MouseEvent
@@ -3518,12 +3518,12 @@
 	'use strict';
 	
 	var ExecutionEnvironment = __webpack_require__(6);
-	var DOMNamespaces = __webpack_require__(32);
+	var DOMNamespaces = __webpack_require__(33);
 	
 	var WHITESPACE_TEST = /^[ \r\n\t\f]/;
 	var NONVISIBLE_TEST = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/;
 	
-	var createMicrosoftUnsafeLocalFunction = __webpack_require__(40);
+	var createMicrosoftUnsafeLocalFunction = __webpack_require__(41);
 	
 	// SVG temp container for IE lacking innerHTML
 	var reusableSVGContainer;
@@ -3605,6 +3605,599 @@
 
 /***/ },
 /* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(global, process) {// Copyright Joyent, Inc. and other Node contributors.
+	//
+	// Permission is hereby granted, free of charge, to any person obtaining a
+	// copy of this software and associated documentation files (the
+	// "Software"), to deal in the Software without restriction, including
+	// without limitation the rights to use, copy, modify, merge, publish,
+	// distribute, sublicense, and/or sell copies of the Software, and to permit
+	// persons to whom the Software is furnished to do so, subject to the
+	// following conditions:
+	//
+	// The above copyright notice and this permission notice shall be included
+	// in all copies or substantial portions of the Software.
+	//
+	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+	// USE OR OTHER DEALINGS IN THE SOFTWARE.
+	
+	var formatRegExp = /%[sdj%]/g;
+	exports.format = function(f) {
+	  if (!isString(f)) {
+	    var objects = [];
+	    for (var i = 0; i < arguments.length; i++) {
+	      objects.push(inspect(arguments[i]));
+	    }
+	    return objects.join(' ');
+	  }
+	
+	  var i = 1;
+	  var args = arguments;
+	  var len = args.length;
+	  var str = String(f).replace(formatRegExp, function(x) {
+	    if (x === '%%') return '%';
+	    if (i >= len) return x;
+	    switch (x) {
+	      case '%s': return String(args[i++]);
+	      case '%d': return Number(args[i++]);
+	      case '%j':
+	        try {
+	          return JSON.stringify(args[i++]);
+	        } catch (_) {
+	          return '[Circular]';
+	        }
+	      default:
+	        return x;
+	    }
+	  });
+	  for (var x = args[i]; i < len; x = args[++i]) {
+	    if (isNull(x) || !isObject(x)) {
+	      str += ' ' + x;
+	    } else {
+	      str += ' ' + inspect(x);
+	    }
+	  }
+	  return str;
+	};
+	
+	
+	// Mark that a method should not be used.
+	// Returns a modified function which warns once by default.
+	// If --no-deprecation is set, then it is a no-op.
+	exports.deprecate = function(fn, msg) {
+	  // Allow for deprecating things in the process of starting up.
+	  if (isUndefined(global.process)) {
+	    return function() {
+	      return exports.deprecate(fn, msg).apply(this, arguments);
+	    };
+	  }
+	
+	  if (process.noDeprecation === true) {
+	    return fn;
+	  }
+	
+	  var warned = false;
+	  function deprecated() {
+	    if (!warned) {
+	      if (process.throwDeprecation) {
+	        throw new Error(msg);
+	      } else if (process.traceDeprecation) {
+	        console.trace(msg);
+	      } else {
+	        console.error(msg);
+	      }
+	      warned = true;
+	    }
+	    return fn.apply(this, arguments);
+	  }
+	
+	  return deprecated;
+	};
+	
+	
+	var debugs = {};
+	var debugEnviron;
+	exports.debuglog = function(set) {
+	  if (isUndefined(debugEnviron))
+	    debugEnviron = ({"NODE_ENV":"production","PUBLIC_URL":"/bemjson-to-jsx"}).NODE_DEBUG || '';
+	  set = set.toUpperCase();
+	  if (!debugs[set]) {
+	    if (new RegExp('\\b' + set + '\\b', 'i').test(debugEnviron)) {
+	      var pid = process.pid;
+	      debugs[set] = function() {
+	        var msg = exports.format.apply(exports, arguments);
+	        console.error('%s %d: %s', set, pid, msg);
+	      };
+	    } else {
+	      debugs[set] = function() {};
+	    }
+	  }
+	  return debugs[set];
+	};
+	
+	
+	/**
+	 * Echos the value of a value. Trys to print the value out
+	 * in the best way possible given the different types.
+	 *
+	 * @param {Object} obj The object to print out.
+	 * @param {Object} opts Optional options object that alters the output.
+	 */
+	/* legacy: obj, showHidden, depth, colors*/
+	function inspect(obj, opts) {
+	  // default options
+	  var ctx = {
+	    seen: [],
+	    stylize: stylizeNoColor
+	  };
+	  // legacy...
+	  if (arguments.length >= 3) ctx.depth = arguments[2];
+	  if (arguments.length >= 4) ctx.colors = arguments[3];
+	  if (isBoolean(opts)) {
+	    // legacy...
+	    ctx.showHidden = opts;
+	  } else if (opts) {
+	    // got an "options" object
+	    exports._extend(ctx, opts);
+	  }
+	  // set default options
+	  if (isUndefined(ctx.showHidden)) ctx.showHidden = false;
+	  if (isUndefined(ctx.depth)) ctx.depth = 2;
+	  if (isUndefined(ctx.colors)) ctx.colors = false;
+	  if (isUndefined(ctx.customInspect)) ctx.customInspect = true;
+	  if (ctx.colors) ctx.stylize = stylizeWithColor;
+	  return formatValue(ctx, obj, ctx.depth);
+	}
+	exports.inspect = inspect;
+	
+	
+	// http://en.wikipedia.org/wiki/ANSI_escape_code#graphics
+	inspect.colors = {
+	  'bold' : [1, 22],
+	  'italic' : [3, 23],
+	  'underline' : [4, 24],
+	  'inverse' : [7, 27],
+	  'white' : [37, 39],
+	  'grey' : [90, 39],
+	  'black' : [30, 39],
+	  'blue' : [34, 39],
+	  'cyan' : [36, 39],
+	  'green' : [32, 39],
+	  'magenta' : [35, 39],
+	  'red' : [31, 39],
+	  'yellow' : [33, 39]
+	};
+	
+	// Don't use 'blue' not visible on cmd.exe
+	inspect.styles = {
+	  'special': 'cyan',
+	  'number': 'yellow',
+	  'boolean': 'yellow',
+	  'undefined': 'grey',
+	  'null': 'bold',
+	  'string': 'green',
+	  'date': 'magenta',
+	  // "name": intentionally not styling
+	  'regexp': 'red'
+	};
+	
+	
+	function stylizeWithColor(str, styleType) {
+	  var style = inspect.styles[styleType];
+	
+	  if (style) {
+	    return '\u001b[' + inspect.colors[style][0] + 'm' + str +
+	           '\u001b[' + inspect.colors[style][1] + 'm';
+	  } else {
+	    return str;
+	  }
+	}
+	
+	
+	function stylizeNoColor(str, styleType) {
+	  return str;
+	}
+	
+	
+	function arrayToHash(array) {
+	  var hash = {};
+	
+	  array.forEach(function(val, idx) {
+	    hash[val] = true;
+	  });
+	
+	  return hash;
+	}
+	
+	
+	function formatValue(ctx, value, recurseTimes) {
+	  // Provide a hook for user-specified inspect functions.
+	  // Check that value is an object with an inspect function on it
+	  if (ctx.customInspect &&
+	      value &&
+	      isFunction(value.inspect) &&
+	      // Filter out the util module, it's inspect function is special
+	      value.inspect !== exports.inspect &&
+	      // Also filter out any prototype objects using the circular check.
+	      !(value.constructor && value.constructor.prototype === value)) {
+	    var ret = value.inspect(recurseTimes, ctx);
+	    if (!isString(ret)) {
+	      ret = formatValue(ctx, ret, recurseTimes);
+	    }
+	    return ret;
+	  }
+	
+	  // Primitive types cannot have properties
+	  var primitive = formatPrimitive(ctx, value);
+	  if (primitive) {
+	    return primitive;
+	  }
+	
+	  // Look up the keys of the object.
+	  var keys = Object.keys(value);
+	  var visibleKeys = arrayToHash(keys);
+	
+	  if (ctx.showHidden) {
+	    keys = Object.getOwnPropertyNames(value);
+	  }
+	
+	  // IE doesn't make error fields non-enumerable
+	  // http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx
+	  if (isError(value)
+	      && (keys.indexOf('message') >= 0 || keys.indexOf('description') >= 0)) {
+	    return formatError(value);
+	  }
+	
+	  // Some type of object without properties can be shortcutted.
+	  if (keys.length === 0) {
+	    if (isFunction(value)) {
+	      var name = value.name ? ': ' + value.name : '';
+	      return ctx.stylize('[Function' + name + ']', 'special');
+	    }
+	    if (isRegExp(value)) {
+	      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
+	    }
+	    if (isDate(value)) {
+	      return ctx.stylize(Date.prototype.toString.call(value), 'date');
+	    }
+	    if (isError(value)) {
+	      return formatError(value);
+	    }
+	  }
+	
+	  var base = '', array = false, braces = ['{', '}'];
+	
+	  // Make Array say that they are Array
+	  if (isArray(value)) {
+	    array = true;
+	    braces = ['[', ']'];
+	  }
+	
+	  // Make functions say that they are functions
+	  if (isFunction(value)) {
+	    var n = value.name ? ': ' + value.name : '';
+	    base = ' [Function' + n + ']';
+	  }
+	
+	  // Make RegExps say that they are RegExps
+	  if (isRegExp(value)) {
+	    base = ' ' + RegExp.prototype.toString.call(value);
+	  }
+	
+	  // Make dates with properties first say the date
+	  if (isDate(value)) {
+	    base = ' ' + Date.prototype.toUTCString.call(value);
+	  }
+	
+	  // Make error with message first say the error
+	  if (isError(value)) {
+	    base = ' ' + formatError(value);
+	  }
+	
+	  if (keys.length === 0 && (!array || value.length == 0)) {
+	    return braces[0] + base + braces[1];
+	  }
+	
+	  if (recurseTimes < 0) {
+	    if (isRegExp(value)) {
+	      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
+	    } else {
+	      return ctx.stylize('[Object]', 'special');
+	    }
+	  }
+	
+	  ctx.seen.push(value);
+	
+	  var output;
+	  if (array) {
+	    output = formatArray(ctx, value, recurseTimes, visibleKeys, keys);
+	  } else {
+	    output = keys.map(function(key) {
+	      return formatProperty(ctx, value, recurseTimes, visibleKeys, key, array);
+	    });
+	  }
+	
+	  ctx.seen.pop();
+	
+	  return reduceToSingleString(output, base, braces);
+	}
+	
+	
+	function formatPrimitive(ctx, value) {
+	  if (isUndefined(value))
+	    return ctx.stylize('undefined', 'undefined');
+	  if (isString(value)) {
+	    var simple = '\'' + JSON.stringify(value).replace(/^"|"$/g, '')
+	                                             .replace(/'/g, "\\'")
+	                                             .replace(/\\"/g, '"') + '\'';
+	    return ctx.stylize(simple, 'string');
+	  }
+	  if (isNumber(value))
+	    return ctx.stylize('' + value, 'number');
+	  if (isBoolean(value))
+	    return ctx.stylize('' + value, 'boolean');
+	  // For some reason typeof null is "object", so special case here.
+	  if (isNull(value))
+	    return ctx.stylize('null', 'null');
+	}
+	
+	
+	function formatError(value) {
+	  return '[' + Error.prototype.toString.call(value) + ']';
+	}
+	
+	
+	function formatArray(ctx, value, recurseTimes, visibleKeys, keys) {
+	  var output = [];
+	  for (var i = 0, l = value.length; i < l; ++i) {
+	    if (hasOwnProperty(value, String(i))) {
+	      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
+	          String(i), true));
+	    } else {
+	      output.push('');
+	    }
+	  }
+	  keys.forEach(function(key) {
+	    if (!key.match(/^\d+$/)) {
+	      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
+	          key, true));
+	    }
+	  });
+	  return output;
+	}
+	
+	
+	function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
+	  var name, str, desc;
+	  desc = Object.getOwnPropertyDescriptor(value, key) || { value: value[key] };
+	  if (desc.get) {
+	    if (desc.set) {
+	      str = ctx.stylize('[Getter/Setter]', 'special');
+	    } else {
+	      str = ctx.stylize('[Getter]', 'special');
+	    }
+	  } else {
+	    if (desc.set) {
+	      str = ctx.stylize('[Setter]', 'special');
+	    }
+	  }
+	  if (!hasOwnProperty(visibleKeys, key)) {
+	    name = '[' + key + ']';
+	  }
+	  if (!str) {
+	    if (ctx.seen.indexOf(desc.value) < 0) {
+	      if (isNull(recurseTimes)) {
+	        str = formatValue(ctx, desc.value, null);
+	      } else {
+	        str = formatValue(ctx, desc.value, recurseTimes - 1);
+	      }
+	      if (str.indexOf('\n') > -1) {
+	        if (array) {
+	          str = str.split('\n').map(function(line) {
+	            return '  ' + line;
+	          }).join('\n').substr(2);
+	        } else {
+	          str = '\n' + str.split('\n').map(function(line) {
+	            return '   ' + line;
+	          }).join('\n');
+	        }
+	      }
+	    } else {
+	      str = ctx.stylize('[Circular]', 'special');
+	    }
+	  }
+	  if (isUndefined(name)) {
+	    if (array && key.match(/^\d+$/)) {
+	      return str;
+	    }
+	    name = JSON.stringify('' + key);
+	    if (name.match(/^"([a-zA-Z_][a-zA-Z_0-9]*)"$/)) {
+	      name = name.substr(1, name.length - 2);
+	      name = ctx.stylize(name, 'name');
+	    } else {
+	      name = name.replace(/'/g, "\\'")
+	                 .replace(/\\"/g, '"')
+	                 .replace(/(^"|"$)/g, "'");
+	      name = ctx.stylize(name, 'string');
+	    }
+	  }
+	
+	  return name + ': ' + str;
+	}
+	
+	
+	function reduceToSingleString(output, base, braces) {
+	  var numLinesEst = 0;
+	  var length = output.reduce(function(prev, cur) {
+	    numLinesEst++;
+	    if (cur.indexOf('\n') >= 0) numLinesEst++;
+	    return prev + cur.replace(/\u001b\[\d\d?m/g, '').length + 1;
+	  }, 0);
+	
+	  if (length > 60) {
+	    return braces[0] +
+	           (base === '' ? '' : base + '\n ') +
+	           ' ' +
+	           output.join(',\n  ') +
+	           ' ' +
+	           braces[1];
+	  }
+	
+	  return braces[0] + base + ' ' + output.join(', ') + ' ' + braces[1];
+	}
+	
+	
+	// NOTE: These type checking functions intentionally don't use `instanceof`
+	// because it is fragile and can be easily faked with `Object.create()`.
+	function isArray(ar) {
+	  return Array.isArray(ar);
+	}
+	exports.isArray = isArray;
+	
+	function isBoolean(arg) {
+	  return typeof arg === 'boolean';
+	}
+	exports.isBoolean = isBoolean;
+	
+	function isNull(arg) {
+	  return arg === null;
+	}
+	exports.isNull = isNull;
+	
+	function isNullOrUndefined(arg) {
+	  return arg == null;
+	}
+	exports.isNullOrUndefined = isNullOrUndefined;
+	
+	function isNumber(arg) {
+	  return typeof arg === 'number';
+	}
+	exports.isNumber = isNumber;
+	
+	function isString(arg) {
+	  return typeof arg === 'string';
+	}
+	exports.isString = isString;
+	
+	function isSymbol(arg) {
+	  return typeof arg === 'symbol';
+	}
+	exports.isSymbol = isSymbol;
+	
+	function isUndefined(arg) {
+	  return arg === void 0;
+	}
+	exports.isUndefined = isUndefined;
+	
+	function isRegExp(re) {
+	  return isObject(re) && objectToString(re) === '[object RegExp]';
+	}
+	exports.isRegExp = isRegExp;
+	
+	function isObject(arg) {
+	  return typeof arg === 'object' && arg !== null;
+	}
+	exports.isObject = isObject;
+	
+	function isDate(d) {
+	  return isObject(d) && objectToString(d) === '[object Date]';
+	}
+	exports.isDate = isDate;
+	
+	function isError(e) {
+	  return isObject(e) &&
+	      (objectToString(e) === '[object Error]' || e instanceof Error);
+	}
+	exports.isError = isError;
+	
+	function isFunction(arg) {
+	  return typeof arg === 'function';
+	}
+	exports.isFunction = isFunction;
+	
+	function isPrimitive(arg) {
+	  return arg === null ||
+	         typeof arg === 'boolean' ||
+	         typeof arg === 'number' ||
+	         typeof arg === 'string' ||
+	         typeof arg === 'symbol' ||  // ES6 symbol
+	         typeof arg === 'undefined';
+	}
+	exports.isPrimitive = isPrimitive;
+	
+	exports.isBuffer = __webpack_require__(184);
+	
+	function objectToString(o) {
+	  return Object.prototype.toString.call(o);
+	}
+	
+	
+	function pad(n) {
+	  return n < 10 ? '0' + n.toString(10) : n.toString(10);
+	}
+	
+	
+	var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
+	              'Oct', 'Nov', 'Dec'];
+	
+	// 26 Feb 16:19:34
+	function timestamp() {
+	  var d = new Date();
+	  var time = [pad(d.getHours()),
+	              pad(d.getMinutes()),
+	              pad(d.getSeconds())].join(':');
+	  return [d.getDate(), months[d.getMonth()], time].join(' ');
+	}
+	
+	
+	// log is just a thin wrapper to console.log that prepends a timestamp
+	exports.log = function() {
+	  console.log('%s - %s', timestamp(), exports.format.apply(exports, arguments));
+	};
+	
+	
+	/**
+	 * Inherit the prototype methods from one constructor into another.
+	 *
+	 * The Function.prototype.inherits from lang.js rewritten as a standalone
+	 * function (not on Function.prototype). NOTE: If this file is to be loaded
+	 * during bootstrapping this function needs to be rewritten using some native
+	 * functions as prototype setup using normal JavaScript does not work as
+	 * expected during bootstrapping (see mirror.js in r114903).
+	 *
+	 * @param {function} ctor Constructor function which needs to inherit the
+	 *     prototype.
+	 * @param {function} superCtor Constructor function to inherit prototype from.
+	 */
+	exports.inherits = __webpack_require__(183);
+	
+	exports._extend = function(origin, add) {
+	  // Don't do anything if add isn't an object
+	  if (!add || !isObject(add)) return origin;
+	
+	  var keys = Object.keys(add);
+	  var i = keys.length;
+	  while (i--) {
+	    origin[keys[i]] = add[keys[i]];
+	  }
+	  return origin;
+	};
+	
+	function hasOwnProperty(obj, prop) {
+	  return Object.prototype.hasOwnProperty.call(obj, prop);
+	}
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(31)))
+
+/***/ },
+/* 30 */
 /***/ function(module, exports) {
 
 	/**
@@ -3676,7 +4269,7 @@
 	module.exports = shallowEqual;
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -3862,7 +4455,7 @@
 
 
 /***/ },
-/* 31 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -3878,11 +4471,11 @@
 	'use strict';
 	
 	var DOMLazyTree = __webpack_require__(13);
-	var Danger = __webpack_require__(121);
+	var Danger = __webpack_require__(111);
 	var ReactDOMComponentTree = __webpack_require__(5);
 	var ReactInstrumentation = __webpack_require__(8);
 	
-	var createMicrosoftUnsafeLocalFunction = __webpack_require__(40);
+	var createMicrosoftUnsafeLocalFunction = __webpack_require__(41);
 	var setInnerHTML = __webpack_require__(28);
 	var setTextContent = __webpack_require__(75);
 	
@@ -4091,7 +4684,7 @@
 	module.exports = DOMChildrenOperations;
 
 /***/ },
-/* 32 */
+/* 33 */
 /***/ function(module, exports) {
 
 	/**
@@ -4115,7 +4708,7 @@
 	module.exports = DOMNamespaces;
 
 /***/ },
-/* 33 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -4374,7 +4967,7 @@
 	module.exports = EventPluginRegistry;
 
 /***/ },
-/* 34 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -4391,7 +4984,7 @@
 	
 	var _prodInvariant = __webpack_require__(3);
 	
-	var ReactErrorUtils = __webpack_require__(38);
+	var ReactErrorUtils = __webpack_require__(39);
 	
 	var invariant = __webpack_require__(1);
 	var warning = __webpack_require__(2);
@@ -4604,7 +5197,7 @@
 	module.exports = EventPluginUtils;
 
 /***/ },
-/* 35 */
+/* 36 */
 /***/ function(module, exports) {
 
 	/**
@@ -4667,7 +5260,7 @@
 	module.exports = KeyEscapeUtils;
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -4684,7 +5277,7 @@
 	
 	var _prodInvariant = __webpack_require__(3);
 	
-	var ReactPropTypesSecret = __webpack_require__(150);
+	var ReactPropTypesSecret = __webpack_require__(140);
 	var propTypesFactory = __webpack_require__(56);
 	
 	var React = __webpack_require__(16);
@@ -4809,7 +5402,7 @@
 	module.exports = LinkedValueUtils;
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -4859,7 +5452,7 @@
 	module.exports = ReactComponentEnvironment;
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -4939,7 +5532,7 @@
 	module.exports = ReactErrorUtils;
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5179,7 +5772,7 @@
 	module.exports = ReactUpdateQueue;
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports) {
 
 	/**
@@ -5215,7 +5808,7 @@
 	module.exports = createMicrosoftUnsafeLocalFunction;
 
 /***/ },
-/* 41 */
+/* 42 */
 /***/ function(module, exports) {
 
 	/**
@@ -5269,7 +5862,7 @@
 	module.exports = getEventCharCode;
 
 /***/ },
-/* 42 */
+/* 43 */
 /***/ function(module, exports) {
 
 	/**
@@ -5316,7 +5909,7 @@
 	module.exports = getEventModifierState;
 
 /***/ },
-/* 43 */
+/* 44 */
 /***/ function(module, exports) {
 
 	/**
@@ -5355,7 +5948,7 @@
 	module.exports = getEventTarget;
 
 /***/ },
-/* 44 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5419,7 +6012,7 @@
 	module.exports = isEventSupported;
 
 /***/ },
-/* 45 */
+/* 46 */
 /***/ function(module, exports) {
 
 	/**
@@ -5465,7 +6058,7 @@
 	module.exports = shouldUpdateReactComponent;
 
 /***/ },
-/* 46 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5846,7 +6439,7 @@
 	module.exports = validateDOMNesting;
 
 /***/ },
-/* 47 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5863,7 +6456,7 @@
 	
 	var _prodInvariant = __webpack_require__(18);
 	
-	var ReactNoopUpdateQueue = __webpack_require__(48);
+	var ReactNoopUpdateQueue = __webpack_require__(49);
 	
 	var canDefineProperty = __webpack_require__(79);
 	var emptyObject = __webpack_require__(19);
@@ -5968,7 +6561,7 @@
 	module.exports = ReactComponent;
 
 /***/ },
-/* 48 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -6068,7 +6661,7 @@
 	module.exports = ReactNoopUpdateQueue;
 
 /***/ },
-/* 49 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6077,7 +6670,7 @@
 
 
 /***/ },
-/* 50 */
+/* 51 */
 /***/ function(module, exports) {
 
 	
@@ -6126,377 +6719,6 @@
 	    arrToStr,
 	    styleToObj,
 	    valToStr
-	};
-
-
-/***/ },
-/* 51 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	const util = __webpack_require__(80);
-	
-	const stringifyEntity = __webpack_require__(83).stringify;
-	
-	/**
-	 * Enum for types of BEM entities.
-	 *
-	 * @readonly
-	 * @enum {String}
-	 */
-	const TYPES = {
-	    BLOCK:     'block',
-	    BLOCK_MOD: 'blockMod',
-	    ELEM:      'elem',
-	    ELEM_MOD:  'elemMod'
-	};
-	
-	module.exports = class BemEntityName {
-	    /**
-	     * @param {object} obj — representation of entity name.
-	     * @param {string} obj.block  — the block name of entity.
-	     * @param {string} [obj.elem] — the element name of entity.
-	     * @param {object} [obj.mod] — the modifier of entity.
-	     * @param {string} obj.mod.name — the modifier name of entity.
-	     * @param {string} [obj.mod.val] — the modifier value of entity.
-	     * @param {string} [obj.modName] — the modifier name of entity. Used if `mod.name` wasn't specified.
-	     * @param {string} [obj.modVal] — the modifier value of entity.
-	     *   Used if neither `mod.val` nor `val` were not specified.
-	     */
-	    constructor(obj) {
-	        if (!obj.block) {
-	             throw new Error('This is not valid BEM entity: the field `block` is undefined.');
-	        }
-	
-	        const data = this._data = { block: obj.block };
-	
-	        obj.elem && (data.elem = obj.elem);
-	
-	        const modObj = obj.mod;
-	        const modName = (typeof modObj === 'string' ? modObj : modObj && modObj.name) || obj.modName;
-	        const hasModVal = modObj && modObj.hasOwnProperty('val') || obj.hasOwnProperty('modVal');
-	
-	        if (modName) {
-	            data.mod = {
-	                name: modName,
-	                val: hasModVal ? modObj && modObj.val || obj.modVal : true
-	            };
-	        } else if (modObj || hasModVal) {
-	            throw new Error('This is not valid BEM entity: the field `mod.name` is undefined.');
-	        }
-	
-	        this.__isBemEntityName__ = true;
-	    }
-	
-	    /**
-	     * Returns the name of block to which this entity belongs.
-	     *
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button' });
-	     *
-	     * name.block; // button
-	     *
-	     * @returns {string} name of entity block.
-	     */
-	    get block() { return this._data.block; }
-	
-	    /**
-	     * Returns the element name of this entity.
-	     *
-	     * If entity is not element or modifier of element then returns empty string.
-	     *
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button', elem: 'text' });
-	     *
-	     * name.elem; // text
-	     *
-	     * @returns {string|undefined} - name of entity element.
-	     */
-	    get elem() { return this._data.elem; }
-	
-	    /**
-	     * Returns the modifier of this entity.
-	     *
-	     * Important: If entity is not a modifier then returns `undefined`.
-	     *
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     *
-	     * const blockName = new BemEntityName({ block: 'button' });
-	     * const modName = new BemEntityName({ block: 'button', mod: 'disabled' });
-	     *
-	     * modName.mod;   // { name: 'disabled', val: true }
-	     * blockName.mod; // undefined
-	     *
-	     * @returns {{mod: string, val: (string|true)}|undefined} - entity modifier.
-	     */
-	    get mod() { return this._data.mod; }
-	
-	    /**
-	     * Returns the modifier name of this entity.
-	     *
-	     * If entity is not modifier then returns `undefined`.
-	     *
-	     * @returns {string|undefined} - entity modifier name.
-	     * @deprecated - use `mod.name` instead.
-	     */
-	    get modName() { return this.mod && this.mod.name; }
-	
-	    /**
-	     * Returns the modifier value of this entity.
-	     *
-	     * If entity is not modifier then returns `undefined`.
-	     *
-	     * @returns {string|undefined} - entity modifier name.
-	     * @deprecated - use `mod.val` instead.
-	     */
-	    get modVal() { return this.mod && this.mod.val; }
-	
-	    /**
-	     * Returns id for this entity.
-	     *
-	     * Important: should only be used to determine uniqueness of entity.
-	     *
-	     * If you want to get string representation in accordance with the provisions naming convention
-	     * you should use `@bem/naming` package.
-	     *
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button', mod: 'disabled' });
-	     *
-	     * name.id; // button_disabled
-	     *
-	     * @returns {string} - id of entity.
-	     */
-	    get id() {
-	        if (this._id) { return this._id; }
-	
-	        this._id = stringifyEntity(this._data);
-	
-	        return this._id;
-	    }
-	
-	    /**
-	     * Returns type for this entity.
-	     *
-	     * @example <caption>type of element</caption>
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button', elem: 'text' });
-	     *
-	     * name.type; // elem
-	     *
-	     * @example <caption>type of element modifier</caption>
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'menu', elem: 'item', mod: 'current' });
-	     *
-	     * name.type; // elemMod
-	     *
-	     * @returns {string} - type of entity. One of 'block', 'elem', 'blockMod', 'elemMod'.
-	     */
-	    get type() {
-	        if (this._type) { return this._type; }
-	
-	        const data = this._data;
-	        const isMod = data.mod;
-	
-	        this._type = data.elem
-	            ? isMod ? TYPES.ELEM_MOD : TYPES.ELEM
-	            : isMod ? TYPES.BLOCK_MOD : TYPES.BLOCK;
-	
-	        return this._type;
-	    }
-	
-	    /**
-	     * Determines whether modifier simple or not
-	     *
-	     * @example <caption>simple mod</caption>
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button', mod: { name: 'theme' } });
-	     *
-	     * name.isSimpleMod(); // true
-	     *
-	     * @example <caption>mod with value</caption>
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button', mod: { name: 'theme', val: 'normal' } });
-	     *
-	     * name.isSimpleMod(); // false
-	     *
-	     * @example <caption>block</caption>
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button' });
-	     *
-	     * name.isSimpleMod(); // null
-	     *
-	     * @returns {boolean|null}
-	     */
-	    isSimpleMod() {
-	        return this.mod ? this.mod.val === true : null;
-	    }
-	
-	    /**
-	     * Returns string representing the entity name.
-	     *
-	     * Important: If you want to get string representation in accordance with the provisions naming convention
-	     * you should use `@bem/naming` package.
-	     *
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button', mod: 'focused' });
-	     *
-	     * name.toString(); // button_focused
-	     *
-	     * @returns {string}
-	     */
-	    toString() { return this.id; }
-	
-	    /**
-	     * Returns object representing the entity name. Is needed for debug in Node.js.
-	     *
-	     * In some browsers `console.log()` calls `valueOf()` on each argument.
-	     * This method will be called to get custom string representation of the object.
-	     *
-	     * The representation object contains only `block`, `elem` and `mod` fields
-	     * without private and deprecated fields (`modName` and `modVal`).
-	     *
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button', mod: 'focused' });
-	     *
-	     * name.valueOf();
-	     *
-	     * // ➜ { block: 'button', mod: { name: 'focused', value: true } }
-	     *
-	     * @returns {{block: string, elem: (string|undefined), mod: ({name: string, val: (string|true)}|undefined)}}
-	     */
-	    valueOf() { return this._data; }
-	
-	    /**
-	     * Returns object representing the entity name. Is needed for debug in Node.js.
-	     *
-	     * In Node.js, `console.log()` calls `util.inspect()` on each argument without a formatting placeholder.
-	     * This method will be called to get custom string representation of the object.
-	     *
-	     * The representation object contains only `block`, `elem` and `mod` fields
-	     * without private and deprecated fields (`modName` and `modVal`).
-	     *
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button' });
-	     *
-	     * console.log(name); // BemEntityName { block: 'button' }
-	     *
-	     * @param {number} depth — tells inspect how many times to recurse while formatting the object.
-	     * @param {object} options — An optional `options` object may be passed
-	     *   that alters certain aspects of the formatted string.
-	     *
-	     * @returns {string}
-	     */
-	    inspect(depth, options) {
-	        const stringRepresentation = util.inspect(this._data, options);
-	
-	        return `BemEntityName ${stringRepresentation}`;
-	    }
-	
-	    /**
-	     * Return raw data for `JSON.stringify()`.
-	     *
-	     * @returns {{block: string, elem: (string|undefined),
-	     *   mod: ({name: string, val: (string|true|undefined)}|undefined)}}
-	     */
-	    toJSON() {
-	        return this._data;
-	    }
-	
-	    /**
-	     * Determines whether specified entity is the deepEqual entity.
-	     *
-	     * @param {BemEntityName} entityName - the entity to compare.
-	     *
-	     * @returns {boolean} - A Boolean indicating whether or not specified entity is the deepEqual entity.
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     *
-	     * const inputName = new BemEntityName({ block: 'input' });
-	     * const buttonName = new BemEntityName({ block: 'button' });
-	     *
-	     * inputName.isEqual(buttonName); // false
-	     * buttonName.isEqual(buttonName); // true
-	     */
-	    isEqual(entityName) {
-	        return entityName && (this.id === entityName.id);
-	    }
-	
-	    /**
-	     * Determines whether specified entity is instance of BemEntityName.
-	     *
-	     * @param {BemEntityName} entityName - the entity to check.
-	     *
-	     * @returns {boolean} A Boolean indicating whether or not specified entity is instance of BemEntityName.
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     *
-	     * const entityName = new BemEntityName({ block: 'input' });
-	     *
-	     * BemEntityName.isBemEntityName(entityName); // true
-	     * BemEntityName.isBemEntityName({}); // false
-	     */
-	    static isBemEntityName(entityName) {
-	        return entityName && entityName.__isBemEntityName__;
-	    }
-	
-	    /**
-	     * Creates BemEntityName instance by any object representation.
-	     *
-	     * @param {object|string} obj — representation of entity name.
-	     * @param {string} obj.block  — the block name of entity.
-	     * @param {string} [obj.elem] — the element name of entity.
-	     * @param {object|string} [obj.mod]  — the modifier of entity.
-	     * @param {string} [obj.val] - the modifier value of entity. Used if `obj.mod` is a string.
-	     * @param {string} obj.mod.name — the modifier name of entity.
-	     * @param {string} [obj.mod.val]  — the modifier value of entity.
-	     * @param {string} [obj.modName] — the modifier name of entity. Used if `obj.mod.name` wasn't specified.
-	     * @param {string} [obj.modVal]  — the modifier value of entity.
-	     *   Used if neither `obj.mod.val` nor `obj.val` were not specified.
-	     *
-	     * @returns {BemEntityName} An object representing entity name.
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     *
-	     * BemEntityName.create({ block: 'my-button', mod: 'theme', val: 'red' });
-	     * BemEntityName.create({ block: 'my-button', modName: 'theme', modVal: 'red' });
-	     * // → BemEntityName { block: 'my-button', mod: { name: 'theme', val: 'red' } }
-	     */
-	    static create(obj) {
-	        if (BemEntityName.isBemEntityName(obj)) {
-	            return obj;
-	        }
-	
-	        if (typeof obj === 'string') {
-	            obj = { block: obj };
-	        }
-	
-	        const data = { block: obj.block };
-	        const mod = obj.mod;
-	
-	        obj.elem && (data.elem = obj.elem);
-	
-	        if (mod || obj.modName) {
-	            const isString = typeof mod === 'string';
-	            const modName = (isString ? mod : mod && mod.name) || obj.modName;
-	            const modObj = !isString && mod || obj;
-	            const hasModVal = modObj.hasOwnProperty('val') || obj.hasOwnProperty('modVal');
-	
-	            data.mod = {
-	                name: modName,
-	                val: hasModVal ? modObj.val || obj.modVal : true
-	            };
-	        }
-	
-	        return new BemEntityName(data);
-	    }
 	};
 
 
@@ -6668,7 +6890,7 @@
 
 	'use strict';
 	
-	var asap = __webpack_require__(93);
+	var asap = __webpack_require__(83);
 	
 	function noop() {}
 	
@@ -6900,7 +7122,7 @@
 	// Therefore we re-export development-only version with all the PropTypes checks here.
 	// However if one is migrating to the `prop-types` npm library, they will go through the
 	// `index.js` entry point, and it will branch depending on the environment.
-	var factory = __webpack_require__(113);
+	var factory = __webpack_require__(103);
 	module.exports = function(isValidElement) {
 	  // It is still allowed in 15.5.
 	  var throwOnDirectAccess = false;
@@ -7203,7 +7425,7 @@
 	var ReactDOMComponentTree = __webpack_require__(5);
 	var ReactInstrumentation = __webpack_require__(8);
 	
-	var quoteAttributeValueForBrowser = __webpack_require__(177);
+	var quoteAttributeValueForBrowser = __webpack_require__(167);
 	var warning = __webpack_require__(2);
 	
 	var VALID_ATTRIBUTE_NAME_REGEX = new RegExp('^[' + DOMProperty.ATTRIBUTE_NAME_START_CHAR + '][' + DOMProperty.ATTRIBUTE_NAME_CHAR + ']*$');
@@ -7464,7 +7686,7 @@
 	
 	var _assign = __webpack_require__(4);
 	
-	var LinkedValueUtils = __webpack_require__(36);
+	var LinkedValueUtils = __webpack_require__(37);
 	var ReactDOMComponentTree = __webpack_require__(5);
 	var ReactUpdates = __webpack_require__(9);
 	
@@ -7798,9 +8020,9 @@
 	
 	'use strict';
 	
-	var ReactDOMSelection = __webpack_require__(137);
+	var ReactDOMSelection = __webpack_require__(127);
 	
-	var containsNode = __webpack_require__(100);
+	var containsNode = __webpack_require__(90);
 	var focusNode = __webpack_require__(53);
 	var getActiveElement = __webpack_require__(54);
 	
@@ -7934,21 +8156,21 @@
 	var ReactBrowserEventEmitter = __webpack_require__(24);
 	var ReactCurrentOwner = __webpack_require__(11);
 	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactDOMContainerInfo = __webpack_require__(131);
-	var ReactDOMFeatureFlags = __webpack_require__(133);
+	var ReactDOMContainerInfo = __webpack_require__(121);
+	var ReactDOMFeatureFlags = __webpack_require__(123);
 	var ReactFeatureFlags = __webpack_require__(63);
 	var ReactInstanceMap = __webpack_require__(22);
 	var ReactInstrumentation = __webpack_require__(8);
-	var ReactMarkupChecksum = __webpack_require__(147);
+	var ReactMarkupChecksum = __webpack_require__(137);
 	var ReactReconciler = __webpack_require__(15);
-	var ReactUpdateQueue = __webpack_require__(39);
+	var ReactUpdateQueue = __webpack_require__(40);
 	var ReactUpdates = __webpack_require__(9);
 	
 	var emptyObject = __webpack_require__(19);
 	var instantiateReactComponent = __webpack_require__(73);
 	var invariant = __webpack_require__(1);
 	var setInnerHTML = __webpack_require__(28);
-	var shouldUpdateReactComponent = __webpack_require__(45);
+	var shouldUpdateReactComponent = __webpack_require__(46);
 	var warning = __webpack_require__(2);
 	
 	var ATTR_NAME = DOMProperty.ID_ATTRIBUTE_NAME;
@@ -8714,11 +8936,11 @@
 	var _prodInvariant = __webpack_require__(3),
 	    _assign = __webpack_require__(4);
 	
-	var ReactCompositeComponent = __webpack_require__(128);
+	var ReactCompositeComponent = __webpack_require__(118);
 	var ReactEmptyComponent = __webpack_require__(62);
 	var ReactHostComponent = __webpack_require__(64);
 	
-	var getNextDebugID = __webpack_require__(190);
+	var getNextDebugID = __webpack_require__(180);
 	var invariant = __webpack_require__(1);
 	var warning = __webpack_require__(2);
 	
@@ -8958,11 +9180,11 @@
 	var _prodInvariant = __webpack_require__(3);
 	
 	var ReactCurrentOwner = __webpack_require__(11);
-	var REACT_ELEMENT_TYPE = __webpack_require__(143);
+	var REACT_ELEMENT_TYPE = __webpack_require__(133);
 	
-	var getIteratorFn = __webpack_require__(174);
+	var getIteratorFn = __webpack_require__(164);
 	var invariant = __webpack_require__(1);
-	var KeyEscapeUtils = __webpack_require__(35);
+	var KeyEscapeUtils = __webpack_require__(36);
 	var warning = __webpack_require__(2);
 	
 	var SEPARATOR = '.';
@@ -9515,594 +9737,10 @@
 /* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global, process) {// Copyright Joyent, Inc. and other Node contributors.
-	//
-	// Permission is hereby granted, free of charge, to any person obtaining a
-	// copy of this software and associated documentation files (the
-	// "Software"), to deal in the Software without restriction, including
-	// without limitation the rights to use, copy, modify, merge, publish,
-	// distribute, sublicense, and/or sell copies of the Software, and to permit
-	// persons to whom the Software is furnished to do so, subject to the
-	// following conditions:
-	//
-	// The above copyright notice and this permission notice shall be included
-	// in all copies or substantial portions of the Software.
-	//
-	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-	// USE OR OTHER DEALINGS IN THE SOFTWARE.
+	'use strict';
 	
-	var formatRegExp = /%[sdj%]/g;
-	exports.format = function(f) {
-	  if (!isString(f)) {
-	    var objects = [];
-	    for (var i = 0; i < arguments.length; i++) {
-	      objects.push(inspect(arguments[i]));
-	    }
-	    return objects.join(' ');
-	  }
-	
-	  var i = 1;
-	  var args = arguments;
-	  var len = args.length;
-	  var str = String(f).replace(formatRegExp, function(x) {
-	    if (x === '%%') return '%';
-	    if (i >= len) return x;
-	    switch (x) {
-	      case '%s': return String(args[i++]);
-	      case '%d': return Number(args[i++]);
-	      case '%j':
-	        try {
-	          return JSON.stringify(args[i++]);
-	        } catch (_) {
-	          return '[Circular]';
-	        }
-	      default:
-	        return x;
-	    }
-	  });
-	  for (var x = args[i]; i < len; x = args[++i]) {
-	    if (isNull(x) || !isObject(x)) {
-	      str += ' ' + x;
-	    } else {
-	      str += ' ' + inspect(x);
-	    }
-	  }
-	  return str;
-	};
-	
-	
-	// Mark that a method should not be used.
-	// Returns a modified function which warns once by default.
-	// If --no-deprecation is set, then it is a no-op.
-	exports.deprecate = function(fn, msg) {
-	  // Allow for deprecating things in the process of starting up.
-	  if (isUndefined(global.process)) {
-	    return function() {
-	      return exports.deprecate(fn, msg).apply(this, arguments);
-	    };
-	  }
-	
-	  if (process.noDeprecation === true) {
-	    return fn;
-	  }
-	
-	  var warned = false;
-	  function deprecated() {
-	    if (!warned) {
-	      if (process.throwDeprecation) {
-	        throw new Error(msg);
-	      } else if (process.traceDeprecation) {
-	        console.trace(msg);
-	      } else {
-	        console.error(msg);
-	      }
-	      warned = true;
-	    }
-	    return fn.apply(this, arguments);
-	  }
-	
-	  return deprecated;
-	};
-	
-	
-	var debugs = {};
-	var debugEnviron;
-	exports.debuglog = function(set) {
-	  if (isUndefined(debugEnviron))
-	    debugEnviron = ({"NODE_ENV":"production","PUBLIC_URL":"/bemjson-to-jsx"}).NODE_DEBUG || '';
-	  set = set.toUpperCase();
-	  if (!debugs[set]) {
-	    if (new RegExp('\\b' + set + '\\b', 'i').test(debugEnviron)) {
-	      var pid = process.pid;
-	      debugs[set] = function() {
-	        var msg = exports.format.apply(exports, arguments);
-	        console.error('%s %d: %s', set, pid, msg);
-	      };
-	    } else {
-	      debugs[set] = function() {};
-	    }
-	  }
-	  return debugs[set];
-	};
-	
-	
-	/**
-	 * Echos the value of a value. Trys to print the value out
-	 * in the best way possible given the different types.
-	 *
-	 * @param {Object} obj The object to print out.
-	 * @param {Object} opts Optional options object that alters the output.
-	 */
-	/* legacy: obj, showHidden, depth, colors*/
-	function inspect(obj, opts) {
-	  // default options
-	  var ctx = {
-	    seen: [],
-	    stylize: stylizeNoColor
-	  };
-	  // legacy...
-	  if (arguments.length >= 3) ctx.depth = arguments[2];
-	  if (arguments.length >= 4) ctx.colors = arguments[3];
-	  if (isBoolean(opts)) {
-	    // legacy...
-	    ctx.showHidden = opts;
-	  } else if (opts) {
-	    // got an "options" object
-	    exports._extend(ctx, opts);
-	  }
-	  // set default options
-	  if (isUndefined(ctx.showHidden)) ctx.showHidden = false;
-	  if (isUndefined(ctx.depth)) ctx.depth = 2;
-	  if (isUndefined(ctx.colors)) ctx.colors = false;
-	  if (isUndefined(ctx.customInspect)) ctx.customInspect = true;
-	  if (ctx.colors) ctx.stylize = stylizeWithColor;
-	  return formatValue(ctx, obj, ctx.depth);
-	}
-	exports.inspect = inspect;
-	
-	
-	// http://en.wikipedia.org/wiki/ANSI_escape_code#graphics
-	inspect.colors = {
-	  'bold' : [1, 22],
-	  'italic' : [3, 23],
-	  'underline' : [4, 24],
-	  'inverse' : [7, 27],
-	  'white' : [37, 39],
-	  'grey' : [90, 39],
-	  'black' : [30, 39],
-	  'blue' : [34, 39],
-	  'cyan' : [36, 39],
-	  'green' : [32, 39],
-	  'magenta' : [35, 39],
-	  'red' : [31, 39],
-	  'yellow' : [33, 39]
-	};
-	
-	// Don't use 'blue' not visible on cmd.exe
-	inspect.styles = {
-	  'special': 'cyan',
-	  'number': 'yellow',
-	  'boolean': 'yellow',
-	  'undefined': 'grey',
-	  'null': 'bold',
-	  'string': 'green',
-	  'date': 'magenta',
-	  // "name": intentionally not styling
-	  'regexp': 'red'
-	};
-	
-	
-	function stylizeWithColor(str, styleType) {
-	  var style = inspect.styles[styleType];
-	
-	  if (style) {
-	    return '\u001b[' + inspect.colors[style][0] + 'm' + str +
-	           '\u001b[' + inspect.colors[style][1] + 'm';
-	  } else {
-	    return str;
-	  }
-	}
-	
-	
-	function stylizeNoColor(str, styleType) {
-	  return str;
-	}
-	
-	
-	function arrayToHash(array) {
-	  var hash = {};
-	
-	  array.forEach(function(val, idx) {
-	    hash[val] = true;
-	  });
-	
-	  return hash;
-	}
-	
-	
-	function formatValue(ctx, value, recurseTimes) {
-	  // Provide a hook for user-specified inspect functions.
-	  // Check that value is an object with an inspect function on it
-	  if (ctx.customInspect &&
-	      value &&
-	      isFunction(value.inspect) &&
-	      // Filter out the util module, it's inspect function is special
-	      value.inspect !== exports.inspect &&
-	      // Also filter out any prototype objects using the circular check.
-	      !(value.constructor && value.constructor.prototype === value)) {
-	    var ret = value.inspect(recurseTimes, ctx);
-	    if (!isString(ret)) {
-	      ret = formatValue(ctx, ret, recurseTimes);
-	    }
-	    return ret;
-	  }
-	
-	  // Primitive types cannot have properties
-	  var primitive = formatPrimitive(ctx, value);
-	  if (primitive) {
-	    return primitive;
-	  }
-	
-	  // Look up the keys of the object.
-	  var keys = Object.keys(value);
-	  var visibleKeys = arrayToHash(keys);
-	
-	  if (ctx.showHidden) {
-	    keys = Object.getOwnPropertyNames(value);
-	  }
-	
-	  // IE doesn't make error fields non-enumerable
-	  // http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx
-	  if (isError(value)
-	      && (keys.indexOf('message') >= 0 || keys.indexOf('description') >= 0)) {
-	    return formatError(value);
-	  }
-	
-	  // Some type of object without properties can be shortcutted.
-	  if (keys.length === 0) {
-	    if (isFunction(value)) {
-	      var name = value.name ? ': ' + value.name : '';
-	      return ctx.stylize('[Function' + name + ']', 'special');
-	    }
-	    if (isRegExp(value)) {
-	      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
-	    }
-	    if (isDate(value)) {
-	      return ctx.stylize(Date.prototype.toString.call(value), 'date');
-	    }
-	    if (isError(value)) {
-	      return formatError(value);
-	    }
-	  }
-	
-	  var base = '', array = false, braces = ['{', '}'];
-	
-	  // Make Array say that they are Array
-	  if (isArray(value)) {
-	    array = true;
-	    braces = ['[', ']'];
-	  }
-	
-	  // Make functions say that they are functions
-	  if (isFunction(value)) {
-	    var n = value.name ? ': ' + value.name : '';
-	    base = ' [Function' + n + ']';
-	  }
-	
-	  // Make RegExps say that they are RegExps
-	  if (isRegExp(value)) {
-	    base = ' ' + RegExp.prototype.toString.call(value);
-	  }
-	
-	  // Make dates with properties first say the date
-	  if (isDate(value)) {
-	    base = ' ' + Date.prototype.toUTCString.call(value);
-	  }
-	
-	  // Make error with message first say the error
-	  if (isError(value)) {
-	    base = ' ' + formatError(value);
-	  }
-	
-	  if (keys.length === 0 && (!array || value.length == 0)) {
-	    return braces[0] + base + braces[1];
-	  }
-	
-	  if (recurseTimes < 0) {
-	    if (isRegExp(value)) {
-	      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
-	    } else {
-	      return ctx.stylize('[Object]', 'special');
-	    }
-	  }
-	
-	  ctx.seen.push(value);
-	
-	  var output;
-	  if (array) {
-	    output = formatArray(ctx, value, recurseTimes, visibleKeys, keys);
-	  } else {
-	    output = keys.map(function(key) {
-	      return formatProperty(ctx, value, recurseTimes, visibleKeys, key, array);
-	    });
-	  }
-	
-	  ctx.seen.pop();
-	
-	  return reduceToSingleString(output, base, braces);
-	}
-	
-	
-	function formatPrimitive(ctx, value) {
-	  if (isUndefined(value))
-	    return ctx.stylize('undefined', 'undefined');
-	  if (isString(value)) {
-	    var simple = '\'' + JSON.stringify(value).replace(/^"|"$/g, '')
-	                                             .replace(/'/g, "\\'")
-	                                             .replace(/\\"/g, '"') + '\'';
-	    return ctx.stylize(simple, 'string');
-	  }
-	  if (isNumber(value))
-	    return ctx.stylize('' + value, 'number');
-	  if (isBoolean(value))
-	    return ctx.stylize('' + value, 'boolean');
-	  // For some reason typeof null is "object", so special case here.
-	  if (isNull(value))
-	    return ctx.stylize('null', 'null');
-	}
-	
-	
-	function formatError(value) {
-	  return '[' + Error.prototype.toString.call(value) + ']';
-	}
-	
-	
-	function formatArray(ctx, value, recurseTimes, visibleKeys, keys) {
-	  var output = [];
-	  for (var i = 0, l = value.length; i < l; ++i) {
-	    if (hasOwnProperty(value, String(i))) {
-	      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
-	          String(i), true));
-	    } else {
-	      output.push('');
-	    }
-	  }
-	  keys.forEach(function(key) {
-	    if (!key.match(/^\d+$/)) {
-	      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
-	          key, true));
-	    }
-	  });
-	  return output;
-	}
-	
-	
-	function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
-	  var name, str, desc;
-	  desc = Object.getOwnPropertyDescriptor(value, key) || { value: value[key] };
-	  if (desc.get) {
-	    if (desc.set) {
-	      str = ctx.stylize('[Getter/Setter]', 'special');
-	    } else {
-	      str = ctx.stylize('[Getter]', 'special');
-	    }
-	  } else {
-	    if (desc.set) {
-	      str = ctx.stylize('[Setter]', 'special');
-	    }
-	  }
-	  if (!hasOwnProperty(visibleKeys, key)) {
-	    name = '[' + key + ']';
-	  }
-	  if (!str) {
-	    if (ctx.seen.indexOf(desc.value) < 0) {
-	      if (isNull(recurseTimes)) {
-	        str = formatValue(ctx, desc.value, null);
-	      } else {
-	        str = formatValue(ctx, desc.value, recurseTimes - 1);
-	      }
-	      if (str.indexOf('\n') > -1) {
-	        if (array) {
-	          str = str.split('\n').map(function(line) {
-	            return '  ' + line;
-	          }).join('\n').substr(2);
-	        } else {
-	          str = '\n' + str.split('\n').map(function(line) {
-	            return '   ' + line;
-	          }).join('\n');
-	        }
-	      }
-	    } else {
-	      str = ctx.stylize('[Circular]', 'special');
-	    }
-	  }
-	  if (isUndefined(name)) {
-	    if (array && key.match(/^\d+$/)) {
-	      return str;
-	    }
-	    name = JSON.stringify('' + key);
-	    if (name.match(/^"([a-zA-Z_][a-zA-Z_0-9]*)"$/)) {
-	      name = name.substr(1, name.length - 2);
-	      name = ctx.stylize(name, 'name');
-	    } else {
-	      name = name.replace(/'/g, "\\'")
-	                 .replace(/\\"/g, '"')
-	                 .replace(/(^"|"$)/g, "'");
-	      name = ctx.stylize(name, 'string');
-	    }
-	  }
-	
-	  return name + ': ' + str;
-	}
-	
-	
-	function reduceToSingleString(output, base, braces) {
-	  var numLinesEst = 0;
-	  var length = output.reduce(function(prev, cur) {
-	    numLinesEst++;
-	    if (cur.indexOf('\n') >= 0) numLinesEst++;
-	    return prev + cur.replace(/\u001b\[\d\d?m/g, '').length + 1;
-	  }, 0);
-	
-	  if (length > 60) {
-	    return braces[0] +
-	           (base === '' ? '' : base + '\n ') +
-	           ' ' +
-	           output.join(',\n  ') +
-	           ' ' +
-	           braces[1];
-	  }
-	
-	  return braces[0] + base + ' ' + output.join(', ') + ' ' + braces[1];
-	}
-	
-	
-	// NOTE: These type checking functions intentionally don't use `instanceof`
-	// because it is fragile and can be easily faked with `Object.create()`.
-	function isArray(ar) {
-	  return Array.isArray(ar);
-	}
-	exports.isArray = isArray;
-	
-	function isBoolean(arg) {
-	  return typeof arg === 'boolean';
-	}
-	exports.isBoolean = isBoolean;
-	
-	function isNull(arg) {
-	  return arg === null;
-	}
-	exports.isNull = isNull;
-	
-	function isNullOrUndefined(arg) {
-	  return arg == null;
-	}
-	exports.isNullOrUndefined = isNullOrUndefined;
-	
-	function isNumber(arg) {
-	  return typeof arg === 'number';
-	}
-	exports.isNumber = isNumber;
-	
-	function isString(arg) {
-	  return typeof arg === 'string';
-	}
-	exports.isString = isString;
-	
-	function isSymbol(arg) {
-	  return typeof arg === 'symbol';
-	}
-	exports.isSymbol = isSymbol;
-	
-	function isUndefined(arg) {
-	  return arg === void 0;
-	}
-	exports.isUndefined = isUndefined;
-	
-	function isRegExp(re) {
-	  return isObject(re) && objectToString(re) === '[object RegExp]';
-	}
-	exports.isRegExp = isRegExp;
-	
-	function isObject(arg) {
-	  return typeof arg === 'object' && arg !== null;
-	}
-	exports.isObject = isObject;
-	
-	function isDate(d) {
-	  return isObject(d) && objectToString(d) === '[object Date]';
-	}
-	exports.isDate = isDate;
-	
-	function isError(e) {
-	  return isObject(e) &&
-	      (objectToString(e) === '[object Error]' || e instanceof Error);
-	}
-	exports.isError = isError;
-	
-	function isFunction(arg) {
-	  return typeof arg === 'function';
-	}
-	exports.isFunction = isFunction;
-	
-	function isPrimitive(arg) {
-	  return arg === null ||
-	         typeof arg === 'boolean' ||
-	         typeof arg === 'number' ||
-	         typeof arg === 'string' ||
-	         typeof arg === 'symbol' ||  // ES6 symbol
-	         typeof arg === 'undefined';
-	}
-	exports.isPrimitive = isPrimitive;
-	
-	exports.isBuffer = __webpack_require__(194);
-	
-	function objectToString(o) {
-	  return Object.prototype.toString.call(o);
-	}
-	
-	
-	function pad(n) {
-	  return n < 10 ? '0' + n.toString(10) : n.toString(10);
-	}
-	
-	
-	var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
-	              'Oct', 'Nov', 'Dec'];
-	
-	// 26 Feb 16:19:34
-	function timestamp() {
-	  var d = new Date();
-	  var time = [pad(d.getHours()),
-	              pad(d.getMinutes()),
-	              pad(d.getSeconds())].join(':');
-	  return [d.getDate(), months[d.getMonth()], time].join(' ');
-	}
-	
-	
-	// log is just a thin wrapper to console.log that prepends a timestamp
-	exports.log = function() {
-	  console.log('%s - %s', timestamp(), exports.format.apply(exports, arguments));
-	};
-	
-	
-	/**
-	 * Inherit the prototype methods from one constructor into another.
-	 *
-	 * The Function.prototype.inherits from lang.js rewritten as a standalone
-	 * function (not on Function.prototype). NOTE: If this file is to be loaded
-	 * during bootstrapping this function needs to be rewritten using some native
-	 * functions as prototype setup using normal JavaScript does not work as
-	 * expected during bootstrapping (see mirror.js in r114903).
-	 *
-	 * @param {function} ctor Constructor function which needs to inherit the
-	 *     prototype.
-	 * @param {function} superCtor Constructor function to inherit prototype from.
-	 */
-	exports.inherits = __webpack_require__(193);
-	
-	exports._extend = function(origin, add) {
-	  // Don't do anything if add isn't an object
-	  if (!add || !isObject(add)) return origin;
-	
-	  var keys = Object.keys(add);
-	  var i = keys.length;
-	  while (i--) {
-	    origin[keys[i]] = add[keys[i]];
-	  }
-	  return origin;
-	};
-	
-	function hasOwnProperty(obj, prop) {
-	  return Object.prototype.hasOwnProperty.call(obj, prop);
-	}
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(30)))
+	module.exports = __webpack_require__(190);
+
 
 /***/ },
 /* 81 */
@@ -10166,842 +9804,16 @@
 
 	'use strict';
 	
-	const util = __webpack_require__(80);
-	
-	const stringifyEntity = __webpack_require__(91).stringify;
-	
-	/**
-	 * Enum for types of BEM entities.
-	 *
-	 * @readonly
-	 * @enum {String}
-	 */
-	const TYPES = {
-	    BLOCK:     'block',
-	    BLOCK_MOD: 'blockMod',
-	    ELEM:      'elem',
-	    ELEM_MOD:  'elemMod'
-	};
-	
-	module.exports = class BemEntityName {
-	    /**
-	     * @param {object} obj — representation of entity name.
-	     * @param {string} obj.block  — the block name of entity.
-	     * @param {string} [obj.elem] — the element name of entity.
-	     * @param {object} [obj.mod] — the modifier of entity.
-	     * @param {string} obj.mod.name — the modifier name of entity.
-	     * @param {string} [obj.mod.val] — the modifier value of entity.
-	     * @param {string} [obj.modName] — the modifier name of entity. Used if `mod.name` wasn't specified.
-	     * @param {string} [obj.modVal] — the modifier value of entity.
-	     *   Used if neither `mod.val` nor `val` were not specified.
-	     */
-	    constructor(obj) {
-	        if (!obj.block) {
-	             throw new Error('This is not valid BEM entity: the field `block` is undefined.');
-	        }
-	
-	        const data = this._data = { block: obj.block };
-	
-	        obj.elem && (data.elem = obj.elem);
-	
-	        const modObj = obj.mod;
-	        const modName = (typeof modObj === 'string' ? modObj : modObj && modObj.name) || obj.modName;
-	        const hasModVal = modObj && modObj.hasOwnProperty('val') || obj.hasOwnProperty('modVal');
-	
-	        if (modName) {
-	            data.mod = {
-	                name: modName,
-	                val: hasModVal ? modObj && modObj.val || obj.modVal : true
-	            };
-	        } else if (modObj || hasModVal) {
-	            throw new Error('This is not valid BEM entity: the field `mod.name` is undefined.');
-	        }
-	
-	        this.__isBemEntityName__ = true;
-	    }
-	
-	    /**
-	     * Returns the name of block to which this entity belongs.
-	     *
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button' });
-	     *
-	     * name.block; // button
-	     *
-	     * @returns {string} name of entity block.
-	     */
-	    get block() { return this._data.block; }
-	
-	    /**
-	     * Returns the element name of this entity.
-	     *
-	     * If entity is not element or modifier of element then returns empty string.
-	     *
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button', elem: 'text' });
-	     *
-	     * name.elem; // text
-	     *
-	     * @returns {string|undefined} - name of entity element.
-	     */
-	    get elem() { return this._data.elem; }
-	
-	    /**
-	     * Returns the modifier of this entity.
-	     *
-	     * Important: If entity is not a modifier then returns `undefined`.
-	     *
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     *
-	     * const blockName = new BemEntityName({ block: 'button' });
-	     * const modName = new BemEntityName({ block: 'button', mod: 'disabled' });
-	     *
-	     * modName.mod;   // { name: 'disabled', val: true }
-	     * blockName.mod; // undefined
-	     *
-	     * @returns {{mod: string, val: (string|true)}|undefined} - entity modifier.
-	     */
-	    get mod() { return this._data.mod; }
-	
-	    /**
-	     * Returns the modifier name of this entity.
-	     *
-	     * If entity is not modifier then returns `undefined`.
-	     *
-	     * @returns {string|undefined} - entity modifier name.
-	     * @deprecated - use `mod.name` instead.
-	     */
-	    get modName() { return this.mod && this.mod.name; }
-	
-	    /**
-	     * Returns the modifier value of this entity.
-	     *
-	     * If entity is not modifier then returns `undefined`.
-	     *
-	     * @returns {string|undefined} - entity modifier name.
-	     * @deprecated - use `mod.val` instead.
-	     */
-	    get modVal() { return this.mod && this.mod.val; }
-	
-	    /**
-	     * Returns id for this entity.
-	     *
-	     * Important: should only be used to determine uniqueness of entity.
-	     *
-	     * If you want to get string representation in accordance with the provisions naming convention
-	     * you should use `bem-naming` package.
-	     *
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button', mod: 'disabled' });
-	     *
-	     * name.id; // button_disabled
-	     *
-	     * @returns {string} - id of entity.
-	     */
-	    get id() {
-	        if (this._id) { return this._id; }
-	
-	        const entity = { block: this._data.block };
-	
-	        this.elem && (entity.elem = this.elem);
-	        this.modName && (entity.modName = this.modName);
-	        this.modVal && (entity.modVal = this.modVal);
-	
-	        this._id = stringifyEntity(entity);
-	
-	        return this._id;
-	    }
-	
-	    /**
-	     * Returns type for this entity.
-	     *
-	     * @example <caption>type of element</caption>
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button', elem: 'text' });
-	     *
-	     * name.type; // elem
-	     *
-	     * @example <caption>type of element modifier</caption>
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'menu', elem: 'item', mod: 'current' });
-	     *
-	     * name.type; // elemMod
-	     *
-	     * @returns {string} - type of entity. One of 'block', 'elem', 'blockMod', 'elemMod'.
-	     */
-	    get type() {
-	        if (this._type) { return this._type; }
-	
-	        const data = this._data;
-	        const isMod = data.mod;
-	
-	        this._type = data.elem
-	            ? isMod ? TYPES.ELEM_MOD : TYPES.ELEM
-	            : isMod ? TYPES.BLOCK_MOD : TYPES.BLOCK;
-	
-	        return this._type;
-	    }
-	
-	    /**
-	     * Determines whether modifier simple or not
-	     *
-	     * @example <caption>simple mod</caption>
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button', mod: { name: 'theme' } });
-	     *
-	     * name.isSimpleMod(); // true
-	     *
-	     * @example <caption>mod with value</caption>
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button', mod: { name: 'theme', val: 'normal' } });
-	     *
-	     * name.isSimpleMod(); // false
-	     *
-	     * @example <caption>block</caption>
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button' });
-	     *
-	     * name.isSimpleMod(); // null
-	     *
-	     * @returns {boolean|null}
-	     */
-	    isSimpleMod() {
-	        return this.mod ? this.mod.val === true : null;
-	    }
-	
-	    /**
-	     * Returns string representing the entity name.
-	     *
-	     * Important: If you want to get string representation in accordance with the provisions naming convention
-	     * you should use `bem-naming` package.
-	     *
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button', mod: 'focused' });
-	     *
-	     * name.toString(); // button_focused
-	     *
-	     * @returns {string}
-	     */
-	    toString() { return this.id; }
-	
-	    /**
-	     * Returns object representing the entity name. Is needed for debug in Node.js.
-	     *
-	     * In some browsers `console.log()` calls `valueOf()` on each argument.
-	     * This method will be called to get custom string representation of the object.
-	     *
-	     * The representation object contains only `block`, `elem` and `mod` fields
-	     * without private and deprecated fields (`modName` and `modVal`).
-	     *
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button', mod: 'focused' });
-	     *
-	     * name.valueOf();
-	     *
-	     * // ➜ { block: 'button', mod: { name: 'focused', value: true } }
-	     *
-	     * @returns {{block: string, elem: (string|undefined), mod: ({name: string, val: (string|true)}|undefined)}}
-	     */
-	    valueOf() { return this._data; }
-	
-	    /**
-	     * Returns object representing the entity name. Is needed for debug in Node.js.
-	     *
-	     * In Node.js, `console.log()` calls `util.inspect()` on each argument without a formatting placeholder.
-	     * This method will be called to get custom string representation of the object.
-	     *
-	     * The representation object contains only `block`, `elem` and `mod` fields
-	     * without private and deprecated fields (`modName` and `modVal`).
-	     *
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     * const name = new BemEntityName({ block: 'button' });
-	     *
-	     * console.log(name); // BemEntityName { block: 'button' }
-	     *
-	     * @param {number} depth — tells inspect how many times to recurse while formatting the object.
-	     * @param {object} options — An optional `options` object may be passed
-	     *   that alters certain aspects of the formatted string.
-	     *
-	     * @returns {string}
-	     */
-	    inspect(depth, options) {
-	        const stringRepresentation = util.inspect(this._data, options);
-	
-	        return `BemEntityName ${stringRepresentation}`;
-	    }
-	
-	    /**
-	     * Return raw data for `JSON.stringify()`.
-	     *
-	     * @returns {{block: string, elem: (string|undefined),
-	     *   mod: ({name: string, val: (string|true|undefined)}|undefined)}}
-	     */
-	    toJSON() {
-	        return this._data;
-	    }
-	
-	    /**
-	     * Determines whether specified entity is the deepEqual entity.
-	     *
-	     * @param {BemEntityName} entityName - the entity to compare.
-	     *
-	     * @returns {boolean} - A Boolean indicating whether or not specified entity is the deepEqual entity.
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     *
-	     * const inputName = new BemEntityName({ block: 'input' });
-	     * const buttonName = new BemEntityName({ block: 'button' });
-	     *
-	     * inputName.isEqual(buttonName); // false
-	     * buttonName.isEqual(buttonName); // true
-	     */
-	    isEqual(entityName) {
-	        return entityName && (this.id === entityName.id);
-	    }
-	
-	    /**
-	     * Determines whether specified entity is instance of BemEntityName.
-	     *
-	     * @param {BemEntityName} entityName - the entity to check.
-	     *
-	     * @returns {boolean} A Boolean indicating whether or not specified entity is instance of BemEntityName.
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     *
-	     * const entityName = new BemEntityName({ block: 'input' });
-	     *
-	     * BemEntityName.isBemEntityName(entityName); // true
-	     * BemEntityName.isBemEntityName({}); // false
-	     */
-	    static isBemEntityName(entityName) {
-	        return entityName && entityName.__isBemEntityName__;
-	    }
-	
-	    /**
-	     * Creates BemEntityName instance by any object representation.
-	     *
-	     * @param {object} obj — representation of entity name.
-	     * @param {string} obj.block  — the block name of entity.
-	     * @param {string} [obj.elem] — the element name of entity.
-	     * @param {object|string} [obj.mod]  — the modifier of entity.
-	     * @param {string} [obj.val] - the modifier value of entity. Used if `obj.mod` is a string.
-	     * @param {string} obj.mod.name — the modifier name of entity.
-	     * @param {string} [obj.mod.val]  — the modifier value of entity.
-	     * @param {string} [obj.modName] — the modifier name of entity. Used if `obj.mod.name` wasn't specified.
-	     * @param {string} [obj.modVal]  — the modifier value of entity.
-	     *   Used if neither `obj.mod.val` nor `obj.val` were not specified.
-	     *
-	     * @returns {BemEntityName} An object representing entity name.
-	     * @example
-	     * const BemEntityName = require('@bem/entity-name');
-	     *
-	     * BemEntityName.create('my-button_theme_red');
-	     * BemEntityName.create({ block: 'my-button', mod: 'theme', val: 'red' });
-	     * BemEntityName.create({ block: 'my-button', modName: 'theme', modVal: 'red' });
-	     * // → BemEntityName { block: 'my-button', mod: { name: 'theme', val: 'red' } }
-	     */
-	    static create(obj) {
-	        if (BemEntityName.isBemEntityName(obj)) {
-	            return obj;
-	        }
-	
-	        const data = { block: obj.block };
-	        const mod = obj.mod;
-	
-	        obj.elem && (data.elem = obj.elem);
-	
-	        if (mod || obj.modName) {
-	            const isString = typeof mod === 'string';
-	            const modName = (isString ? mod : mod && mod.name) || obj.modName;
-	            const modObj = !isString && mod || obj;
-	            const hasModVal = modObj.hasOwnProperty('val') || obj.hasOwnProperty('modVal');
-	
-	            data.mod = {
-	                name: modName,
-	                val: hasModVal ? modObj.val || obj.modVal : true
-	            };
-	        }
-	
-	        return new BemEntityName(data);
-	    }
-	};
-
-
-/***/ },
-/* 83 */
-[215, 84],
-/* 84 */
-[216, 86, 85, 87],
-/* 85 */
-[217, 82],
-/* 86 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	/**
-	 * Forms a string according to object representation of BEM entity.
-	 *
-	 * @param {Object|BemEntityName} entity - object representation of BEM entity.
-	 * @param {BemNamingDelims} delims - separates entity names from each other.
-	 * @returns {String}
-	 */
-	function stringify(entity, delims) {
-	    if (!entity || !entity.block) {
-	        return undefined;
-	    }
-	
-	    let res = entity.block;
-	
-	    if (entity.elem) {
-	        res += delims.elem + entity.elem;
-	    }
-	
-	    const modObj = entity.mod;
-	    const modName = (typeof modObj === 'string' ? modObj : modObj && modObj.name) || entity.modName;
-	
-	    if (modName) {
-	        const hasModVal = modObj && modObj.hasOwnProperty('val') || entity.hasOwnProperty('modVal');
-	        const modVal = modObj && modObj.val || entity.modVal;
-	
-	        if (modVal || modVal === 0 || !hasModVal) {
-	            res += delims.mod.name + modName;
-	        }
-	
-	        if (modVal && modVal !== true) {
-	            res += delims.mod.val + modVal;
-	        }
-	    }
-	
-	    return res;
-	}
-	
-	/**
-	 * Creates `stringify` function for specified naming convention.
-	 *
-	 * @param {BemNamingConvention} convention - options for naming convention.
-	 * @returns {Function}
-	 */
-	module.exports = (convention) => {
-	    return (entity) => stringify(entity, convention.delims);
-	};
-
-
-/***/ },
-/* 87 */
-[218, 88, 89, 90],
-/* 88 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	module.exports = {
-	    delims: {
-	        elem: '__',
-	        mod: { name: '_', val: '_' }
-	    },
-	    wordPattern: '[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*'
-	};
-
-
-/***/ },
-/* 89 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	module.exports = {
-	    delims: {
-	        elem: '-',
-	        mod: { name: '_', val: '_' }
-	    },
-	    wordPattern: '[a-zA-Z0-9]+'
-	};
-
-
-/***/ },
-/* 90 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	module.exports = {
-	    delims: {
-	        elem: '__',
-	        mod: { name: '--', val: '_' }
-	    },
-	    wordPattern: '[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*'
-	};
-
-
-/***/ },
-/* 91 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {'use strict';
-	
-	(function (global) {
-	/**
-	 * Enum for types of BEM entities.
-	 *
-	 * @readonly
-	 * @enum {String}
-	 */
-	var TYPES = {
-	    BLOCK:     'block',
-	    BLOCK_MOD: 'blockMod',
-	    ELEM:      'elem',
-	    ELEM_MOD:  'elemMod'
-	};
-	
-	/**
-	 * Defines which symbols can be used for block, element and modifier's names.
-	 * @readonly
-	 */
-	var WORD_PATTERN = '[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*';
-	
-	/**
-	 * Presets of options for various naming.
-	 * @readonly
-	 */
-	var presets = {
-	    origin: {
-	        delims: {
-	            elem: '__',
-	            mod: { name: '_', val: '_' }
-	        },
-	        wordPattern: WORD_PATTERN
-	    },
-	    'two-dashes': {
-	        delims: {
-	            elem: '__',
-	            mod: { name: '--', val: '_' }
-	        },
-	        wordPattern: WORD_PATTERN
-	    }
-	};
-	
-	/**
-	 * It is necessary not to create new instances for the same custom naming.
-	 * @readonly
-	 */
-	var cache = {};
-	
-	/**
-	 * Creates namespace with methods which allows getting information about BEM entity using string as well
-	 * as forming string representation based on naming object.
-	 *
-	 * @param {Object} [options]              Options.
-	 * @param {String} [options.elem=__]      Separates element's name from block.
-	 * @param {String|Object} [options.mod=_] Separates modifiers from blocks and elements.
-	 * @param {String} [options.mod.name=_]   Separates name of modifier from blocks and elements.
-	 * @param {String} [options.mod.val=_]    Separates value of modifier from name of modifier.
-	 * @param {String} [options.wordPattern]  Defines which symbols can be used for block, element and modifier's names.
-	 * @return {Object}
-	 */
-	function createNaming(options) {
-	    var opts = init(options),
-	        id = JSON.stringify(opts);
-	
-	    if (cache[id]) {
-	        return cache[id];
-	    }
-	
-	    var delims = opts.delims,
-	        regex = buildRegex(delims, opts.wordPattern);
-	
-	    /**
-	     * Checks a string to be valid BEM notation.
-	     *
-	     * @param {String} str - String representation of BEM entity.
-	     * @returns {Boolean}
-	     */
-	    function validate(str) {
-	        return regex.test(str);
-	    }
-	
-	    /**
-	     * Parses string into naming object.
-	     *
-	     * @param {String} str - string representation of BEM entity.
-	     * @returns {Object|undefined}
-	     */
-	    function parse(str) {
-	        var executed = regex.exec(str);
-	
-	        if (!executed) { return undefined; }
-	
-	        var notation = {
-	                block: executed[1] || executed[4]
-	            },
-	            elem = executed[5],
-	            modName = executed[2] || executed[6];
-	
-	        elem && (notation.elem = elem);
-	
-	        if (modName) {
-	            var modVal = executed[3] || executed[7];
-	
-	            notation.modName = modName;
-	            notation.modVal = modVal || true;
-	        }
-	
-	        return notation;
-	    }
-	
-	    /**
-	     * Forms a string according to naming object.
-	     *
-	     * @param {Object} obj - naming object
-	     * @returns {String}
-	     */
-	    function stringify(obj) {
-	        if (!obj || !obj.block) {
-	            return undefined;
-	        }
-	
-	        var res = obj.block;
-	
-	        if (obj.elem) {
-	            res += delims.elem + obj.elem;
-	        }
-	
-	        if (obj.modName) {
-	            var modVal = obj.modVal;
-	
-	            if (modVal || modVal === 0 || !obj.hasOwnProperty('modVal')) {
-	                res += delims.mod.name + obj.modName;
-	            }
-	
-	            if (modVal && modVal !== true) {
-	                res += delims.mod.val + modVal;
-	            }
-	        }
-	
-	        return res;
-	    }
-	
-	    /**
-	     * Returns a string indicating type of a BEM entity.
-	     *
-	     * @param {Object|String|undefined} obj - naming object or string representation of BEM entity.
-	     * @returns {String}
-	     */
-	    function typeOf(obj) {
-	        if (typeof obj === 'string') {
-	            obj = parse(obj);
-	        }
-	
-	        if (!obj || !obj.block) { return undefined; }
-	
-	        var modName = obj.modName,
-	            isMod = modName && (obj.modVal || !obj.hasOwnProperty('modVal'));
-	
-	        if (obj.elem) {
-	            if (isMod)    { return TYPES.ELEM_MOD; }
-	            if (!modName) { return TYPES.ELEM;     }
-	        }
-	
-	        if (isMod)    { return TYPES.BLOCK_MOD; }
-	        if (!modName) { return TYPES.BLOCK;     }
-	    }
-	
-	    /**
-	     * Checks whether naming object or string is a block.
-	     *
-	     * @param {Object|String} obj - naming object or string representation of BEM entity.
-	     * @returns {Boolean}
-	     */
-	    function isBlock(obj) {
-	        return typeOf(obj) === TYPES.BLOCK;
-	    }
-	
-	    /**
-	     * Checks whether naming object or string is modifier of a block.
-	     *
-	     * @param {Object|String} obj - naming object or string representation of BEM entity.
-	     * @returns {Boolean}
-	     */
-	    function isBlockMod(obj) {
-	        return typeOf(obj) === TYPES.BLOCK_MOD;
-	    }
-	
-	    /**
-	     * Checks whether naming object or string is element of a block.
-	     *
-	     * @param {Object|String} obj - naming object or string representation of BEM entity.
-	     * @returns {Boolean}
-	     */
-	    function isElem(obj) {
-	        return typeOf(obj) === TYPES.ELEM;
-	    }
-	
-	    /**
-	     * Checks whether naming object or string is element of a block.
-	     *
-	     * @param {Object|String} obj - naming object or string representation of BEM entity.
-	     * @returns {Boolean}
-	     */
-	    function isElemMod(obj) {
-	        return typeOf(obj) === TYPES.ELEM_MOD;
-	    }
-	
-	    var namespace = {
-	        validate: validate,
-	        typeOf: typeOf,
-	        isBlock: isBlock,
-	        isBlockMod: isBlockMod,
-	        isElem: isElem,
-	        isElemMod: isElemMod,
-	        parse: parse,
-	        stringify: stringify,
-	        /**
-	         * String to separate elem from block.
-	         *
-	         * @type {String}
-	         */
-	        elemDelim: delims.elem,
-	        /**
-	         * String to separate modifiers from blocks and elements.
-	         *
-	         * @type {String}
-	         */
-	        modDelim: delims.mod.name,
-	        /**
-	         * String to separate value of modifier from name of modifier.
-	         *
-	         * @type {String}
-	         */
-	        modValDelim: delims.mod.val
-	    };
-	
-	    cache[id] = namespace;
-	
-	    return namespace;
-	}
-	
-	/**
-	 * Returns delims and wordPattern.
-	 *
-	 * @param {Object} options - user options
-	 * @returns {{delims: Object, wordPattern: String}}
-	 */
-	function init(options) {
-	    options || (options = {});
-	
-	    if (typeof options === 'string') {
-	        var preset = presets[options];
-	
-	        if (!preset) {
-	            throw new Error('The `' + options + '` naming is unknown.');
-	        }
-	
-	        return preset;
-	    }
-	
-	    var defaults = presets.origin,
-	        defaultDelims = defaults.delims,
-	        defaultModDelims = defaultDelims.mod,
-	        mod = options.mod || defaultDelims.mod;
-	
-	    return {
-	        delims: {
-	            elem: options.elem || defaultDelims.elem,
-	            mod: typeof mod === 'string'
-	                ? { name: mod, val: mod }
-	                : {
-	                    name: mod.name || defaultModDelims.name,
-	                    val: mod.val || mod.name || defaultModDelims.val
-	                }
-	        },
-	        wordPattern: options.wordPattern || defaults.wordPattern
-	    };
-	}
-	
-	/**
-	 * Builds regex for specified naming.
-	 *
-	 * @param {Object} delims      Separates block names, elements and modifiers.
-	 * @param {String} wordPattern Defines which symbols can be used for block, element and modifier's names.
-	 * @returns {RegExp}
-	 */
-	function buildRegex(delims, wordPattern) {
-	    var block = '(' + wordPattern + ')',
-	        elem = '(?:' + delims.elem + '(' + wordPattern + '))?',
-	        modName = '(?:' + delims.mod.name + '(' + wordPattern + '))?',
-	        modVal = '(?:' + delims.mod.val + '(' + wordPattern + '))?',
-	        mod = modName + modVal;
-	
-	    return new RegExp('^' + block + mod + '$|^' + block + elem + mod + '$');
-	}
-	
-	var defineAsGlobal = true,
-	    api = [
-	        'validate', 'typeOf',
-	        'isBlock', 'isBlockMod', 'isElem', 'isElemMod',
-	        'parse', 'stringify',
-	        'elemDelim', 'modDelim', 'modValDelim'
-	    ],
-	    originalNaming = createNaming();
-	
-	api.forEach(function (name) {
-	    createNaming[name] = originalNaming[name];
-	});
-	
-	// Node.js
-	/* istanbul ignore if */
-	if (true) {
-	    module.exports = createNaming;
-	    defineAsGlobal = false;
-	}
-	
-	// YModules
-	/* istanbul ignore if */
-	if (typeof modules === 'object') {
-	    modules.define('bem-naming', function (provide) {
-	        provide(createNaming);
-	    });
-	    defineAsGlobal = false;
-	}
-	
-	// AMD
-	/* istanbul ignore if */
-	if (true) {
-	    !(__WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, module) {
-	        module.exports = createNaming;
-	    }.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	    defineAsGlobal = false;
-	}
-	
-	/* istanbul ignore next */
-	defineAsGlobal && (global.bemNaming = createNaming);
-	})(typeof window !== 'undefined' ? window : global);
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 92 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
 	if (typeof Promise === 'undefined') {
 	  // Rejection tracking prevents a common issue where React gets into an
 	  // inconsistent state due to an error, but it gets swallowed by a Promise,
 	  // and the user has no idea what causes React's erratic future behavior.
-	  __webpack_require__(111).enable();
-	  window.Promise = __webpack_require__(110);
+	  __webpack_require__(101).enable();
+	  window.Promise = __webpack_require__(100);
 	}
 	
 	// fetch() polyfill for making API calls.
-	__webpack_require__(195);
+	__webpack_require__(185);
 	
 	// Object.assign() is commonly used with React.
 	// It will use the native implementation if it's present and isn't buggy.
@@ -11009,7 +9821,7 @@
 
 
 /***/ },
-/* 93 */
+/* 83 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {"use strict";
@@ -11239,7 +10051,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 94 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11250,19 +10062,19 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(49);
+	var _react = __webpack_require__(50);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactMonacoEditor = __webpack_require__(179);
+	var _reactMonacoEditor = __webpack_require__(169);
 	
 	var _reactMonacoEditor2 = _interopRequireDefault(_reactMonacoEditor);
 	
-	var _ = __webpack_require__(196);
+	var _ = __webpack_require__(186);
 	
 	var _2 = _interopRequireDefault(_);
 	
-	__webpack_require__(96);
+	__webpack_require__(86);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -11340,39 +10152,39 @@
 	exports.default = App;
 
 /***/ },
-/* 95 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _react = __webpack_require__(49);
+	var _react = __webpack_require__(50);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(115);
+	var _reactDom = __webpack_require__(105);
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _App = __webpack_require__(94);
+	var _App = __webpack_require__(84);
 	
 	var _App2 = _interopRequireDefault(_App);
 	
-	__webpack_require__(97);
+	__webpack_require__(87);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('root'));
 
 /***/ },
-/* 96 */
+/* 86 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 97 */
-96,
-/* 98 */
+/* 87 */
+86,
+/* 88 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -11408,7 +10220,7 @@
 	module.exports = camelize;
 
 /***/ },
-/* 99 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11424,7 +10236,7 @@
 	
 	'use strict';
 	
-	var camelize = __webpack_require__(98);
+	var camelize = __webpack_require__(88);
 	
 	var msPattern = /^-ms-/;
 	
@@ -11452,7 +10264,7 @@
 	module.exports = camelizeStyleName;
 
 /***/ },
-/* 100 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11468,7 +10280,7 @@
 	 * 
 	 */
 	
-	var isTextNode = __webpack_require__(108);
+	var isTextNode = __webpack_require__(98);
 	
 	/*eslint-disable no-bitwise */
 	
@@ -11496,7 +10308,7 @@
 	module.exports = containsNode;
 
 /***/ },
-/* 101 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11627,7 +10439,7 @@
 	module.exports = createArrayFromMixed;
 
 /***/ },
-/* 102 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11647,8 +10459,8 @@
 	
 	var ExecutionEnvironment = __webpack_require__(6);
 	
-	var createArrayFromMixed = __webpack_require__(101);
-	var getMarkupWrap = __webpack_require__(103);
+	var createArrayFromMixed = __webpack_require__(91);
+	var getMarkupWrap = __webpack_require__(93);
 	var invariant = __webpack_require__(1);
 	
 	/**
@@ -11715,7 +10527,7 @@
 	module.exports = createNodesFromMarkup;
 
 /***/ },
-/* 103 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11814,7 +10626,7 @@
 	module.exports = getMarkupWrap;
 
 /***/ },
-/* 104 */
+/* 94 */
 /***/ function(module, exports) {
 
 	/**
@@ -11857,7 +10669,7 @@
 	module.exports = getUnboundedScrollPosition;
 
 /***/ },
-/* 105 */
+/* 95 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -11894,7 +10706,7 @@
 	module.exports = hyphenate;
 
 /***/ },
-/* 106 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11910,7 +10722,7 @@
 	
 	'use strict';
 	
-	var hyphenate = __webpack_require__(105);
+	var hyphenate = __webpack_require__(95);
 	
 	var msPattern = /^ms-/;
 	
@@ -11937,7 +10749,7 @@
 	module.exports = hyphenateStyleName;
 
 /***/ },
-/* 107 */
+/* 97 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -11966,7 +10778,7 @@
 	module.exports = isNode;
 
 /***/ },
-/* 108 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11982,7 +10794,7 @@
 	 * @typechecks
 	 */
 	
-	var isNode = __webpack_require__(107);
+	var isNode = __webpack_require__(97);
 	
 	/**
 	 * @param {*} object The object to check.
@@ -11995,7 +10807,7 @@
 	module.exports = isTextNode;
 
 /***/ },
-/* 109 */
+/* 99 */
 /***/ function(module, exports) {
 
 	/**
@@ -12029,7 +10841,7 @@
 	module.exports = memoizeStringOnly;
 
 /***/ },
-/* 110 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12142,7 +10954,7 @@
 
 
 /***/ },
-/* 111 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12260,7 +11072,7 @@
 	}
 
 /***/ },
-/* 112 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12327,7 +11139,7 @@
 
 
 /***/ },
-/* 113 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12345,8 +11157,8 @@
 	var invariant = __webpack_require__(1);
 	var warning = __webpack_require__(2);
 	
-	var ReactPropTypesSecret = __webpack_require__(114);
-	var checkPropTypes = __webpack_require__(112);
+	var ReactPropTypesSecret = __webpack_require__(104);
+	var checkPropTypes = __webpack_require__(102);
 	
 	module.exports = function(isValidElement, throwOnDirectAccess) {
 	  /* global Symbol */
@@ -12811,7 +11623,7 @@
 
 
 /***/ },
-/* 114 */
+/* 104 */
 /***/ function(module, exports) {
 
 	/**
@@ -12831,16 +11643,16 @@
 
 
 /***/ },
-/* 115 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	module.exports = __webpack_require__(129);
+	module.exports = __webpack_require__(119);
 
 
 /***/ },
-/* 116 */
+/* 106 */
 /***/ function(module, exports) {
 
 	/**
@@ -12918,7 +11730,7 @@
 	module.exports = ARIADOMPropertyConfig;
 
 /***/ },
-/* 117 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12946,7 +11758,7 @@
 	module.exports = AutoFocusUtils;
 
 /***/ },
-/* 118 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12963,9 +11775,9 @@
 	
 	var EventPropagators = __webpack_require__(21);
 	var ExecutionEnvironment = __webpack_require__(6);
-	var FallbackCompositionState = __webpack_require__(124);
-	var SyntheticCompositionEvent = __webpack_require__(161);
-	var SyntheticInputEvent = __webpack_require__(164);
+	var FallbackCompositionState = __webpack_require__(114);
+	var SyntheticCompositionEvent = __webpack_require__(151);
+	var SyntheticInputEvent = __webpack_require__(154);
 	
 	var END_KEYCODES = [9, 13, 27, 32]; // Tab, Return, Esc, Space
 	var START_KEYCODE = 229;
@@ -13335,7 +12147,7 @@
 	module.exports = BeforeInputEventPlugin;
 
 /***/ },
-/* 119 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13354,10 +12166,10 @@
 	var ExecutionEnvironment = __webpack_require__(6);
 	var ReactInstrumentation = __webpack_require__(8);
 	
-	var camelizeStyleName = __webpack_require__(99);
-	var dangerousStyleValue = __webpack_require__(170);
-	var hyphenateStyleName = __webpack_require__(106);
-	var memoizeStringOnly = __webpack_require__(109);
+	var camelizeStyleName = __webpack_require__(89);
+	var dangerousStyleValue = __webpack_require__(160);
+	var hyphenateStyleName = __webpack_require__(96);
+	var memoizeStringOnly = __webpack_require__(99);
 	var warning = __webpack_require__(2);
 	
 	var processStyleName = memoizeStringOnly(function (styleName) {
@@ -13548,7 +12360,7 @@
 	module.exports = CSSPropertyOperations;
 
 /***/ },
-/* 120 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13570,8 +12382,8 @@
 	var ReactUpdates = __webpack_require__(9);
 	var SyntheticEvent = __webpack_require__(10);
 	
-	var getEventTarget = __webpack_require__(43);
-	var isEventSupported = __webpack_require__(44);
+	var getEventTarget = __webpack_require__(44);
+	var isEventSupported = __webpack_require__(45);
 	var isTextInputElement = __webpack_require__(74);
 	
 	var eventTypes = {
@@ -13898,7 +12710,7 @@
 	module.exports = ChangeEventPlugin;
 
 /***/ },
-/* 121 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13918,7 +12730,7 @@
 	var DOMLazyTree = __webpack_require__(13);
 	var ExecutionEnvironment = __webpack_require__(6);
 	
-	var createNodesFromMarkup = __webpack_require__(102);
+	var createNodesFromMarkup = __webpack_require__(92);
 	var emptyFunction = __webpack_require__(7);
 	var invariant = __webpack_require__(1);
 	
@@ -13950,7 +12762,7 @@
 	module.exports = Danger;
 
 /***/ },
-/* 122 */
+/* 112 */
 /***/ function(module, exports) {
 
 	/**
@@ -13980,7 +12792,7 @@
 	module.exports = DefaultEventPluginOrder;
 
 /***/ },
-/* 123 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -14084,7 +12896,7 @@
 	module.exports = EnterLeaveEventPlugin;
 
 /***/ },
-/* 124 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -14183,7 +12995,7 @@
 	module.exports = FallbackCompositionState;
 
 /***/ },
-/* 125 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -14423,7 +13235,7 @@
 	module.exports = HTMLDOMPropertyConfig;
 
 /***/ },
-/* 126 */
+/* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -14441,8 +13253,8 @@
 	var ReactReconciler = __webpack_require__(15);
 	
 	var instantiateReactComponent = __webpack_require__(73);
-	var KeyEscapeUtils = __webpack_require__(35);
-	var shouldUpdateReactComponent = __webpack_require__(45);
+	var KeyEscapeUtils = __webpack_require__(36);
+	var shouldUpdateReactComponent = __webpack_require__(46);
 	var traverseAllChildren = __webpack_require__(76);
 	var warning = __webpack_require__(2);
 	
@@ -14579,10 +13391,10 @@
 	};
 	
 	module.exports = ReactChildReconciler;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(31)))
 
 /***/ },
-/* 127 */
+/* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -14597,8 +13409,8 @@
 	
 	'use strict';
 	
-	var DOMChildrenOperations = __webpack_require__(31);
-	var ReactDOMIDOperations = __webpack_require__(134);
+	var DOMChildrenOperations = __webpack_require__(32);
+	var ReactDOMIDOperations = __webpack_require__(124);
 	
 	/**
 	 * Abstracts away all functionality of the reconciler that requires knowledge of
@@ -14616,7 +13428,7 @@
 	module.exports = ReactComponentBrowserEnvironment;
 
 /***/ },
-/* 128 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -14635,9 +13447,9 @@
 	    _assign = __webpack_require__(4);
 	
 	var React = __webpack_require__(16);
-	var ReactComponentEnvironment = __webpack_require__(37);
+	var ReactComponentEnvironment = __webpack_require__(38);
 	var ReactCurrentOwner = __webpack_require__(11);
-	var ReactErrorUtils = __webpack_require__(38);
+	var ReactErrorUtils = __webpack_require__(39);
 	var ReactInstanceMap = __webpack_require__(22);
 	var ReactInstrumentation = __webpack_require__(8);
 	var ReactNodeTypes = __webpack_require__(67);
@@ -14649,8 +13461,8 @@
 	
 	var emptyObject = __webpack_require__(19);
 	var invariant = __webpack_require__(1);
-	var shallowEqual = __webpack_require__(29);
-	var shouldUpdateReactComponent = __webpack_require__(45);
+	var shallowEqual = __webpack_require__(30);
+	var shouldUpdateReactComponent = __webpack_require__(46);
 	var warning = __webpack_require__(2);
 	
 	var CompositeTypes = {
@@ -15522,7 +14334,7 @@
 	module.exports = ReactCompositeComponent;
 
 /***/ },
-/* 129 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -15540,15 +14352,15 @@
 	'use strict';
 	
 	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactDefaultInjection = __webpack_require__(142);
+	var ReactDefaultInjection = __webpack_require__(132);
 	var ReactMount = __webpack_require__(66);
 	var ReactReconciler = __webpack_require__(15);
 	var ReactUpdates = __webpack_require__(9);
-	var ReactVersion = __webpack_require__(155);
+	var ReactVersion = __webpack_require__(145);
 	
-	var findDOMNode = __webpack_require__(171);
+	var findDOMNode = __webpack_require__(161);
 	var getHostComponentFromComposite = __webpack_require__(71);
-	var renderSubtreeIntoContainer = __webpack_require__(178);
+	var renderSubtreeIntoContainer = __webpack_require__(168);
 	var warning = __webpack_require__(2);
 	
 	ReactDefaultInjection.inject();
@@ -15637,7 +14449,7 @@
 	module.exports = ReactDOM;
 
 /***/ },
-/* 130 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -15657,31 +14469,31 @@
 	var _prodInvariant = __webpack_require__(3),
 	    _assign = __webpack_require__(4);
 	
-	var AutoFocusUtils = __webpack_require__(117);
-	var CSSPropertyOperations = __webpack_require__(119);
+	var AutoFocusUtils = __webpack_require__(107);
+	var CSSPropertyOperations = __webpack_require__(109);
 	var DOMLazyTree = __webpack_require__(13);
-	var DOMNamespaces = __webpack_require__(32);
+	var DOMNamespaces = __webpack_require__(33);
 	var DOMProperty = __webpack_require__(14);
 	var DOMPropertyOperations = __webpack_require__(59);
 	var EventPluginHub = __webpack_require__(20);
-	var EventPluginRegistry = __webpack_require__(33);
+	var EventPluginRegistry = __webpack_require__(34);
 	var ReactBrowserEventEmitter = __webpack_require__(24);
 	var ReactDOMComponentFlags = __webpack_require__(60);
 	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactDOMInput = __webpack_require__(135);
-	var ReactDOMOption = __webpack_require__(136);
+	var ReactDOMInput = __webpack_require__(125);
+	var ReactDOMOption = __webpack_require__(126);
 	var ReactDOMSelect = __webpack_require__(61);
-	var ReactDOMTextarea = __webpack_require__(139);
+	var ReactDOMTextarea = __webpack_require__(129);
 	var ReactInstrumentation = __webpack_require__(8);
-	var ReactMultiChild = __webpack_require__(148);
-	var ReactServerRenderingTransaction = __webpack_require__(153);
+	var ReactMultiChild = __webpack_require__(138);
+	var ReactServerRenderingTransaction = __webpack_require__(143);
 	
 	var emptyFunction = __webpack_require__(7);
 	var escapeTextContentForBrowser = __webpack_require__(27);
 	var invariant = __webpack_require__(1);
-	var isEventSupported = __webpack_require__(44);
-	var shallowEqual = __webpack_require__(29);
-	var validateDOMNesting = __webpack_require__(46);
+	var isEventSupported = __webpack_require__(45);
+	var shallowEqual = __webpack_require__(30);
+	var validateDOMNesting = __webpack_require__(47);
 	var warning = __webpack_require__(2);
 	
 	var Flags = ReactDOMComponentFlags;
@@ -16642,7 +15454,7 @@
 	module.exports = ReactDOMComponent;
 
 /***/ },
-/* 131 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -16657,7 +15469,7 @@
 	
 	'use strict';
 	
-	var validateDOMNesting = __webpack_require__(46);
+	var validateDOMNesting = __webpack_require__(47);
 	
 	var DOC_NODE_TYPE = 9;
 	
@@ -16679,7 +15491,7 @@
 	module.exports = ReactDOMContainerInfo;
 
 /***/ },
-/* 132 */
+/* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -16743,7 +15555,7 @@
 	module.exports = ReactDOMEmptyComponent;
 
 /***/ },
-/* 133 */
+/* 123 */
 /***/ function(module, exports) {
 
 	/**
@@ -16766,7 +15578,7 @@
 	module.exports = ReactDOMFeatureFlags;
 
 /***/ },
-/* 134 */
+/* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -16781,7 +15593,7 @@
 	
 	'use strict';
 	
-	var DOMChildrenOperations = __webpack_require__(31);
+	var DOMChildrenOperations = __webpack_require__(32);
 	var ReactDOMComponentTree = __webpack_require__(5);
 	
 	/**
@@ -16804,7 +15616,7 @@
 	module.exports = ReactDOMIDOperations;
 
 /***/ },
-/* 135 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -16823,7 +15635,7 @@
 	    _assign = __webpack_require__(4);
 	
 	var DOMPropertyOperations = __webpack_require__(59);
-	var LinkedValueUtils = __webpack_require__(36);
+	var LinkedValueUtils = __webpack_require__(37);
 	var ReactDOMComponentTree = __webpack_require__(5);
 	var ReactUpdates = __webpack_require__(9);
 	
@@ -17093,7 +15905,7 @@
 	module.exports = ReactDOMInput;
 
 /***/ },
-/* 136 */
+/* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -17220,7 +16032,7 @@
 	module.exports = ReactDOMOption;
 
 /***/ },
-/* 137 */
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -17237,7 +16049,7 @@
 	
 	var ExecutionEnvironment = __webpack_require__(6);
 	
-	var getNodeForCharacterOffset = __webpack_require__(175);
+	var getNodeForCharacterOffset = __webpack_require__(165);
 	var getTextContentAccessor = __webpack_require__(72);
 	
 	/**
@@ -17436,7 +16248,7 @@
 	module.exports = ReactDOMSelection;
 
 /***/ },
-/* 138 */
+/* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -17454,13 +16266,13 @@
 	var _prodInvariant = __webpack_require__(3),
 	    _assign = __webpack_require__(4);
 	
-	var DOMChildrenOperations = __webpack_require__(31);
+	var DOMChildrenOperations = __webpack_require__(32);
 	var DOMLazyTree = __webpack_require__(13);
 	var ReactDOMComponentTree = __webpack_require__(5);
 	
 	var escapeTextContentForBrowser = __webpack_require__(27);
 	var invariant = __webpack_require__(1);
-	var validateDOMNesting = __webpack_require__(46);
+	var validateDOMNesting = __webpack_require__(47);
 	
 	/**
 	 * Text nodes violate a couple assumptions that React makes about components:
@@ -17604,7 +16416,7 @@
 	module.exports = ReactDOMTextComponent;
 
 /***/ },
-/* 139 */
+/* 129 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -17622,7 +16434,7 @@
 	var _prodInvariant = __webpack_require__(3),
 	    _assign = __webpack_require__(4);
 	
-	var LinkedValueUtils = __webpack_require__(36);
+	var LinkedValueUtils = __webpack_require__(37);
 	var ReactDOMComponentTree = __webpack_require__(5);
 	var ReactUpdates = __webpack_require__(9);
 	
@@ -17768,7 +16580,7 @@
 	module.exports = ReactDOMTextarea;
 
 /***/ },
-/* 140 */
+/* 130 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -17908,7 +16720,7 @@
 	};
 
 /***/ },
-/* 141 */
+/* 131 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -17980,7 +16792,7 @@
 	module.exports = ReactDefaultBatchingStrategy;
 
 /***/ },
-/* 142 */
+/* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -17995,25 +16807,25 @@
 	
 	'use strict';
 	
-	var ARIADOMPropertyConfig = __webpack_require__(116);
-	var BeforeInputEventPlugin = __webpack_require__(118);
-	var ChangeEventPlugin = __webpack_require__(120);
-	var DefaultEventPluginOrder = __webpack_require__(122);
-	var EnterLeaveEventPlugin = __webpack_require__(123);
-	var HTMLDOMPropertyConfig = __webpack_require__(125);
-	var ReactComponentBrowserEnvironment = __webpack_require__(127);
-	var ReactDOMComponent = __webpack_require__(130);
+	var ARIADOMPropertyConfig = __webpack_require__(106);
+	var BeforeInputEventPlugin = __webpack_require__(108);
+	var ChangeEventPlugin = __webpack_require__(110);
+	var DefaultEventPluginOrder = __webpack_require__(112);
+	var EnterLeaveEventPlugin = __webpack_require__(113);
+	var HTMLDOMPropertyConfig = __webpack_require__(115);
+	var ReactComponentBrowserEnvironment = __webpack_require__(117);
+	var ReactDOMComponent = __webpack_require__(120);
 	var ReactDOMComponentTree = __webpack_require__(5);
-	var ReactDOMEmptyComponent = __webpack_require__(132);
-	var ReactDOMTreeTraversal = __webpack_require__(140);
-	var ReactDOMTextComponent = __webpack_require__(138);
-	var ReactDefaultBatchingStrategy = __webpack_require__(141);
-	var ReactEventListener = __webpack_require__(145);
-	var ReactInjection = __webpack_require__(146);
-	var ReactReconcileTransaction = __webpack_require__(151);
-	var SVGDOMPropertyConfig = __webpack_require__(156);
-	var SelectEventPlugin = __webpack_require__(157);
-	var SimpleEventPlugin = __webpack_require__(158);
+	var ReactDOMEmptyComponent = __webpack_require__(122);
+	var ReactDOMTreeTraversal = __webpack_require__(130);
+	var ReactDOMTextComponent = __webpack_require__(128);
+	var ReactDefaultBatchingStrategy = __webpack_require__(131);
+	var ReactEventListener = __webpack_require__(135);
+	var ReactInjection = __webpack_require__(136);
+	var ReactReconcileTransaction = __webpack_require__(141);
+	var SVGDOMPropertyConfig = __webpack_require__(146);
+	var SelectEventPlugin = __webpack_require__(147);
+	var SimpleEventPlugin = __webpack_require__(148);
 	
 	var alreadyInjected = false;
 	
@@ -18070,9 +16882,9 @@
 	};
 
 /***/ },
-/* 143 */
+/* 133 */
 78,
-/* 144 */
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18109,7 +16921,7 @@
 	module.exports = ReactEventEmitterMixin;
 
 /***/ },
-/* 145 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18132,8 +16944,8 @@
 	var ReactDOMComponentTree = __webpack_require__(5);
 	var ReactUpdates = __webpack_require__(9);
 	
-	var getEventTarget = __webpack_require__(43);
-	var getUnboundedScrollPosition = __webpack_require__(104);
+	var getEventTarget = __webpack_require__(44);
+	var getUnboundedScrollPosition = __webpack_require__(94);
 	
 	/**
 	 * Find the deepest React component completely containing the root of the
@@ -18268,7 +17080,7 @@
 	module.exports = ReactEventListener;
 
 /***/ },
-/* 146 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18285,8 +17097,8 @@
 	
 	var DOMProperty = __webpack_require__(14);
 	var EventPluginHub = __webpack_require__(20);
-	var EventPluginUtils = __webpack_require__(34);
-	var ReactComponentEnvironment = __webpack_require__(37);
+	var EventPluginUtils = __webpack_require__(35);
+	var ReactComponentEnvironment = __webpack_require__(38);
 	var ReactEmptyComponent = __webpack_require__(62);
 	var ReactBrowserEventEmitter = __webpack_require__(24);
 	var ReactHostComponent = __webpack_require__(64);
@@ -18306,7 +17118,7 @@
 	module.exports = ReactInjection;
 
 /***/ },
-/* 147 */
+/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18321,7 +17133,7 @@
 	
 	'use strict';
 	
-	var adler32 = __webpack_require__(169);
+	var adler32 = __webpack_require__(159);
 	
 	var TAG_END = /\/?>/;
 	var COMMENT_START = /^<\!\-\-/;
@@ -18360,7 +17172,7 @@
 	module.exports = ReactMarkupChecksum;
 
 /***/ },
-/* 148 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18377,16 +17189,16 @@
 	
 	var _prodInvariant = __webpack_require__(3);
 	
-	var ReactComponentEnvironment = __webpack_require__(37);
+	var ReactComponentEnvironment = __webpack_require__(38);
 	var ReactInstanceMap = __webpack_require__(22);
 	var ReactInstrumentation = __webpack_require__(8);
 	
 	var ReactCurrentOwner = __webpack_require__(11);
 	var ReactReconciler = __webpack_require__(15);
-	var ReactChildReconciler = __webpack_require__(126);
+	var ReactChildReconciler = __webpack_require__(116);
 	
 	var emptyFunction = __webpack_require__(7);
-	var flattenChildren = __webpack_require__(172);
+	var flattenChildren = __webpack_require__(162);
 	var invariant = __webpack_require__(1);
 	
 	/**
@@ -18814,7 +17626,7 @@
 	module.exports = ReactMultiChild;
 
 /***/ },
-/* 149 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18912,7 +17724,7 @@
 	module.exports = ReactOwner;
 
 /***/ },
-/* 150 */
+/* 140 */
 /***/ function(module, exports) {
 
 	/**
@@ -18933,7 +17745,7 @@
 	module.exports = ReactPropTypesSecret;
 
 /***/ },
-/* 151 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18956,7 +17768,7 @@
 	var ReactInputSelection = __webpack_require__(65);
 	var ReactInstrumentation = __webpack_require__(8);
 	var Transaction = __webpack_require__(26);
-	var ReactUpdateQueue = __webpack_require__(39);
+	var ReactUpdateQueue = __webpack_require__(40);
 	
 	/**
 	 * Ensures that, when possible, the selection range (currently selected text
@@ -19115,7 +17927,7 @@
 	module.exports = ReactReconcileTransaction;
 
 /***/ },
-/* 152 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19131,7 +17943,7 @@
 	
 	'use strict';
 	
-	var ReactOwner = __webpack_require__(149);
+	var ReactOwner = __webpack_require__(139);
 	
 	var ReactRef = {};
 	
@@ -19208,7 +18020,7 @@
 	module.exports = ReactRef;
 
 /***/ },
-/* 153 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19228,7 +18040,7 @@
 	var PooledClass = __webpack_require__(12);
 	var Transaction = __webpack_require__(26);
 	var ReactInstrumentation = __webpack_require__(8);
-	var ReactServerUpdateQueue = __webpack_require__(154);
+	var ReactServerUpdateQueue = __webpack_require__(144);
 	
 	/**
 	 * Executed within the scope of the `Transaction` instance. Consider these as
@@ -19302,7 +18114,7 @@
 	module.exports = ReactServerRenderingTransaction;
 
 /***/ },
-/* 154 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19320,7 +18132,7 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	var ReactUpdateQueue = __webpack_require__(39);
+	var ReactUpdateQueue = __webpack_require__(40);
 	
 	var warning = __webpack_require__(2);
 	
@@ -19445,7 +18257,7 @@
 	module.exports = ReactServerUpdateQueue;
 
 /***/ },
-/* 155 */
+/* 145 */
 /***/ function(module, exports) {
 
 	/**
@@ -19463,7 +18275,7 @@
 	module.exports = '15.5.4';
 
 /***/ },
-/* 156 */
+/* 146 */
 /***/ function(module, exports) {
 
 	/**
@@ -19769,7 +18581,7 @@
 	module.exports = SVGDOMPropertyConfig;
 
 /***/ },
-/* 157 */
+/* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19792,7 +18604,7 @@
 	
 	var getActiveElement = __webpack_require__(54);
 	var isTextInputElement = __webpack_require__(74);
-	var shallowEqual = __webpack_require__(29);
+	var shallowEqual = __webpack_require__(30);
 	
 	var skipSelectionChangeEvent = ExecutionEnvironment.canUseDOM && 'documentMode' in document && document.documentMode <= 11;
 	
@@ -19964,7 +18776,7 @@
 	module.exports = SelectEventPlugin;
 
 /***/ },
-/* 158 */
+/* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19985,20 +18797,20 @@
 	var EventListener = __webpack_require__(52);
 	var EventPropagators = __webpack_require__(21);
 	var ReactDOMComponentTree = __webpack_require__(5);
-	var SyntheticAnimationEvent = __webpack_require__(159);
-	var SyntheticClipboardEvent = __webpack_require__(160);
+	var SyntheticAnimationEvent = __webpack_require__(149);
+	var SyntheticClipboardEvent = __webpack_require__(150);
 	var SyntheticEvent = __webpack_require__(10);
-	var SyntheticFocusEvent = __webpack_require__(163);
-	var SyntheticKeyboardEvent = __webpack_require__(165);
+	var SyntheticFocusEvent = __webpack_require__(153);
+	var SyntheticKeyboardEvent = __webpack_require__(155);
 	var SyntheticMouseEvent = __webpack_require__(25);
-	var SyntheticDragEvent = __webpack_require__(162);
-	var SyntheticTouchEvent = __webpack_require__(166);
-	var SyntheticTransitionEvent = __webpack_require__(167);
+	var SyntheticDragEvent = __webpack_require__(152);
+	var SyntheticTouchEvent = __webpack_require__(156);
+	var SyntheticTransitionEvent = __webpack_require__(157);
 	var SyntheticUIEvent = __webpack_require__(23);
-	var SyntheticWheelEvent = __webpack_require__(168);
+	var SyntheticWheelEvent = __webpack_require__(158);
 	
 	var emptyFunction = __webpack_require__(7);
-	var getEventCharCode = __webpack_require__(41);
+	var getEventCharCode = __webpack_require__(42);
 	var invariant = __webpack_require__(1);
 	
 	/**
@@ -20196,7 +19008,7 @@
 	module.exports = SimpleEventPlugin;
 
 /***/ },
-/* 159 */
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20239,7 +19051,7 @@
 	module.exports = SyntheticAnimationEvent;
 
 /***/ },
-/* 160 */
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20281,7 +19093,7 @@
 	module.exports = SyntheticClipboardEvent;
 
 /***/ },
-/* 161 */
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20321,7 +19133,7 @@
 	module.exports = SyntheticCompositionEvent;
 
 /***/ },
-/* 162 */
+/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20361,7 +19173,7 @@
 	module.exports = SyntheticDragEvent;
 
 /***/ },
-/* 163 */
+/* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20401,7 +19213,7 @@
 	module.exports = SyntheticFocusEvent;
 
 /***/ },
-/* 164 */
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20442,7 +19254,7 @@
 	module.exports = SyntheticInputEvent;
 
 /***/ },
-/* 165 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20459,9 +19271,9 @@
 	
 	var SyntheticUIEvent = __webpack_require__(23);
 	
-	var getEventCharCode = __webpack_require__(41);
-	var getEventKey = __webpack_require__(173);
-	var getEventModifierState = __webpack_require__(42);
+	var getEventCharCode = __webpack_require__(42);
+	var getEventKey = __webpack_require__(163);
+	var getEventModifierState = __webpack_require__(43);
 	
 	/**
 	 * @interface KeyboardEvent
@@ -20530,7 +19342,7 @@
 	module.exports = SyntheticKeyboardEvent;
 
 /***/ },
-/* 166 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20547,7 +19359,7 @@
 	
 	var SyntheticUIEvent = __webpack_require__(23);
 	
-	var getEventModifierState = __webpack_require__(42);
+	var getEventModifierState = __webpack_require__(43);
 	
 	/**
 	 * @interface TouchEvent
@@ -20579,7 +19391,7 @@
 	module.exports = SyntheticTouchEvent;
 
 /***/ },
-/* 167 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20622,7 +19434,7 @@
 	module.exports = SyntheticTransitionEvent;
 
 /***/ },
-/* 168 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20680,7 +19492,7 @@
 	module.exports = SyntheticWheelEvent;
 
 /***/ },
-/* 169 */
+/* 159 */
 /***/ function(module, exports) {
 
 	/**
@@ -20728,7 +19540,7 @@
 	module.exports = adler32;
 
 /***/ },
-/* 170 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20811,7 +19623,7 @@
 	module.exports = dangerousStyleValue;
 
 /***/ },
-/* 171 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20875,7 +19687,7 @@
 	module.exports = findDOMNode;
 
 /***/ },
-/* 172 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -20891,7 +19703,7 @@
 	
 	'use strict';
 	
-	var KeyEscapeUtils = __webpack_require__(35);
+	var KeyEscapeUtils = __webpack_require__(36);
 	var traverseAllChildren = __webpack_require__(76);
 	var warning = __webpack_require__(2);
 	
@@ -20953,10 +19765,10 @@
 	}
 	
 	module.exports = flattenChildren;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(31)))
 
 /***/ },
-/* 173 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20971,7 +19783,7 @@
 	
 	'use strict';
 	
-	var getEventCharCode = __webpack_require__(41);
+	var getEventCharCode = __webpack_require__(42);
 	
 	/**
 	 * Normalization of deprecated HTML5 `key` values
@@ -21062,7 +19874,7 @@
 	module.exports = getEventKey;
 
 /***/ },
-/* 174 */
+/* 164 */
 /***/ function(module, exports) {
 
 	/**
@@ -21107,7 +19919,7 @@
 	module.exports = getIteratorFn;
 
 /***/ },
-/* 175 */
+/* 165 */
 /***/ function(module, exports) {
 
 	/**
@@ -21185,7 +19997,7 @@
 	module.exports = getNodeForCharacterOffset;
 
 /***/ },
-/* 176 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21290,7 +20102,7 @@
 	module.exports = getVendorPrefixedEventName;
 
 /***/ },
-/* 177 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21320,7 +20132,7 @@
 	module.exports = quoteAttributeValueForBrowser;
 
 /***/ },
-/* 178 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21340,7 +20152,7 @@
 	module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ },
-/* 179 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21353,7 +20165,7 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(49);
+	var _react = __webpack_require__(50);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -21576,11 +20388,11 @@
 	exports.default = MonacoEditor;
 
 /***/ },
-/* 180 */
-35,
-/* 181 */
-[219, 18],
-/* 182 */
+/* 170 */
+36,
+/* 171 */
+[220, 18],
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21595,11 +20407,11 @@
 	
 	'use strict';
 	
-	var PooledClass = __webpack_require__(181);
+	var PooledClass = __webpack_require__(171);
 	var ReactElement = __webpack_require__(17);
 	
 	var emptyFunction = __webpack_require__(7);
-	var traverseAllChildren = __webpack_require__(192);
+	var traverseAllChildren = __webpack_require__(182);
 	
 	var twoArgumentPooler = PooledClass.twoArgumentPooler;
 	var fourArgumentPooler = PooledClass.fourArgumentPooler;
@@ -21775,7 +20587,7 @@
 	module.exports = ReactChildren;
 
 /***/ },
-/* 183 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21793,10 +20605,10 @@
 	var _prodInvariant = __webpack_require__(18),
 	    _assign = __webpack_require__(4);
 	
-	var ReactComponent = __webpack_require__(47);
+	var ReactComponent = __webpack_require__(48);
 	var ReactElement = __webpack_require__(17);
-	var ReactPropTypeLocationNames = __webpack_require__(185);
-	var ReactNoopUpdateQueue = __webpack_require__(48);
+	var ReactPropTypeLocationNames = __webpack_require__(175);
+	var ReactNoopUpdateQueue = __webpack_require__(49);
 	
 	var emptyObject = __webpack_require__(19);
 	var invariant = __webpack_require__(1);
@@ -22502,7 +21314,7 @@
 	module.exports = ReactClass;
 
 /***/ },
-/* 184 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22676,7 +21488,7 @@
 	module.exports = ReactDOMFactories;
 
 /***/ },
-/* 185 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22705,7 +21517,7 @@
 	module.exports = ReactPropTypeLocationNames;
 
 /***/ },
-/* 186 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22728,7 +21540,7 @@
 	module.exports = factory(isValidElement);
 
 /***/ },
-/* 187 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22745,8 +21557,8 @@
 	
 	var _assign = __webpack_require__(4);
 	
-	var ReactComponent = __webpack_require__(47);
-	var ReactNoopUpdateQueue = __webpack_require__(48);
+	var ReactComponent = __webpack_require__(48);
+	var ReactNoopUpdateQueue = __webpack_require__(49);
 	
 	var emptyObject = __webpack_require__(19);
 	
@@ -22774,11 +21586,11 @@
 	module.exports = ReactPureComponent;
 
 /***/ },
-/* 188 */
-155,
-/* 189 */
-174,
-/* 190 */
+/* 178 */
+145,
+/* 179 */
+164,
+/* 180 */
 /***/ function(module, exports) {
 
 	/**
@@ -22803,7 +21615,7 @@
 	module.exports = getNextDebugID;
 
 /***/ },
-/* 191 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22845,7 +21657,7 @@
 	module.exports = onlyChild;
 
 /***/ },
-/* 192 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22865,9 +21677,9 @@
 	var ReactCurrentOwner = __webpack_require__(11);
 	var REACT_ELEMENT_TYPE = __webpack_require__(78);
 	
-	var getIteratorFn = __webpack_require__(189);
+	var getIteratorFn = __webpack_require__(179);
 	var invariant = __webpack_require__(1);
-	var KeyEscapeUtils = __webpack_require__(180);
+	var KeyEscapeUtils = __webpack_require__(170);
 	var warning = __webpack_require__(2);
 	
 	var SEPARATOR = '.';
@@ -23025,7 +21837,7 @@
 	module.exports = traverseAllChildren;
 
 /***/ },
-/* 193 */
+/* 183 */
 /***/ function(module, exports) {
 
 	if (typeof Object.create === 'function') {
@@ -23054,7 +21866,7 @@
 
 
 /***/ },
-/* 194 */
+/* 184 */
 /***/ function(module, exports) {
 
 	module.exports = function isBuffer(arg) {
@@ -23065,7 +21877,7 @@
 	}
 
 /***/ },
-/* 195 */
+/* 185 */
 /***/ function(module, exports) {
 
 	(function(self) {
@@ -23529,18 +22341,18 @@
 
 
 /***/ },
-/* 196 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var bn = __webpack_require__(199);
-	var BemEntity = __webpack_require__(51);
-	var pascalCase = __webpack_require__(213);
+	var bn = __webpack_require__(201);
+	var BemEntity = __webpack_require__(80);
+	var pascalCase = __webpack_require__(218);
 	
-	var reactMappings = __webpack_require__(198);
-	var valToStr = __webpack_require__(50).valToStr;
-	var styleToObj = __webpack_require__(50).styleToObj;
+	var reactMappings = __webpack_require__(188);
+	var valToStr = __webpack_require__(51).valToStr;
+	var styleToObj = __webpack_require__(51).styleToObj;
 	
-	var plugins = __webpack_require__(197);
+	var plugins = __webpack_require__(187);
 	
 	function JSXNode(tag, props, children) {
 	    this.tag = tag || 'div';
@@ -23579,7 +22391,7 @@
 	
 	function Transformer(options) {
 	    this.plugins = [];
-	    this.use(plugins.defaultPlugins);
+	    this.use(plugins.defaultPlugins.map(plugin => plugin()));
 	    this.bemNaming = bn(options.naming || 'react');
 	}
 	
@@ -23695,34 +22507,52 @@
 
 
 /***/ },
-/* 197 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var styleToObj = __webpack_require__(50).styleToObj;
+	var helpers = __webpack_require__(51);
+	var styleToObj = helpers.styleToObj;
+	var valToStr = helpers.valToStr;
 	
-	module.exports.defaultPlugins = [
-	    function copyMods(jsx, bemjson) {
-	        bemjson.mods && Object.assign(jsx.props, bemjson.mods);
-	    },
-	    function copyCustomFields(jsx, bemjson) {
-	        var blackList = ['content', 'block', 'elem', 'mods', 'tag', 'js'];
+	module.exports.copyMods = () => function copyMods(jsx, bemjson) {
+	    bemjson.mods && Object.assign(jsx.props, bemjson.mods);
+	};
 	
-	        Object.keys(bemjson).forEach(k => {
-	            if(~blackList.indexOf(k)) { return; }
-	            if(k === 'attrs') {
-	                bemjson[k]['style'] && (jsx.props['style'] = bemjson[k]['style']);
-	            }
+	module.exports.copyCustomFields = () => function copyCustomFields(jsx, bemjson) {
+	    var blackList = ['content', 'block', 'elem', 'mods', 'tag', 'js'];
 	
-	            jsx.props[k] = bemjson[k];
-	        });
-	    },
-	    function stylePropToObj(jsx) {
-	        if (jsx.props['style']) {
-	            jsx.props['style'] = styleToObj(jsx.props['style'])
-	            jsx.props['attrs'] &&
-	                (jsx.props['attrs']['style'] = jsx.props['style']);
+	    Object.keys(bemjson).forEach(k => {
+	        if(~blackList.indexOf(k)) { return; }
+	        if(k === 'attrs') {
+	            bemjson[k]['style'] && (jsx.props['style'] = bemjson[k]['style']);
+	        }
+	
+	        jsx.props[k] = bemjson[k];
+	    });
+	};
+	
+	module.exports.stylePropToObj = () => function stylePropToObj(jsx) {
+	    if (jsx.props['style']) {
+	        jsx.props['style'] = styleToObj(jsx.props['style'])
+	        jsx.props['attrs'] &&
+	            (jsx.props['attrs']['style'] = jsx.props['style']);
+	    }
+	};
+	
+	module.exports.keepWhiteSpaces = () => function keepWhiteSpaces(jsx) {
+	    if (jsx.isText) {
+	        if (jsx.simpleText[0] === ' ' || jsx.simpleText[jsx.simpleText.length - 1] === ' ') {
+	            // wrap to {} to keep spaces
+	            jsx.simpleText = `{${valToStr(jsx.simpleText)}}`;
 	        }
 	    }
+	};
+	
+	module.exports.defaultPlugins = [
+	    module.exports.keepWhiteSpaces,
+	    module.exports.copyMods,
+	    module.exports.copyCustomFields,
+	    module.exports.stylePropToObj
 	];
 	
 	module.exports.whiteList = function(options) {
@@ -23739,7 +22569,7 @@
 
 
 /***/ },
-/* 198 */
+/* 188 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -23881,27 +22711,1345 @@
 
 
 /***/ },
+/* 189 */
+/***/ function(module, exports, __webpack_require__) {
+
+	const util = __webpack_require__(29);
+	
+	const deprecate = __webpack_require__(211)('@bem/entity-name');
+	
+	/**
+	 * Logs deprecation messages.
+	 *
+	 * @param {object} obj
+	 * @param {string} deprecateName
+	 * @param {string} newName
+	 */
+	module.exports = (obj, deprecateName, newName) => {
+	    const objStr = util.inspect(obj, { depth: 1 });
+	    const message = [
+	        `\`${deprecateName}\` is kept just for compatibility and can be dropped in the future.`,
+	        `Use \`${newName}\` instead in \`${objStr}\` at`
+	    ].join(' ');
+	
+	    deprecate(message);
+	};
+
+
+/***/ },
+/* 190 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	const util = __webpack_require__(29);
+	
+	const stringifyEntity = __webpack_require__(192).stringify;
+	
+	const deprecate = __webpack_require__(189);
+	const EntityTypeError = __webpack_require__(191);
+	
+	/**
+	 * Enum for types of BEM entities.
+	 *
+	 * @readonly
+	 * @enum {string}
+	 */
+	const TYPES = {
+	    BLOCK:     'block',
+	    BLOCK_MOD: 'blockMod',
+	    ELEM:      'elem',
+	    ELEM_MOD:  'elemMod'
+	};
+	
+	class BemEntityName {
+	    /**
+	     * @param {BEMSDK.EntityName.Options} obj — representation of entity name.
+	     */
+	    constructor(obj) {
+	        if (!obj.block) {
+	            throw new EntityTypeError(obj, 'the field `block` is undefined');
+	        }
+	
+	        obj.modName && deprecate(obj, 'modName', 'mod.name');
+	        obj.modVal && deprecate(obj, 'modVal', 'mod.val');
+	
+	        const data = this._data = { block: obj.block };
+	
+	        obj.elem && (data.elem = obj.elem);
+	
+	        const modObj = obj.mod;
+	        const modName = (typeof modObj === 'string' ? modObj : modObj && modObj.name) || obj.modName;
+	        const hasModVal = modObj && modObj.hasOwnProperty('val') || obj.hasOwnProperty('modVal');
+	
+	        if (modName) {
+	            data.mod = {
+	                name: modName,
+	                val: hasModVal ? modObj && modObj.val || obj.modVal : true
+	            };
+	        } else if (modObj || hasModVal) {
+	            throw new EntityTypeError(obj, 'the field `mod.name` is undefined');
+	        }
+	
+	        this.__isBemEntityName__ = true;
+	    }
+	
+	    /**
+	     * Returns the name of block to which this entity belongs.
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button' });
+	     *
+	     * name.block; // button
+	     *
+	     * @returns {BEMSDK.EntityName.BlockName} name of entity block.
+	     */
+	    get block() { return this._data.block; }
+	
+	    /**
+	     * Returns the element name of this entity.
+	     *
+	     * If entity is not element or modifier of element then returns empty string.
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button', elem: 'text' });
+	     *
+	     * name.elem; // text
+	     *
+	     * @returns {?BEMSDK.EntityName.ElementName} - name of entity element.
+	     */
+	    get elem() { return this._data.elem; }
+	
+	    /**
+	     * Returns the modifier of this entity.
+	     *
+	     * Important: If entity is not a modifier then returns `undefined`.
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     *
+	     * const blockName = new BemEntityName({ block: 'button' });
+	     * const modName = new BemEntityName({ block: 'button', mod: 'disabled' });
+	     *
+	     * modName.mod;   // { name: 'disabled', val: true }
+	     * blockName.mod; // undefined
+	     *
+	     * @returns {?BEMSDK.EntityName.Modifier} - entity modifier.
+	     */
+	    get mod() { return this._data.mod; }
+	
+	    /**
+	     * Returns the modifier name of this entity.
+	     *
+	     * If entity is not modifier then returns `undefined`.
+	     *
+	     * @returns {?BEMSDK.EntityName.ModifierName} - entity modifier name.
+	     * @deprecated use {@link BemEntityName#mod.name}
+	     */
+	    get modName() {
+	        deprecate(this, 'modName', 'mod.name');
+	
+	        return this.mod && this.mod.name;
+	    }
+	
+	    /**
+	     * Returns the modifier value of this entity.
+	     *
+	     * If entity is not modifier then returns `undefined`.
+	     *
+	     * @returns {?BEMSDK.EntityName.ModifierValue} - entity modifier name.
+	     * @deprecated use {@link BemEntityName#mod.val}
+	     */
+	    get modVal() {
+	        deprecate(this, 'modVal', 'mod.val');
+	
+	        return this.mod && this.mod.val;
+	    }
+	
+	    /**
+	     * Returns type for this entity.
+	     *
+	     * @example <caption>type of element</caption>
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button', elem: 'text' });
+	     *
+	     * name.type; // elem
+	     *
+	     * @example <caption>type of element modifier</caption>
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'menu', elem: 'item', mod: 'current' });
+	     *
+	     * name.type; // elemMod
+	     *
+	     * @returns {BEMSDK.EntityName.Type} - type of entity.
+	     */
+	    get type() {
+	        if (this._type) { return this._type; }
+	
+	        const data = this._data;
+	        const isMod = data.mod;
+	
+	        this._type = data.elem
+	            ? isMod ? TYPES.ELEM_MOD : TYPES.ELEM
+	            : isMod ? TYPES.BLOCK_MOD : TYPES.BLOCK;
+	
+	        return this._type;
+	    }
+	
+	    /**
+	     * Returns scope of this entity.
+	     *
+	     * Important: block-typed entities has no scope.
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     *
+	     * const buttonName = new BemEntityName({ block: 'button' });
+	     * const buttonTextName = new BemEntityName({ block: 'button', elem: 'text' });
+	     * const buttonTextBoldName = new BemEntityName({ block: 'button', elem: 'text', mod: 'bold' });
+	     *
+	     * buttonName.scope;         // null
+	     * buttonTextName.scope;     // BemEntityName { block: 'button' }
+	     * buttonTextBoldName.scope; // BemEntityName { block: 'button', elem: 'elem' }
+	     *
+	     * @returns {(BemEntityName|null)} - scope entity name.
+	     */
+	    get scope() {
+	        if (this.type === TYPES.BLOCK) { return null; }
+	        if (this._scope) { return this._scope; }
+	
+	        this._scope = new BemEntityName({
+	            block: this.block,
+	            elem: this.type === TYPES.ELEM_MOD && this.elem
+	        });
+	
+	        return this._scope;
+	    }
+	
+	    /**
+	     * Returns id for this entity.
+	     *
+	     * Important: should only be used to determine uniqueness of entity.
+	     *
+	     * If you want to get string representation in accordance with the provisions naming convention
+	     * you should use `@bem/naming` package.
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button', mod: 'disabled' });
+	     *
+	     * name.id; // button_disabled
+	     *
+	     * @returns {BEMSDK.EntityName.Id} - id of entity.
+	     */
+	    get id() {
+	        if (this._id) { return this._id; }
+	
+	        this._id = stringifyEntity(this._data);
+	
+	        return this._id;
+	    }
+	
+	    /**
+	     * Determines whether modifier simple or not
+	     *
+	     * @example <caption>simple mod</caption>
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button', mod: { name: 'theme' } });
+	     *
+	     * name.isSimpleMod(); // true
+	     *
+	     * @example <caption>mod with value</caption>
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button', mod: { name: 'theme', val: 'normal' } });
+	     *
+	     * name.isSimpleMod(); // false
+	     *
+	     * @example <caption>block</caption>
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button' });
+	     *
+	     * name.isSimpleMod(); // null
+	     *
+	     * @returns {(boolean|null)}
+	     */
+	    isSimpleMod() {
+	        return this.mod ? this.mod.val === true : null;
+	    }
+	
+	    /**
+	     * Determines whether specified entity is the deepEqual entity.
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     *
+	     * const inputName = new BemEntityName({ block: 'input' });
+	     * const buttonName = new BemEntityName({ block: 'button' });
+	     *
+	     * inputName.isEqual(buttonName); // false
+	     * buttonName.isEqual(buttonName); // true
+	     *
+	     * @param {BemEntityName} entityName - the entity to compare.
+	     * @returns {boolean} - A Boolean indicating whether or not specified entity is the deepEqual entity.
+	     */
+	    isEqual(entityName) {
+	        return entityName && (this.id === entityName.id);
+	    }
+	
+	    /**
+	     * Determines whether specified entity belongs to this.
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     *
+	     * const buttonName = new BemEntityName({ block: 'button' });
+	     * const buttonTextName = new BemEntityName({ block: 'button', elem: 'text' });
+	     * const buttonTextBoldName = new BemEntityName({ block: 'button', elem: 'text', mod: 'bold' });
+	     *
+	     * buttonTextName.belongsTo(buttonName); // true
+	     * buttonName.belongsTo(buttonTextName); // false
+	     *
+	     * buttonTextBoldName.belongsTo(buttonTextName); // true
+	     * buttonTextBoldName.belongsTo(buttonName); // false
+	     *
+	     * @param {BemEntityName} entityName - the entity to compare.
+	     *
+	     * @returns {boolean}
+	     */
+	    belongsTo(entityName) {
+	        if (entityName.block !== this.block) { return false; }
+	
+	        return entityName.type === TYPES.BLOCK && (this.type === TYPES.BLOCK_MOD || this.type === TYPES.ELEM)
+	            || entityName.elem === this.elem && (entityName.type === TYPES.ELEM && this.type === TYPES.ELEM_MOD);
+	    }
+	
+	    /**
+	     * Returns normalized object representing the entity name.
+	     *
+	     * In some browsers `console.log()` calls `valueOf()` on each argument.
+	     * This method will be called to get custom string representation of the object.
+	     *
+	     * The representation object contains only `block`, `elem` and `mod` fields
+	     * without private and deprecated fields (`modName` and `modVal`).
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button', mod: 'focused' });
+	     *
+	     * name.valueOf();
+	     *
+	     * // ➜ { block: 'button', mod: { name: 'focused', value: true } }
+	     *
+	     * @returns {BEMSDK.EntityName.Representation}
+	     */
+	    valueOf() { return this._data; }
+	
+	    /**
+	     * Returns raw data for `JSON.stringify()` purposes.
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     *
+	     * const name = new BemEntityName({ block: 'input', mod: 'available' });
+	     *
+	     * JSON.stringify(name); // {"block":"input","mod":{"name":"available","val":true}}
+	     *
+	     * @returns {BEMSDK.EntityName.Representation}
+	     */
+	    toJSON() {
+	        return this._data;
+	    }
+	
+	    /**
+	     * Returns string representing the entity name.
+	     *
+	     * Important: If you want to get string representation in accordance with the provisions naming convention
+	     * you should use `@bem/naming` package.
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button', mod: 'focused' });
+	     *
+	     * name.toString(); // button_focused
+	     *
+	     * @returns {string}
+	     */
+	    toString() { return this.id; }
+	
+	    /**
+	     * Returns object representing the entity name. Is needed for debug in Node.js.
+	     *
+	     * In Node.js, `console.log()` calls `util.inspect()` on each argument without a formatting placeholder.
+	     * This method will be called to get custom string representation of the object.
+	     *
+	     * The representation object contains only `block`, `elem` and `mod` fields
+	     * without private and deprecated fields (`modName` and `modVal`).
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button' });
+	     *
+	     * console.log(name); // BemEntityName { block: 'button' }
+	     *
+	     * @param {number} depth — tells inspect how many times to recurse while formatting the object.
+	     * @param {object} options — An optional `options` object may be passed
+	     *   that alters certain aspects of the formatted string.
+	     *
+	     * @returns {string}
+	     */
+	    inspect(depth, options) {
+	        const stringRepresentation = util.inspect(this._data, options);
+	
+	        return `BemEntityName ${stringRepresentation}`;
+	    }
+	
+	    /**
+	     * Creates BemEntityName instance by any object representation.
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     *
+	     * BemEntityName.create({ block: 'my-button', mod: 'theme', val: 'red' });
+	     * BemEntityName.create({ block: 'my-button', modName: 'theme', modVal: 'red' });
+	     * // → BemEntityName { block: 'my-button', mod: { name: 'theme', val: 'red' } }
+	     *
+	     * @param {(BEMSDK.EntityName.CreateOptions|string)} obj — representation of entity name.
+	     * @returns {BemEntityName} An object representing entity name.
+	     */
+	    static create(obj) {
+	        if (BemEntityName.isBemEntityName(obj)) {
+	            return obj;
+	        }
+	
+	        if (typeof obj === 'string') {
+	            obj = { block: obj };
+	        }
+	
+	        const data = { block: obj.block };
+	        const mod = obj.mod;
+	
+	        obj.elem && (data.elem = obj.elem);
+	
+	        if (mod || obj.modName) {
+	            const isString = typeof mod === 'string';
+	            const modName = (isString ? mod : mod && mod.name) || obj.modName;
+	            const modObj = !isString && mod || obj;
+	            const hasModVal = modObj.hasOwnProperty('val') || obj.hasOwnProperty('modVal');
+	
+	            data.mod = {
+	                name: modName,
+	                val: hasModVal ? modObj.val || obj.modVal : true
+	            };
+	        }
+	
+	        return new BemEntityName(data);
+	    }
+	
+	    /**
+	     * Determines whether specified entity is instance of BemEntityName.
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     *
+	     * const entityName = new BemEntityName({ block: 'input' });
+	     *
+	     * BemEntityName.isBemEntityName(entityName); // true
+	     * BemEntityName.isBemEntityName({}); // false
+	     *
+	     * @param {*} entityName - the entity to check.
+	     * @returns {boolean} A Boolean indicating whether or not specified entity is instance of BemEntityName.
+	     */
+	    static isBemEntityName(entityName) {
+	        return entityName && entityName.__isBemEntityName__;
+	    }
+	}
+	
+	module.exports = BemEntityName;
+	
+	// TypeScript imports the `default` property for
+	// an ES2015 default import (`import BemEntityName from '@bem/entity-name'`)
+	// See: https://github.com/Microsoft/TypeScript/issues/2242#issuecomment-83694181
+	module.exports.default = BemEntityName;
+
+
+/***/ },
+/* 191 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	const util = __webpack_require__(29);
+	
+	const ExtendableError = __webpack_require__(212);
+	
+	/**
+	 * The EntityTypeError object represents an error when a value is not valid BEM entity.
+	 */
+	module.exports = class EntityTypeError extends ExtendableError {
+	    /**
+	     * @param {*} obj — not valid object
+	     * @param {string} [reason] — human-readable reason why object is not valid
+	     */
+	    constructor(obj, reason) {
+	        const str = util.inspect(obj, { depth: 1 });
+	        const type = obj ? typeof obj : '';
+	        const message = `the ${type} \`${str}\` is not valid BEM entity`;
+	
+	        super(reason ? `${message}, ${reason}` : message);
+	    }
+	};
+
+
+/***/ },
+/* 192 */
+[221, 193],
+/* 193 */
+[222, 195, 194, 196],
+/* 194 */
+[223, 200],
+/* 195 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	/**
+	 * Forms a string according to object representation of BEM entity.
+	 *
+	 * @param {Object|BemEntityName} entity - object representation of BEM entity.
+	 * @param {BemNamingDelims} delims - separates entity names from each other.
+	 * @returns {String}
+	 */
+	function stringify(entity, delims) {
+	    if (!entity || !entity.block) {
+	        return undefined;
+	    }
+	
+	    let res = entity.block;
+	
+	    if (entity.elem) {
+	        res += delims.elem + entity.elem;
+	    }
+	
+	    const modObj = entity.mod;
+	    const modName = (typeof modObj === 'string' ? modObj : modObj && modObj.name) || entity.modName;
+	
+	    if (modName) {
+	        const hasModVal = modObj && modObj.hasOwnProperty('val') || entity.hasOwnProperty('modVal');
+	        const modVal = modObj && modObj.val || entity.modVal;
+	
+	        if (modVal || modVal === 0 || !hasModVal) {
+	            res += delims.mod.name + modName;
+	        }
+	
+	        if (modVal && modVal !== true) {
+	            res += delims.mod.val + modVal;
+	        }
+	    }
+	
+	    return res;
+	}
+	
+	/**
+	 * Creates `stringify` function for specified naming convention.
+	 *
+	 * @param {BemNamingConvention} convention - options for naming convention.
+	 * @returns {Function}
+	 */
+	module.exports = (convention) => {
+	    return (entity) => stringify(entity, convention.delims);
+	};
+
+
+/***/ },
+/* 196 */
+[224, 197, 198, 199],
+/* 197 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	module.exports = {
+	    delims: {
+	        elem: '__',
+	        mod: { name: '_', val: '_' }
+	    },
+	    wordPattern: '[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*'
+	};
+
+
+/***/ },
+/* 198 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	module.exports = {
+	    delims: {
+	        elem: '-',
+	        mod: { name: '_', val: '_' }
+	    },
+	    wordPattern: '[a-zA-Z0-9]+'
+	};
+
+
+/***/ },
 /* 199 */
-[215, 200],
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	module.exports = {
+	    delims: {
+	        elem: '__',
+	        mod: { name: '--', val: '_' }
+	    },
+	    wordPattern: '[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*'
+	};
+
+
+/***/ },
 /* 200 */
-[216, 202, 201, 203],
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	const util = __webpack_require__(29);
+	
+	const stringifyEntity = __webpack_require__(209).stringify;
+	
+	/**
+	 * Enum for types of BEM entities.
+	 *
+	 * @readonly
+	 * @enum {String}
+	 */
+	const TYPES = {
+	    BLOCK:     'block',
+	    BLOCK_MOD: 'blockMod',
+	    ELEM:      'elem',
+	    ELEM_MOD:  'elemMod'
+	};
+	
+	module.exports = class BemEntityName {
+	    /**
+	     * @param {object} obj — representation of entity name.
+	     * @param {string} obj.block  — the block name of entity.
+	     * @param {string} [obj.elem] — the element name of entity.
+	     * @param {object} [obj.mod] — the modifier of entity.
+	     * @param {string} obj.mod.name — the modifier name of entity.
+	     * @param {string} [obj.mod.val] — the modifier value of entity.
+	     * @param {string} [obj.modName] — the modifier name of entity. Used if `mod.name` wasn't specified.
+	     * @param {string} [obj.modVal] — the modifier value of entity.
+	     *   Used if neither `mod.val` nor `val` were not specified.
+	     */
+	    constructor(obj) {
+	        if (!obj.block) {
+	             throw new Error('This is not valid BEM entity: the field `block` is undefined.');
+	        }
+	
+	        const data = this._data = { block: obj.block };
+	
+	        obj.elem && (data.elem = obj.elem);
+	
+	        const modObj = obj.mod;
+	        const modName = (typeof modObj === 'string' ? modObj : modObj && modObj.name) || obj.modName;
+	        const hasModVal = modObj && modObj.hasOwnProperty('val') || obj.hasOwnProperty('modVal');
+	
+	        if (modName) {
+	            data.mod = {
+	                name: modName,
+	                val: hasModVal ? modObj && modObj.val || obj.modVal : true
+	            };
+	        } else if (modObj || hasModVal) {
+	            throw new Error('This is not valid BEM entity: the field `mod.name` is undefined.');
+	        }
+	
+	        this.__isBemEntityName__ = true;
+	    }
+	
+	    /**
+	     * Returns the name of block to which this entity belongs.
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button' });
+	     *
+	     * name.block; // button
+	     *
+	     * @returns {string} name of entity block.
+	     */
+	    get block() { return this._data.block; }
+	
+	    /**
+	     * Returns the element name of this entity.
+	     *
+	     * If entity is not element or modifier of element then returns empty string.
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button', elem: 'text' });
+	     *
+	     * name.elem; // text
+	     *
+	     * @returns {string|undefined} - name of entity element.
+	     */
+	    get elem() { return this._data.elem; }
+	
+	    /**
+	     * Returns the modifier of this entity.
+	     *
+	     * Important: If entity is not a modifier then returns `undefined`.
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     *
+	     * const blockName = new BemEntityName({ block: 'button' });
+	     * const modName = new BemEntityName({ block: 'button', mod: 'disabled' });
+	     *
+	     * modName.mod;   // { name: 'disabled', val: true }
+	     * blockName.mod; // undefined
+	     *
+	     * @returns {{mod: string, val: (string|true)}|undefined} - entity modifier.
+	     */
+	    get mod() { return this._data.mod; }
+	
+	    /**
+	     * Returns the modifier name of this entity.
+	     *
+	     * If entity is not modifier then returns `undefined`.
+	     *
+	     * @returns {string|undefined} - entity modifier name.
+	     * @deprecated - use `mod.name` instead.
+	     */
+	    get modName() { return this.mod && this.mod.name; }
+	
+	    /**
+	     * Returns the modifier value of this entity.
+	     *
+	     * If entity is not modifier then returns `undefined`.
+	     *
+	     * @returns {string|undefined} - entity modifier name.
+	     * @deprecated - use `mod.val` instead.
+	     */
+	    get modVal() { return this.mod && this.mod.val; }
+	
+	    /**
+	     * Returns id for this entity.
+	     *
+	     * Important: should only be used to determine uniqueness of entity.
+	     *
+	     * If you want to get string representation in accordance with the provisions naming convention
+	     * you should use `bem-naming` package.
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button', mod: 'disabled' });
+	     *
+	     * name.id; // button_disabled
+	     *
+	     * @returns {string} - id of entity.
+	     */
+	    get id() {
+	        if (this._id) { return this._id; }
+	
+	        const entity = { block: this._data.block };
+	
+	        this.elem && (entity.elem = this.elem);
+	        this.modName && (entity.modName = this.modName);
+	        this.modVal && (entity.modVal = this.modVal);
+	
+	        this._id = stringifyEntity(entity);
+	
+	        return this._id;
+	    }
+	
+	    /**
+	     * Returns type for this entity.
+	     *
+	     * @example <caption>type of element</caption>
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button', elem: 'text' });
+	     *
+	     * name.type; // elem
+	     *
+	     * @example <caption>type of element modifier</caption>
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'menu', elem: 'item', mod: 'current' });
+	     *
+	     * name.type; // elemMod
+	     *
+	     * @returns {string} - type of entity. One of 'block', 'elem', 'blockMod', 'elemMod'.
+	     */
+	    get type() {
+	        if (this._type) { return this._type; }
+	
+	        const data = this._data;
+	        const isMod = data.mod;
+	
+	        this._type = data.elem
+	            ? isMod ? TYPES.ELEM_MOD : TYPES.ELEM
+	            : isMod ? TYPES.BLOCK_MOD : TYPES.BLOCK;
+	
+	        return this._type;
+	    }
+	
+	    /**
+	     * Determines whether modifier simple or not
+	     *
+	     * @example <caption>simple mod</caption>
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button', mod: { name: 'theme' } });
+	     *
+	     * name.isSimpleMod(); // true
+	     *
+	     * @example <caption>mod with value</caption>
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button', mod: { name: 'theme', val: 'normal' } });
+	     *
+	     * name.isSimpleMod(); // false
+	     *
+	     * @example <caption>block</caption>
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button' });
+	     *
+	     * name.isSimpleMod(); // null
+	     *
+	     * @returns {boolean|null}
+	     */
+	    isSimpleMod() {
+	        return this.mod ? this.mod.val === true : null;
+	    }
+	
+	    /**
+	     * Returns string representing the entity name.
+	     *
+	     * Important: If you want to get string representation in accordance with the provisions naming convention
+	     * you should use `bem-naming` package.
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button', mod: 'focused' });
+	     *
+	     * name.toString(); // button_focused
+	     *
+	     * @returns {string}
+	     */
+	    toString() { return this.id; }
+	
+	    /**
+	     * Returns object representing the entity name. Is needed for debug in Node.js.
+	     *
+	     * In some browsers `console.log()` calls `valueOf()` on each argument.
+	     * This method will be called to get custom string representation of the object.
+	     *
+	     * The representation object contains only `block`, `elem` and `mod` fields
+	     * without private and deprecated fields (`modName` and `modVal`).
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button', mod: 'focused' });
+	     *
+	     * name.valueOf();
+	     *
+	     * // ➜ { block: 'button', mod: { name: 'focused', value: true } }
+	     *
+	     * @returns {{block: string, elem: (string|undefined), mod: ({name: string, val: (string|true)}|undefined)}}
+	     */
+	    valueOf() { return this._data; }
+	
+	    /**
+	     * Returns object representing the entity name. Is needed for debug in Node.js.
+	     *
+	     * In Node.js, `console.log()` calls `util.inspect()` on each argument without a formatting placeholder.
+	     * This method will be called to get custom string representation of the object.
+	     *
+	     * The representation object contains only `block`, `elem` and `mod` fields
+	     * without private and deprecated fields (`modName` and `modVal`).
+	     *
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     * const name = new BemEntityName({ block: 'button' });
+	     *
+	     * console.log(name); // BemEntityName { block: 'button' }
+	     *
+	     * @param {number} depth — tells inspect how many times to recurse while formatting the object.
+	     * @param {object} options — An optional `options` object may be passed
+	     *   that alters certain aspects of the formatted string.
+	     *
+	     * @returns {string}
+	     */
+	    inspect(depth, options) {
+	        const stringRepresentation = util.inspect(this._data, options);
+	
+	        return `BemEntityName ${stringRepresentation}`;
+	    }
+	
+	    /**
+	     * Return raw data for `JSON.stringify()`.
+	     *
+	     * @returns {{block: string, elem: (string|undefined),
+	     *   mod: ({name: string, val: (string|true|undefined)}|undefined)}}
+	     */
+	    toJSON() {
+	        return this._data;
+	    }
+	
+	    /**
+	     * Determines whether specified entity is the deepEqual entity.
+	     *
+	     * @param {BemEntityName} entityName - the entity to compare.
+	     *
+	     * @returns {boolean} - A Boolean indicating whether or not specified entity is the deepEqual entity.
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     *
+	     * const inputName = new BemEntityName({ block: 'input' });
+	     * const buttonName = new BemEntityName({ block: 'button' });
+	     *
+	     * inputName.isEqual(buttonName); // false
+	     * buttonName.isEqual(buttonName); // true
+	     */
+	    isEqual(entityName) {
+	        return entityName && (this.id === entityName.id);
+	    }
+	
+	    /**
+	     * Determines whether specified entity is instance of BemEntityName.
+	     *
+	     * @param {BemEntityName} entityName - the entity to check.
+	     *
+	     * @returns {boolean} A Boolean indicating whether or not specified entity is instance of BemEntityName.
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     *
+	     * const entityName = new BemEntityName({ block: 'input' });
+	     *
+	     * BemEntityName.isBemEntityName(entityName); // true
+	     * BemEntityName.isBemEntityName({}); // false
+	     */
+	    static isBemEntityName(entityName) {
+	        return entityName && entityName.__isBemEntityName__;
+	    }
+	
+	    /**
+	     * Creates BemEntityName instance by any object representation.
+	     *
+	     * @param {object} obj — representation of entity name.
+	     * @param {string} obj.block  — the block name of entity.
+	     * @param {string} [obj.elem] — the element name of entity.
+	     * @param {object|string} [obj.mod]  — the modifier of entity.
+	     * @param {string} [obj.val] - the modifier value of entity. Used if `obj.mod` is a string.
+	     * @param {string} obj.mod.name — the modifier name of entity.
+	     * @param {string} [obj.mod.val]  — the modifier value of entity.
+	     * @param {string} [obj.modName] — the modifier name of entity. Used if `obj.mod.name` wasn't specified.
+	     * @param {string} [obj.modVal]  — the modifier value of entity.
+	     *   Used if neither `obj.mod.val` nor `obj.val` were not specified.
+	     *
+	     * @returns {BemEntityName} An object representing entity name.
+	     * @example
+	     * const BemEntityName = require('@bem/entity-name');
+	     *
+	     * BemEntityName.create('my-button_theme_red');
+	     * BemEntityName.create({ block: 'my-button', mod: 'theme', val: 'red' });
+	     * BemEntityName.create({ block: 'my-button', modName: 'theme', modVal: 'red' });
+	     * // → BemEntityName { block: 'my-button', mod: { name: 'theme', val: 'red' } }
+	     */
+	    static create(obj) {
+	        if (BemEntityName.isBemEntityName(obj)) {
+	            return obj;
+	        }
+	
+	        const data = { block: obj.block };
+	        const mod = obj.mod;
+	
+	        obj.elem && (data.elem = obj.elem);
+	
+	        if (mod || obj.modName) {
+	            const isString = typeof mod === 'string';
+	            const modName = (isString ? mod : mod && mod.name) || obj.modName;
+	            const modObj = !isString && mod || obj;
+	            const hasModVal = modObj.hasOwnProperty('val') || obj.hasOwnProperty('modVal');
+	
+	            data.mod = {
+	                name: modName,
+	                val: hasModVal ? modObj.val || obj.modVal : true
+	            };
+	        }
+	
+	        return new BemEntityName(data);
+	    }
+	};
+
+
+/***/ },
 /* 201 */
-[217, 51],
+[221, 202],
 /* 202 */
-86,
+[222, 204, 203, 205],
 /* 203 */
-[218, 204, 205, 206],
+[223, 80],
 /* 204 */
-88,
+195,
 /* 205 */
-89,
+[224, 206, 207, 208],
 /* 206 */
-90,
+197,
 /* 207 */
+198,
+/* 208 */
+199,
+/* 209 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {'use strict';
+	
+	(function (global) {
+	/**
+	 * Enum for types of BEM entities.
+	 *
+	 * @readonly
+	 * @enum {String}
+	 */
+	var TYPES = {
+	    BLOCK:     'block',
+	    BLOCK_MOD: 'blockMod',
+	    ELEM:      'elem',
+	    ELEM_MOD:  'elemMod'
+	};
+	
+	/**
+	 * Defines which symbols can be used for block, element and modifier's names.
+	 * @readonly
+	 */
+	var WORD_PATTERN = '[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*';
+	
+	/**
+	 * Presets of options for various naming.
+	 * @readonly
+	 */
+	var presets = {
+	    origin: {
+	        delims: {
+	            elem: '__',
+	            mod: { name: '_', val: '_' }
+	        },
+	        wordPattern: WORD_PATTERN
+	    },
+	    'two-dashes': {
+	        delims: {
+	            elem: '__',
+	            mod: { name: '--', val: '_' }
+	        },
+	        wordPattern: WORD_PATTERN
+	    }
+	};
+	
+	/**
+	 * It is necessary not to create new instances for the same custom naming.
+	 * @readonly
+	 */
+	var cache = {};
+	
+	/**
+	 * Creates namespace with methods which allows getting information about BEM entity using string as well
+	 * as forming string representation based on naming object.
+	 *
+	 * @param {Object} [options]              Options.
+	 * @param {String} [options.elem=__]      Separates element's name from block.
+	 * @param {String|Object} [options.mod=_] Separates modifiers from blocks and elements.
+	 * @param {String} [options.mod.name=_]   Separates name of modifier from blocks and elements.
+	 * @param {String} [options.mod.val=_]    Separates value of modifier from name of modifier.
+	 * @param {String} [options.wordPattern]  Defines which symbols can be used for block, element and modifier's names.
+	 * @return {Object}
+	 */
+	function createNaming(options) {
+	    var opts = init(options),
+	        id = JSON.stringify(opts);
+	
+	    if (cache[id]) {
+	        return cache[id];
+	    }
+	
+	    var delims = opts.delims,
+	        regex = buildRegex(delims, opts.wordPattern);
+	
+	    /**
+	     * Checks a string to be valid BEM notation.
+	     *
+	     * @param {String} str - String representation of BEM entity.
+	     * @returns {Boolean}
+	     */
+	    function validate(str) {
+	        return regex.test(str);
+	    }
+	
+	    /**
+	     * Parses string into naming object.
+	     *
+	     * @param {String} str - string representation of BEM entity.
+	     * @returns {Object|undefined}
+	     */
+	    function parse(str) {
+	        var executed = regex.exec(str);
+	
+	        if (!executed) { return undefined; }
+	
+	        var notation = {
+	                block: executed[1] || executed[4]
+	            },
+	            elem = executed[5],
+	            modName = executed[2] || executed[6];
+	
+	        elem && (notation.elem = elem);
+	
+	        if (modName) {
+	            var modVal = executed[3] || executed[7];
+	
+	            notation.modName = modName;
+	            notation.modVal = modVal || true;
+	        }
+	
+	        return notation;
+	    }
+	
+	    /**
+	     * Forms a string according to naming object.
+	     *
+	     * @param {Object} obj - naming object
+	     * @returns {String}
+	     */
+	    function stringify(obj) {
+	        if (!obj || !obj.block) {
+	            return undefined;
+	        }
+	
+	        var res = obj.block;
+	
+	        if (obj.elem) {
+	            res += delims.elem + obj.elem;
+	        }
+	
+	        if (obj.modName) {
+	            var modVal = obj.modVal;
+	
+	            if (modVal || modVal === 0 || !obj.hasOwnProperty('modVal')) {
+	                res += delims.mod.name + obj.modName;
+	            }
+	
+	            if (modVal && modVal !== true) {
+	                res += delims.mod.val + modVal;
+	            }
+	        }
+	
+	        return res;
+	    }
+	
+	    /**
+	     * Returns a string indicating type of a BEM entity.
+	     *
+	     * @param {Object|String|undefined} obj - naming object or string representation of BEM entity.
+	     * @returns {String}
+	     */
+	    function typeOf(obj) {
+	        if (typeof obj === 'string') {
+	            obj = parse(obj);
+	        }
+	
+	        if (!obj || !obj.block) { return undefined; }
+	
+	        var modName = obj.modName,
+	            isMod = modName && (obj.modVal || !obj.hasOwnProperty('modVal'));
+	
+	        if (obj.elem) {
+	            if (isMod)    { return TYPES.ELEM_MOD; }
+	            if (!modName) { return TYPES.ELEM;     }
+	        }
+	
+	        if (isMod)    { return TYPES.BLOCK_MOD; }
+	        if (!modName) { return TYPES.BLOCK;     }
+	    }
+	
+	    /**
+	     * Checks whether naming object or string is a block.
+	     *
+	     * @param {Object|String} obj - naming object or string representation of BEM entity.
+	     * @returns {Boolean}
+	     */
+	    function isBlock(obj) {
+	        return typeOf(obj) === TYPES.BLOCK;
+	    }
+	
+	    /**
+	     * Checks whether naming object or string is modifier of a block.
+	     *
+	     * @param {Object|String} obj - naming object or string representation of BEM entity.
+	     * @returns {Boolean}
+	     */
+	    function isBlockMod(obj) {
+	        return typeOf(obj) === TYPES.BLOCK_MOD;
+	    }
+	
+	    /**
+	     * Checks whether naming object or string is element of a block.
+	     *
+	     * @param {Object|String} obj - naming object or string representation of BEM entity.
+	     * @returns {Boolean}
+	     */
+	    function isElem(obj) {
+	        return typeOf(obj) === TYPES.ELEM;
+	    }
+	
+	    /**
+	     * Checks whether naming object or string is element of a block.
+	     *
+	     * @param {Object|String} obj - naming object or string representation of BEM entity.
+	     * @returns {Boolean}
+	     */
+	    function isElemMod(obj) {
+	        return typeOf(obj) === TYPES.ELEM_MOD;
+	    }
+	
+	    var namespace = {
+	        validate: validate,
+	        typeOf: typeOf,
+	        isBlock: isBlock,
+	        isBlockMod: isBlockMod,
+	        isElem: isElem,
+	        isElemMod: isElemMod,
+	        parse: parse,
+	        stringify: stringify,
+	        /**
+	         * String to separate elem from block.
+	         *
+	         * @type {String}
+	         */
+	        elemDelim: delims.elem,
+	        /**
+	         * String to separate modifiers from blocks and elements.
+	         *
+	         * @type {String}
+	         */
+	        modDelim: delims.mod.name,
+	        /**
+	         * String to separate value of modifier from name of modifier.
+	         *
+	         * @type {String}
+	         */
+	        modValDelim: delims.mod.val
+	    };
+	
+	    cache[id] = namespace;
+	
+	    return namespace;
+	}
+	
+	/**
+	 * Returns delims and wordPattern.
+	 *
+	 * @param {Object} options - user options
+	 * @returns {{delims: Object, wordPattern: String}}
+	 */
+	function init(options) {
+	    options || (options = {});
+	
+	    if (typeof options === 'string') {
+	        var preset = presets[options];
+	
+	        if (!preset) {
+	            throw new Error('The `' + options + '` naming is unknown.');
+	        }
+	
+	        return preset;
+	    }
+	
+	    var defaults = presets.origin,
+	        defaultDelims = defaults.delims,
+	        defaultModDelims = defaultDelims.mod,
+	        mod = options.mod || defaultDelims.mod;
+	
+	    return {
+	        delims: {
+	            elem: options.elem || defaultDelims.elem,
+	            mod: typeof mod === 'string'
+	                ? { name: mod, val: mod }
+	                : {
+	                    name: mod.name || defaultModDelims.name,
+	                    val: mod.val || mod.name || defaultModDelims.val
+	                }
+	        },
+	        wordPattern: options.wordPattern || defaults.wordPattern
+	    };
+	}
+	
+	/**
+	 * Builds regex for specified naming.
+	 *
+	 * @param {Object} delims      Separates block names, elements and modifiers.
+	 * @param {String} wordPattern Defines which symbols can be used for block, element and modifier's names.
+	 * @returns {RegExp}
+	 */
+	function buildRegex(delims, wordPattern) {
+	    var block = '(' + wordPattern + ')',
+	        elem = '(?:' + delims.elem + '(' + wordPattern + '))?',
+	        modName = '(?:' + delims.mod.name + '(' + wordPattern + '))?',
+	        modVal = '(?:' + delims.mod.val + '(' + wordPattern + '))?',
+	        mod = modName + modVal;
+	
+	    return new RegExp('^' + block + mod + '$|^' + block + elem + mod + '$');
+	}
+	
+	var defineAsGlobal = true,
+	    api = [
+	        'validate', 'typeOf',
+	        'isBlock', 'isBlockMod', 'isElem', 'isElemMod',
+	        'parse', 'stringify',
+	        'elemDelim', 'modDelim', 'modValDelim'
+	    ],
+	    originalNaming = createNaming();
+	
+	api.forEach(function (name) {
+	    createNaming[name] = originalNaming[name];
+	});
+	
+	// Node.js
+	/* istanbul ignore if */
+	if (true) {
+	    module.exports = createNaming;
+	    defineAsGlobal = false;
+	}
+	
+	// YModules
+	/* istanbul ignore if */
+	if (typeof modules === 'object') {
+	    modules.define('bem-naming', function (provide) {
+	        provide(createNaming);
+	    });
+	    defineAsGlobal = false;
+	}
+	
+	// AMD
+	/* istanbul ignore if */
+	if (true) {
+	    !(__WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, module) {
+	        module.exports = createNaming;
+	    }.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	    defineAsGlobal = false;
+	}
+	
+	/* istanbul ignore next */
+	defineAsGlobal && (global.bemNaming = createNaming);
+	})(typeof window !== 'undefined' ? window : global);
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var upperCase = __webpack_require__(81)
-	var noCase = __webpack_require__(209)
+	var noCase = __webpack_require__(214)
 	
 	/**
 	 * Camel case a string.
@@ -23926,7 +24074,177 @@
 
 
 /***/ },
-/* 208 */
+/* 211 */
+/***/ function(module, exports) {
+
+	/*!
+	 * depd
+	 * Copyright(c) 2015 Douglas Christopher Wilson
+	 * MIT Licensed
+	 */
+	
+	'use strict'
+	
+	/**
+	 * Module exports.
+	 * @public
+	 */
+	
+	module.exports = depd
+	
+	/**
+	 * Create deprecate for namespace in caller.
+	 */
+	
+	function depd(namespace) {
+	  if (!namespace) {
+	    throw new TypeError('argument namespace is required')
+	  }
+	
+	  function deprecate(message) {
+	    // no-op in browser
+	  }
+	
+	  deprecate._file = undefined
+	  deprecate._ignored = true
+	  deprecate._namespace = namespace
+	  deprecate._traced = false
+	  deprecate._warned = Object.create(null)
+	
+	  deprecate.function = wrapfunction
+	  deprecate.property = wrapproperty
+	
+	  return deprecate
+	}
+	
+	/**
+	 * Return a wrapped function in a deprecation message.
+	 *
+	 * This is a no-op version of the wrapper, which does nothing but call
+	 * validation.
+	 */
+	
+	function wrapfunction(fn, message) {
+	  if (typeof fn !== 'function') {
+	    throw new TypeError('argument fn must be a function')
+	  }
+	
+	  return fn
+	}
+	
+	/**
+	 * Wrap property in a deprecation message.
+	 *
+	 * This is a no-op version of the wrapper, which does nothing but call
+	 * validation.
+	 */
+	
+	function wrapproperty(obj, prop, message) {
+	  if (!obj || (typeof obj !== 'object' && typeof obj !== 'function')) {
+	    throw new TypeError('argument obj must be object')
+	  }
+	
+	  var descriptor = Object.getOwnPropertyDescriptor(obj, prop)
+	
+	  if (!descriptor) {
+	    throw new TypeError('must call property on owner object')
+	  }
+	
+	  if (!descriptor.configurable) {
+	    throw new TypeError('property must be configurable')
+	  }
+	
+	  return
+	}
+
+
+/***/ },
+/* 212 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	function _extendableBuiltin(cls) {
+	  function ExtendableBuiltin() {
+	    cls.apply(this, arguments);
+	  }
+	
+	  ExtendableBuiltin.prototype = Object.create(cls.prototype, {
+	    constructor: {
+	      value: cls,
+	      enumerable: false,
+	      writable: true,
+	      configurable: true
+	    }
+	  });
+	
+	  if (Object.setPrototypeOf) {
+	    Object.setPrototypeOf(ExtendableBuiltin, cls);
+	  } else {
+	    ExtendableBuiltin.__proto__ = cls;
+	  }
+	
+	  return ExtendableBuiltin;
+	}
+	
+	var ExtendableError = function (_extendableBuiltin2) {
+	  _inherits(ExtendableError, _extendableBuiltin2);
+	
+	  function ExtendableError() {
+	    var message = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+	
+	    _classCallCheck(this, ExtendableError);
+	
+	    // extending Error is weird and does not propagate `message`
+	    var _this = _possibleConstructorReturn(this, (ExtendableError.__proto__ || Object.getPrototypeOf(ExtendableError)).call(this, message));
+	
+	    Object.defineProperty(_this, 'message', {
+	      configurable: true,
+	      enumerable: false,
+	      value: message,
+	      writable: true
+	    });
+	
+	    Object.defineProperty(_this, 'name', {
+	      configurable: true,
+	      enumerable: false,
+	      value: _this.constructor.name,
+	      writable: true
+	    });
+	
+	    if (Error.hasOwnProperty('captureStackTrace')) {
+	      Error.captureStackTrace(_this, _this.constructor);
+	      return _possibleConstructorReturn(_this);
+	    }
+	
+	    Object.defineProperty(_this, 'stack', {
+	      configurable: true,
+	      enumerable: false,
+	      value: new Error(message).stack,
+	      writable: true
+	    });
+	    return _this;
+	  }
+	
+	  return ExtendableError;
+	}(_extendableBuiltin(Error));
+	
+	exports.default = ExtendableError;
+	module.exports = exports['default'];
+
+
+/***/ },
+/* 213 */
 /***/ function(module, exports) {
 
 	/**
@@ -23986,14 +24304,14 @@
 
 
 /***/ },
-/* 209 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var lowerCase = __webpack_require__(208)
+	var lowerCase = __webpack_require__(213)
 	
-	var NON_WORD_REGEXP = __webpack_require__(212)
-	var CAMEL_CASE_REGEXP = __webpack_require__(210)
-	var CAMEL_CASE_UPPER_REGEXP = __webpack_require__(211)
+	var NON_WORD_REGEXP = __webpack_require__(217)
+	var CAMEL_CASE_REGEXP = __webpack_require__(215)
+	var CAMEL_CASE_UPPER_REGEXP = __webpack_require__(216)
 	
 	/**
 	 * Sentence case a string.
@@ -24032,32 +24350,32 @@
 
 
 /***/ },
-/* 210 */
+/* 215 */
 /***/ function(module, exports) {
 
 	module.exports = /([a-z\xB5\xDF-\xF6\xF8-\xFF\u0101\u0103\u0105\u0107\u0109\u010B\u010D\u010F\u0111\u0113\u0115\u0117\u0119\u011B\u011D\u011F\u0121\u0123\u0125\u0127\u0129\u012B\u012D\u012F\u0131\u0133\u0135\u0137\u0138\u013A\u013C\u013E\u0140\u0142\u0144\u0146\u0148\u0149\u014B\u014D\u014F\u0151\u0153\u0155\u0157\u0159\u015B\u015D\u015F\u0161\u0163\u0165\u0167\u0169\u016B\u016D\u016F\u0171\u0173\u0175\u0177\u017A\u017C\u017E-\u0180\u0183\u0185\u0188\u018C\u018D\u0192\u0195\u0199-\u019B\u019E\u01A1\u01A3\u01A5\u01A8\u01AA\u01AB\u01AD\u01B0\u01B4\u01B6\u01B9\u01BA\u01BD-\u01BF\u01C6\u01C9\u01CC\u01CE\u01D0\u01D2\u01D4\u01D6\u01D8\u01DA\u01DC\u01DD\u01DF\u01E1\u01E3\u01E5\u01E7\u01E9\u01EB\u01ED\u01EF\u01F0\u01F3\u01F5\u01F9\u01FB\u01FD\u01FF\u0201\u0203\u0205\u0207\u0209\u020B\u020D\u020F\u0211\u0213\u0215\u0217\u0219\u021B\u021D\u021F\u0221\u0223\u0225\u0227\u0229\u022B\u022D\u022F\u0231\u0233-\u0239\u023C\u023F\u0240\u0242\u0247\u0249\u024B\u024D\u024F-\u0293\u0295-\u02AF\u0371\u0373\u0377\u037B-\u037D\u0390\u03AC-\u03CE\u03D0\u03D1\u03D5-\u03D7\u03D9\u03DB\u03DD\u03DF\u03E1\u03E3\u03E5\u03E7\u03E9\u03EB\u03ED\u03EF-\u03F3\u03F5\u03F8\u03FB\u03FC\u0430-\u045F\u0461\u0463\u0465\u0467\u0469\u046B\u046D\u046F\u0471\u0473\u0475\u0477\u0479\u047B\u047D\u047F\u0481\u048B\u048D\u048F\u0491\u0493\u0495\u0497\u0499\u049B\u049D\u049F\u04A1\u04A3\u04A5\u04A7\u04A9\u04AB\u04AD\u04AF\u04B1\u04B3\u04B5\u04B7\u04B9\u04BB\u04BD\u04BF\u04C2\u04C4\u04C6\u04C8\u04CA\u04CC\u04CE\u04CF\u04D1\u04D3\u04D5\u04D7\u04D9\u04DB\u04DD\u04DF\u04E1\u04E3\u04E5\u04E7\u04E9\u04EB\u04ED\u04EF\u04F1\u04F3\u04F5\u04F7\u04F9\u04FB\u04FD\u04FF\u0501\u0503\u0505\u0507\u0509\u050B\u050D\u050F\u0511\u0513\u0515\u0517\u0519\u051B\u051D\u051F\u0521\u0523\u0525\u0527\u0529\u052B\u052D\u052F\u0561-\u0587\u13F8-\u13FD\u1D00-\u1D2B\u1D6B-\u1D77\u1D79-\u1D9A\u1E01\u1E03\u1E05\u1E07\u1E09\u1E0B\u1E0D\u1E0F\u1E11\u1E13\u1E15\u1E17\u1E19\u1E1B\u1E1D\u1E1F\u1E21\u1E23\u1E25\u1E27\u1E29\u1E2B\u1E2D\u1E2F\u1E31\u1E33\u1E35\u1E37\u1E39\u1E3B\u1E3D\u1E3F\u1E41\u1E43\u1E45\u1E47\u1E49\u1E4B\u1E4D\u1E4F\u1E51\u1E53\u1E55\u1E57\u1E59\u1E5B\u1E5D\u1E5F\u1E61\u1E63\u1E65\u1E67\u1E69\u1E6B\u1E6D\u1E6F\u1E71\u1E73\u1E75\u1E77\u1E79\u1E7B\u1E7D\u1E7F\u1E81\u1E83\u1E85\u1E87\u1E89\u1E8B\u1E8D\u1E8F\u1E91\u1E93\u1E95-\u1E9D\u1E9F\u1EA1\u1EA3\u1EA5\u1EA7\u1EA9\u1EAB\u1EAD\u1EAF\u1EB1\u1EB3\u1EB5\u1EB7\u1EB9\u1EBB\u1EBD\u1EBF\u1EC1\u1EC3\u1EC5\u1EC7\u1EC9\u1ECB\u1ECD\u1ECF\u1ED1\u1ED3\u1ED5\u1ED7\u1ED9\u1EDB\u1EDD\u1EDF\u1EE1\u1EE3\u1EE5\u1EE7\u1EE9\u1EEB\u1EED\u1EEF\u1EF1\u1EF3\u1EF5\u1EF7\u1EF9\u1EFB\u1EFD\u1EFF-\u1F07\u1F10-\u1F15\u1F20-\u1F27\u1F30-\u1F37\u1F40-\u1F45\u1F50-\u1F57\u1F60-\u1F67\u1F70-\u1F7D\u1F80-\u1F87\u1F90-\u1F97\u1FA0-\u1FA7\u1FB0-\u1FB4\u1FB6\u1FB7\u1FBE\u1FC2-\u1FC4\u1FC6\u1FC7\u1FD0-\u1FD3\u1FD6\u1FD7\u1FE0-\u1FE7\u1FF2-\u1FF4\u1FF6\u1FF7\u210A\u210E\u210F\u2113\u212F\u2134\u2139\u213C\u213D\u2146-\u2149\u214E\u2184\u2C30-\u2C5E\u2C61\u2C65\u2C66\u2C68\u2C6A\u2C6C\u2C71\u2C73\u2C74\u2C76-\u2C7B\u2C81\u2C83\u2C85\u2C87\u2C89\u2C8B\u2C8D\u2C8F\u2C91\u2C93\u2C95\u2C97\u2C99\u2C9B\u2C9D\u2C9F\u2CA1\u2CA3\u2CA5\u2CA7\u2CA9\u2CAB\u2CAD\u2CAF\u2CB1\u2CB3\u2CB5\u2CB7\u2CB9\u2CBB\u2CBD\u2CBF\u2CC1\u2CC3\u2CC5\u2CC7\u2CC9\u2CCB\u2CCD\u2CCF\u2CD1\u2CD3\u2CD5\u2CD7\u2CD9\u2CDB\u2CDD\u2CDF\u2CE1\u2CE3\u2CE4\u2CEC\u2CEE\u2CF3\u2D00-\u2D25\u2D27\u2D2D\uA641\uA643\uA645\uA647\uA649\uA64B\uA64D\uA64F\uA651\uA653\uA655\uA657\uA659\uA65B\uA65D\uA65F\uA661\uA663\uA665\uA667\uA669\uA66B\uA66D\uA681\uA683\uA685\uA687\uA689\uA68B\uA68D\uA68F\uA691\uA693\uA695\uA697\uA699\uA69B\uA723\uA725\uA727\uA729\uA72B\uA72D\uA72F-\uA731\uA733\uA735\uA737\uA739\uA73B\uA73D\uA73F\uA741\uA743\uA745\uA747\uA749\uA74B\uA74D\uA74F\uA751\uA753\uA755\uA757\uA759\uA75B\uA75D\uA75F\uA761\uA763\uA765\uA767\uA769\uA76B\uA76D\uA76F\uA771-\uA778\uA77A\uA77C\uA77F\uA781\uA783\uA785\uA787\uA78C\uA78E\uA791\uA793-\uA795\uA797\uA799\uA79B\uA79D\uA79F\uA7A1\uA7A3\uA7A5\uA7A7\uA7A9\uA7B5\uA7B7\uA7FA\uAB30-\uAB5A\uAB60-\uAB65\uAB70-\uABBF\uFB00-\uFB06\uFB13-\uFB17\uFF41-\uFF5A0-9\xB2\xB3\xB9\xBC-\xBE\u0660-\u0669\u06F0-\u06F9\u07C0-\u07C9\u0966-\u096F\u09E6-\u09EF\u09F4-\u09F9\u0A66-\u0A6F\u0AE6-\u0AEF\u0B66-\u0B6F\u0B72-\u0B77\u0BE6-\u0BF2\u0C66-\u0C6F\u0C78-\u0C7E\u0CE6-\u0CEF\u0D66-\u0D75\u0DE6-\u0DEF\u0E50-\u0E59\u0ED0-\u0ED9\u0F20-\u0F33\u1040-\u1049\u1090-\u1099\u1369-\u137C\u16EE-\u16F0\u17E0-\u17E9\u17F0-\u17F9\u1810-\u1819\u1946-\u194F\u19D0-\u19DA\u1A80-\u1A89\u1A90-\u1A99\u1B50-\u1B59\u1BB0-\u1BB9\u1C40-\u1C49\u1C50-\u1C59\u2070\u2074-\u2079\u2080-\u2089\u2150-\u2182\u2185-\u2189\u2460-\u249B\u24EA-\u24FF\u2776-\u2793\u2CFD\u3007\u3021-\u3029\u3038-\u303A\u3192-\u3195\u3220-\u3229\u3248-\u324F\u3251-\u325F\u3280-\u3289\u32B1-\u32BF\uA620-\uA629\uA6E6-\uA6EF\uA830-\uA835\uA8D0-\uA8D9\uA900-\uA909\uA9D0-\uA9D9\uA9F0-\uA9F9\uAA50-\uAA59\uABF0-\uABF9\uFF10-\uFF19])([A-Z\xC0-\xD6\xD8-\xDE\u0100\u0102\u0104\u0106\u0108\u010A\u010C\u010E\u0110\u0112\u0114\u0116\u0118\u011A\u011C\u011E\u0120\u0122\u0124\u0126\u0128\u012A\u012C\u012E\u0130\u0132\u0134\u0136\u0139\u013B\u013D\u013F\u0141\u0143\u0145\u0147\u014A\u014C\u014E\u0150\u0152\u0154\u0156\u0158\u015A\u015C\u015E\u0160\u0162\u0164\u0166\u0168\u016A\u016C\u016E\u0170\u0172\u0174\u0176\u0178\u0179\u017B\u017D\u0181\u0182\u0184\u0186\u0187\u0189-\u018B\u018E-\u0191\u0193\u0194\u0196-\u0198\u019C\u019D\u019F\u01A0\u01A2\u01A4\u01A6\u01A7\u01A9\u01AC\u01AE\u01AF\u01B1-\u01B3\u01B5\u01B7\u01B8\u01BC\u01C4\u01C7\u01CA\u01CD\u01CF\u01D1\u01D3\u01D5\u01D7\u01D9\u01DB\u01DE\u01E0\u01E2\u01E4\u01E6\u01E8\u01EA\u01EC\u01EE\u01F1\u01F4\u01F6-\u01F8\u01FA\u01FC\u01FE\u0200\u0202\u0204\u0206\u0208\u020A\u020C\u020E\u0210\u0212\u0214\u0216\u0218\u021A\u021C\u021E\u0220\u0222\u0224\u0226\u0228\u022A\u022C\u022E\u0230\u0232\u023A\u023B\u023D\u023E\u0241\u0243-\u0246\u0248\u024A\u024C\u024E\u0370\u0372\u0376\u037F\u0386\u0388-\u038A\u038C\u038E\u038F\u0391-\u03A1\u03A3-\u03AB\u03CF\u03D2-\u03D4\u03D8\u03DA\u03DC\u03DE\u03E0\u03E2\u03E4\u03E6\u03E8\u03EA\u03EC\u03EE\u03F4\u03F7\u03F9\u03FA\u03FD-\u042F\u0460\u0462\u0464\u0466\u0468\u046A\u046C\u046E\u0470\u0472\u0474\u0476\u0478\u047A\u047C\u047E\u0480\u048A\u048C\u048E\u0490\u0492\u0494\u0496\u0498\u049A\u049C\u049E\u04A0\u04A2\u04A4\u04A6\u04A8\u04AA\u04AC\u04AE\u04B0\u04B2\u04B4\u04B6\u04B8\u04BA\u04BC\u04BE\u04C0\u04C1\u04C3\u04C5\u04C7\u04C9\u04CB\u04CD\u04D0\u04D2\u04D4\u04D6\u04D8\u04DA\u04DC\u04DE\u04E0\u04E2\u04E4\u04E6\u04E8\u04EA\u04EC\u04EE\u04F0\u04F2\u04F4\u04F6\u04F8\u04FA\u04FC\u04FE\u0500\u0502\u0504\u0506\u0508\u050A\u050C\u050E\u0510\u0512\u0514\u0516\u0518\u051A\u051C\u051E\u0520\u0522\u0524\u0526\u0528\u052A\u052C\u052E\u0531-\u0556\u10A0-\u10C5\u10C7\u10CD\u13A0-\u13F5\u1E00\u1E02\u1E04\u1E06\u1E08\u1E0A\u1E0C\u1E0E\u1E10\u1E12\u1E14\u1E16\u1E18\u1E1A\u1E1C\u1E1E\u1E20\u1E22\u1E24\u1E26\u1E28\u1E2A\u1E2C\u1E2E\u1E30\u1E32\u1E34\u1E36\u1E38\u1E3A\u1E3C\u1E3E\u1E40\u1E42\u1E44\u1E46\u1E48\u1E4A\u1E4C\u1E4E\u1E50\u1E52\u1E54\u1E56\u1E58\u1E5A\u1E5C\u1E5E\u1E60\u1E62\u1E64\u1E66\u1E68\u1E6A\u1E6C\u1E6E\u1E70\u1E72\u1E74\u1E76\u1E78\u1E7A\u1E7C\u1E7E\u1E80\u1E82\u1E84\u1E86\u1E88\u1E8A\u1E8C\u1E8E\u1E90\u1E92\u1E94\u1E9E\u1EA0\u1EA2\u1EA4\u1EA6\u1EA8\u1EAA\u1EAC\u1EAE\u1EB0\u1EB2\u1EB4\u1EB6\u1EB8\u1EBA\u1EBC\u1EBE\u1EC0\u1EC2\u1EC4\u1EC6\u1EC8\u1ECA\u1ECC\u1ECE\u1ED0\u1ED2\u1ED4\u1ED6\u1ED8\u1EDA\u1EDC\u1EDE\u1EE0\u1EE2\u1EE4\u1EE6\u1EE8\u1EEA\u1EEC\u1EEE\u1EF0\u1EF2\u1EF4\u1EF6\u1EF8\u1EFA\u1EFC\u1EFE\u1F08-\u1F0F\u1F18-\u1F1D\u1F28-\u1F2F\u1F38-\u1F3F\u1F48-\u1F4D\u1F59\u1F5B\u1F5D\u1F5F\u1F68-\u1F6F\u1FB8-\u1FBB\u1FC8-\u1FCB\u1FD8-\u1FDB\u1FE8-\u1FEC\u1FF8-\u1FFB\u2102\u2107\u210B-\u210D\u2110-\u2112\u2115\u2119-\u211D\u2124\u2126\u2128\u212A-\u212D\u2130-\u2133\u213E\u213F\u2145\u2183\u2C00-\u2C2E\u2C60\u2C62-\u2C64\u2C67\u2C69\u2C6B\u2C6D-\u2C70\u2C72\u2C75\u2C7E-\u2C80\u2C82\u2C84\u2C86\u2C88\u2C8A\u2C8C\u2C8E\u2C90\u2C92\u2C94\u2C96\u2C98\u2C9A\u2C9C\u2C9E\u2CA0\u2CA2\u2CA4\u2CA6\u2CA8\u2CAA\u2CAC\u2CAE\u2CB0\u2CB2\u2CB4\u2CB6\u2CB8\u2CBA\u2CBC\u2CBE\u2CC0\u2CC2\u2CC4\u2CC6\u2CC8\u2CCA\u2CCC\u2CCE\u2CD0\u2CD2\u2CD4\u2CD6\u2CD8\u2CDA\u2CDC\u2CDE\u2CE0\u2CE2\u2CEB\u2CED\u2CF2\uA640\uA642\uA644\uA646\uA648\uA64A\uA64C\uA64E\uA650\uA652\uA654\uA656\uA658\uA65A\uA65C\uA65E\uA660\uA662\uA664\uA666\uA668\uA66A\uA66C\uA680\uA682\uA684\uA686\uA688\uA68A\uA68C\uA68E\uA690\uA692\uA694\uA696\uA698\uA69A\uA722\uA724\uA726\uA728\uA72A\uA72C\uA72E\uA732\uA734\uA736\uA738\uA73A\uA73C\uA73E\uA740\uA742\uA744\uA746\uA748\uA74A\uA74C\uA74E\uA750\uA752\uA754\uA756\uA758\uA75A\uA75C\uA75E\uA760\uA762\uA764\uA766\uA768\uA76A\uA76C\uA76E\uA779\uA77B\uA77D\uA77E\uA780\uA782\uA784\uA786\uA78B\uA78D\uA790\uA792\uA796\uA798\uA79A\uA79C\uA79E\uA7A0\uA7A2\uA7A4\uA7A6\uA7A8\uA7AA-\uA7AD\uA7B0-\uA7B4\uA7B6\uFF21-\uFF3A])/g
 
 
 /***/ },
-/* 211 */
+/* 216 */
 /***/ function(module, exports) {
 
 	module.exports = /([A-Z\xC0-\xD6\xD8-\xDE\u0100\u0102\u0104\u0106\u0108\u010A\u010C\u010E\u0110\u0112\u0114\u0116\u0118\u011A\u011C\u011E\u0120\u0122\u0124\u0126\u0128\u012A\u012C\u012E\u0130\u0132\u0134\u0136\u0139\u013B\u013D\u013F\u0141\u0143\u0145\u0147\u014A\u014C\u014E\u0150\u0152\u0154\u0156\u0158\u015A\u015C\u015E\u0160\u0162\u0164\u0166\u0168\u016A\u016C\u016E\u0170\u0172\u0174\u0176\u0178\u0179\u017B\u017D\u0181\u0182\u0184\u0186\u0187\u0189-\u018B\u018E-\u0191\u0193\u0194\u0196-\u0198\u019C\u019D\u019F\u01A0\u01A2\u01A4\u01A6\u01A7\u01A9\u01AC\u01AE\u01AF\u01B1-\u01B3\u01B5\u01B7\u01B8\u01BC\u01C4\u01C7\u01CA\u01CD\u01CF\u01D1\u01D3\u01D5\u01D7\u01D9\u01DB\u01DE\u01E0\u01E2\u01E4\u01E6\u01E8\u01EA\u01EC\u01EE\u01F1\u01F4\u01F6-\u01F8\u01FA\u01FC\u01FE\u0200\u0202\u0204\u0206\u0208\u020A\u020C\u020E\u0210\u0212\u0214\u0216\u0218\u021A\u021C\u021E\u0220\u0222\u0224\u0226\u0228\u022A\u022C\u022E\u0230\u0232\u023A\u023B\u023D\u023E\u0241\u0243-\u0246\u0248\u024A\u024C\u024E\u0370\u0372\u0376\u037F\u0386\u0388-\u038A\u038C\u038E\u038F\u0391-\u03A1\u03A3-\u03AB\u03CF\u03D2-\u03D4\u03D8\u03DA\u03DC\u03DE\u03E0\u03E2\u03E4\u03E6\u03E8\u03EA\u03EC\u03EE\u03F4\u03F7\u03F9\u03FA\u03FD-\u042F\u0460\u0462\u0464\u0466\u0468\u046A\u046C\u046E\u0470\u0472\u0474\u0476\u0478\u047A\u047C\u047E\u0480\u048A\u048C\u048E\u0490\u0492\u0494\u0496\u0498\u049A\u049C\u049E\u04A0\u04A2\u04A4\u04A6\u04A8\u04AA\u04AC\u04AE\u04B0\u04B2\u04B4\u04B6\u04B8\u04BA\u04BC\u04BE\u04C0\u04C1\u04C3\u04C5\u04C7\u04C9\u04CB\u04CD\u04D0\u04D2\u04D4\u04D6\u04D8\u04DA\u04DC\u04DE\u04E0\u04E2\u04E4\u04E6\u04E8\u04EA\u04EC\u04EE\u04F0\u04F2\u04F4\u04F6\u04F8\u04FA\u04FC\u04FE\u0500\u0502\u0504\u0506\u0508\u050A\u050C\u050E\u0510\u0512\u0514\u0516\u0518\u051A\u051C\u051E\u0520\u0522\u0524\u0526\u0528\u052A\u052C\u052E\u0531-\u0556\u10A0-\u10C5\u10C7\u10CD\u13A0-\u13F5\u1E00\u1E02\u1E04\u1E06\u1E08\u1E0A\u1E0C\u1E0E\u1E10\u1E12\u1E14\u1E16\u1E18\u1E1A\u1E1C\u1E1E\u1E20\u1E22\u1E24\u1E26\u1E28\u1E2A\u1E2C\u1E2E\u1E30\u1E32\u1E34\u1E36\u1E38\u1E3A\u1E3C\u1E3E\u1E40\u1E42\u1E44\u1E46\u1E48\u1E4A\u1E4C\u1E4E\u1E50\u1E52\u1E54\u1E56\u1E58\u1E5A\u1E5C\u1E5E\u1E60\u1E62\u1E64\u1E66\u1E68\u1E6A\u1E6C\u1E6E\u1E70\u1E72\u1E74\u1E76\u1E78\u1E7A\u1E7C\u1E7E\u1E80\u1E82\u1E84\u1E86\u1E88\u1E8A\u1E8C\u1E8E\u1E90\u1E92\u1E94\u1E9E\u1EA0\u1EA2\u1EA4\u1EA6\u1EA8\u1EAA\u1EAC\u1EAE\u1EB0\u1EB2\u1EB4\u1EB6\u1EB8\u1EBA\u1EBC\u1EBE\u1EC0\u1EC2\u1EC4\u1EC6\u1EC8\u1ECA\u1ECC\u1ECE\u1ED0\u1ED2\u1ED4\u1ED6\u1ED8\u1EDA\u1EDC\u1EDE\u1EE0\u1EE2\u1EE4\u1EE6\u1EE8\u1EEA\u1EEC\u1EEE\u1EF0\u1EF2\u1EF4\u1EF6\u1EF8\u1EFA\u1EFC\u1EFE\u1F08-\u1F0F\u1F18-\u1F1D\u1F28-\u1F2F\u1F38-\u1F3F\u1F48-\u1F4D\u1F59\u1F5B\u1F5D\u1F5F\u1F68-\u1F6F\u1FB8-\u1FBB\u1FC8-\u1FCB\u1FD8-\u1FDB\u1FE8-\u1FEC\u1FF8-\u1FFB\u2102\u2107\u210B-\u210D\u2110-\u2112\u2115\u2119-\u211D\u2124\u2126\u2128\u212A-\u212D\u2130-\u2133\u213E\u213F\u2145\u2183\u2C00-\u2C2E\u2C60\u2C62-\u2C64\u2C67\u2C69\u2C6B\u2C6D-\u2C70\u2C72\u2C75\u2C7E-\u2C80\u2C82\u2C84\u2C86\u2C88\u2C8A\u2C8C\u2C8E\u2C90\u2C92\u2C94\u2C96\u2C98\u2C9A\u2C9C\u2C9E\u2CA0\u2CA2\u2CA4\u2CA6\u2CA8\u2CAA\u2CAC\u2CAE\u2CB0\u2CB2\u2CB4\u2CB6\u2CB8\u2CBA\u2CBC\u2CBE\u2CC0\u2CC2\u2CC4\u2CC6\u2CC8\u2CCA\u2CCC\u2CCE\u2CD0\u2CD2\u2CD4\u2CD6\u2CD8\u2CDA\u2CDC\u2CDE\u2CE0\u2CE2\u2CEB\u2CED\u2CF2\uA640\uA642\uA644\uA646\uA648\uA64A\uA64C\uA64E\uA650\uA652\uA654\uA656\uA658\uA65A\uA65C\uA65E\uA660\uA662\uA664\uA666\uA668\uA66A\uA66C\uA680\uA682\uA684\uA686\uA688\uA68A\uA68C\uA68E\uA690\uA692\uA694\uA696\uA698\uA69A\uA722\uA724\uA726\uA728\uA72A\uA72C\uA72E\uA732\uA734\uA736\uA738\uA73A\uA73C\uA73E\uA740\uA742\uA744\uA746\uA748\uA74A\uA74C\uA74E\uA750\uA752\uA754\uA756\uA758\uA75A\uA75C\uA75E\uA760\uA762\uA764\uA766\uA768\uA76A\uA76C\uA76E\uA779\uA77B\uA77D\uA77E\uA780\uA782\uA784\uA786\uA78B\uA78D\uA790\uA792\uA796\uA798\uA79A\uA79C\uA79E\uA7A0\uA7A2\uA7A4\uA7A6\uA7A8\uA7AA-\uA7AD\uA7B0-\uA7B4\uA7B6\uFF21-\uFF3A]+)([A-Z\xC0-\xD6\xD8-\xDE\u0100\u0102\u0104\u0106\u0108\u010A\u010C\u010E\u0110\u0112\u0114\u0116\u0118\u011A\u011C\u011E\u0120\u0122\u0124\u0126\u0128\u012A\u012C\u012E\u0130\u0132\u0134\u0136\u0139\u013B\u013D\u013F\u0141\u0143\u0145\u0147\u014A\u014C\u014E\u0150\u0152\u0154\u0156\u0158\u015A\u015C\u015E\u0160\u0162\u0164\u0166\u0168\u016A\u016C\u016E\u0170\u0172\u0174\u0176\u0178\u0179\u017B\u017D\u0181\u0182\u0184\u0186\u0187\u0189-\u018B\u018E-\u0191\u0193\u0194\u0196-\u0198\u019C\u019D\u019F\u01A0\u01A2\u01A4\u01A6\u01A7\u01A9\u01AC\u01AE\u01AF\u01B1-\u01B3\u01B5\u01B7\u01B8\u01BC\u01C4\u01C7\u01CA\u01CD\u01CF\u01D1\u01D3\u01D5\u01D7\u01D9\u01DB\u01DE\u01E0\u01E2\u01E4\u01E6\u01E8\u01EA\u01EC\u01EE\u01F1\u01F4\u01F6-\u01F8\u01FA\u01FC\u01FE\u0200\u0202\u0204\u0206\u0208\u020A\u020C\u020E\u0210\u0212\u0214\u0216\u0218\u021A\u021C\u021E\u0220\u0222\u0224\u0226\u0228\u022A\u022C\u022E\u0230\u0232\u023A\u023B\u023D\u023E\u0241\u0243-\u0246\u0248\u024A\u024C\u024E\u0370\u0372\u0376\u037F\u0386\u0388-\u038A\u038C\u038E\u038F\u0391-\u03A1\u03A3-\u03AB\u03CF\u03D2-\u03D4\u03D8\u03DA\u03DC\u03DE\u03E0\u03E2\u03E4\u03E6\u03E8\u03EA\u03EC\u03EE\u03F4\u03F7\u03F9\u03FA\u03FD-\u042F\u0460\u0462\u0464\u0466\u0468\u046A\u046C\u046E\u0470\u0472\u0474\u0476\u0478\u047A\u047C\u047E\u0480\u048A\u048C\u048E\u0490\u0492\u0494\u0496\u0498\u049A\u049C\u049E\u04A0\u04A2\u04A4\u04A6\u04A8\u04AA\u04AC\u04AE\u04B0\u04B2\u04B4\u04B6\u04B8\u04BA\u04BC\u04BE\u04C0\u04C1\u04C3\u04C5\u04C7\u04C9\u04CB\u04CD\u04D0\u04D2\u04D4\u04D6\u04D8\u04DA\u04DC\u04DE\u04E0\u04E2\u04E4\u04E6\u04E8\u04EA\u04EC\u04EE\u04F0\u04F2\u04F4\u04F6\u04F8\u04FA\u04FC\u04FE\u0500\u0502\u0504\u0506\u0508\u050A\u050C\u050E\u0510\u0512\u0514\u0516\u0518\u051A\u051C\u051E\u0520\u0522\u0524\u0526\u0528\u052A\u052C\u052E\u0531-\u0556\u10A0-\u10C5\u10C7\u10CD\u13A0-\u13F5\u1E00\u1E02\u1E04\u1E06\u1E08\u1E0A\u1E0C\u1E0E\u1E10\u1E12\u1E14\u1E16\u1E18\u1E1A\u1E1C\u1E1E\u1E20\u1E22\u1E24\u1E26\u1E28\u1E2A\u1E2C\u1E2E\u1E30\u1E32\u1E34\u1E36\u1E38\u1E3A\u1E3C\u1E3E\u1E40\u1E42\u1E44\u1E46\u1E48\u1E4A\u1E4C\u1E4E\u1E50\u1E52\u1E54\u1E56\u1E58\u1E5A\u1E5C\u1E5E\u1E60\u1E62\u1E64\u1E66\u1E68\u1E6A\u1E6C\u1E6E\u1E70\u1E72\u1E74\u1E76\u1E78\u1E7A\u1E7C\u1E7E\u1E80\u1E82\u1E84\u1E86\u1E88\u1E8A\u1E8C\u1E8E\u1E90\u1E92\u1E94\u1E9E\u1EA0\u1EA2\u1EA4\u1EA6\u1EA8\u1EAA\u1EAC\u1EAE\u1EB0\u1EB2\u1EB4\u1EB6\u1EB8\u1EBA\u1EBC\u1EBE\u1EC0\u1EC2\u1EC4\u1EC6\u1EC8\u1ECA\u1ECC\u1ECE\u1ED0\u1ED2\u1ED4\u1ED6\u1ED8\u1EDA\u1EDC\u1EDE\u1EE0\u1EE2\u1EE4\u1EE6\u1EE8\u1EEA\u1EEC\u1EEE\u1EF0\u1EF2\u1EF4\u1EF6\u1EF8\u1EFA\u1EFC\u1EFE\u1F08-\u1F0F\u1F18-\u1F1D\u1F28-\u1F2F\u1F38-\u1F3F\u1F48-\u1F4D\u1F59\u1F5B\u1F5D\u1F5F\u1F68-\u1F6F\u1FB8-\u1FBB\u1FC8-\u1FCB\u1FD8-\u1FDB\u1FE8-\u1FEC\u1FF8-\u1FFB\u2102\u2107\u210B-\u210D\u2110-\u2112\u2115\u2119-\u211D\u2124\u2126\u2128\u212A-\u212D\u2130-\u2133\u213E\u213F\u2145\u2183\u2C00-\u2C2E\u2C60\u2C62-\u2C64\u2C67\u2C69\u2C6B\u2C6D-\u2C70\u2C72\u2C75\u2C7E-\u2C80\u2C82\u2C84\u2C86\u2C88\u2C8A\u2C8C\u2C8E\u2C90\u2C92\u2C94\u2C96\u2C98\u2C9A\u2C9C\u2C9E\u2CA0\u2CA2\u2CA4\u2CA6\u2CA8\u2CAA\u2CAC\u2CAE\u2CB0\u2CB2\u2CB4\u2CB6\u2CB8\u2CBA\u2CBC\u2CBE\u2CC0\u2CC2\u2CC4\u2CC6\u2CC8\u2CCA\u2CCC\u2CCE\u2CD0\u2CD2\u2CD4\u2CD6\u2CD8\u2CDA\u2CDC\u2CDE\u2CE0\u2CE2\u2CEB\u2CED\u2CF2\uA640\uA642\uA644\uA646\uA648\uA64A\uA64C\uA64E\uA650\uA652\uA654\uA656\uA658\uA65A\uA65C\uA65E\uA660\uA662\uA664\uA666\uA668\uA66A\uA66C\uA680\uA682\uA684\uA686\uA688\uA68A\uA68C\uA68E\uA690\uA692\uA694\uA696\uA698\uA69A\uA722\uA724\uA726\uA728\uA72A\uA72C\uA72E\uA732\uA734\uA736\uA738\uA73A\uA73C\uA73E\uA740\uA742\uA744\uA746\uA748\uA74A\uA74C\uA74E\uA750\uA752\uA754\uA756\uA758\uA75A\uA75C\uA75E\uA760\uA762\uA764\uA766\uA768\uA76A\uA76C\uA76E\uA779\uA77B\uA77D\uA77E\uA780\uA782\uA784\uA786\uA78B\uA78D\uA790\uA792\uA796\uA798\uA79A\uA79C\uA79E\uA7A0\uA7A2\uA7A4\uA7A6\uA7A8\uA7AA-\uA7AD\uA7B0-\uA7B4\uA7B6\uFF21-\uFF3A][a-z\xB5\xDF-\xF6\xF8-\xFF\u0101\u0103\u0105\u0107\u0109\u010B\u010D\u010F\u0111\u0113\u0115\u0117\u0119\u011B\u011D\u011F\u0121\u0123\u0125\u0127\u0129\u012B\u012D\u012F\u0131\u0133\u0135\u0137\u0138\u013A\u013C\u013E\u0140\u0142\u0144\u0146\u0148\u0149\u014B\u014D\u014F\u0151\u0153\u0155\u0157\u0159\u015B\u015D\u015F\u0161\u0163\u0165\u0167\u0169\u016B\u016D\u016F\u0171\u0173\u0175\u0177\u017A\u017C\u017E-\u0180\u0183\u0185\u0188\u018C\u018D\u0192\u0195\u0199-\u019B\u019E\u01A1\u01A3\u01A5\u01A8\u01AA\u01AB\u01AD\u01B0\u01B4\u01B6\u01B9\u01BA\u01BD-\u01BF\u01C6\u01C9\u01CC\u01CE\u01D0\u01D2\u01D4\u01D6\u01D8\u01DA\u01DC\u01DD\u01DF\u01E1\u01E3\u01E5\u01E7\u01E9\u01EB\u01ED\u01EF\u01F0\u01F3\u01F5\u01F9\u01FB\u01FD\u01FF\u0201\u0203\u0205\u0207\u0209\u020B\u020D\u020F\u0211\u0213\u0215\u0217\u0219\u021B\u021D\u021F\u0221\u0223\u0225\u0227\u0229\u022B\u022D\u022F\u0231\u0233-\u0239\u023C\u023F\u0240\u0242\u0247\u0249\u024B\u024D\u024F-\u0293\u0295-\u02AF\u0371\u0373\u0377\u037B-\u037D\u0390\u03AC-\u03CE\u03D0\u03D1\u03D5-\u03D7\u03D9\u03DB\u03DD\u03DF\u03E1\u03E3\u03E5\u03E7\u03E9\u03EB\u03ED\u03EF-\u03F3\u03F5\u03F8\u03FB\u03FC\u0430-\u045F\u0461\u0463\u0465\u0467\u0469\u046B\u046D\u046F\u0471\u0473\u0475\u0477\u0479\u047B\u047D\u047F\u0481\u048B\u048D\u048F\u0491\u0493\u0495\u0497\u0499\u049B\u049D\u049F\u04A1\u04A3\u04A5\u04A7\u04A9\u04AB\u04AD\u04AF\u04B1\u04B3\u04B5\u04B7\u04B9\u04BB\u04BD\u04BF\u04C2\u04C4\u04C6\u04C8\u04CA\u04CC\u04CE\u04CF\u04D1\u04D3\u04D5\u04D7\u04D9\u04DB\u04DD\u04DF\u04E1\u04E3\u04E5\u04E7\u04E9\u04EB\u04ED\u04EF\u04F1\u04F3\u04F5\u04F7\u04F9\u04FB\u04FD\u04FF\u0501\u0503\u0505\u0507\u0509\u050B\u050D\u050F\u0511\u0513\u0515\u0517\u0519\u051B\u051D\u051F\u0521\u0523\u0525\u0527\u0529\u052B\u052D\u052F\u0561-\u0587\u13F8-\u13FD\u1D00-\u1D2B\u1D6B-\u1D77\u1D79-\u1D9A\u1E01\u1E03\u1E05\u1E07\u1E09\u1E0B\u1E0D\u1E0F\u1E11\u1E13\u1E15\u1E17\u1E19\u1E1B\u1E1D\u1E1F\u1E21\u1E23\u1E25\u1E27\u1E29\u1E2B\u1E2D\u1E2F\u1E31\u1E33\u1E35\u1E37\u1E39\u1E3B\u1E3D\u1E3F\u1E41\u1E43\u1E45\u1E47\u1E49\u1E4B\u1E4D\u1E4F\u1E51\u1E53\u1E55\u1E57\u1E59\u1E5B\u1E5D\u1E5F\u1E61\u1E63\u1E65\u1E67\u1E69\u1E6B\u1E6D\u1E6F\u1E71\u1E73\u1E75\u1E77\u1E79\u1E7B\u1E7D\u1E7F\u1E81\u1E83\u1E85\u1E87\u1E89\u1E8B\u1E8D\u1E8F\u1E91\u1E93\u1E95-\u1E9D\u1E9F\u1EA1\u1EA3\u1EA5\u1EA7\u1EA9\u1EAB\u1EAD\u1EAF\u1EB1\u1EB3\u1EB5\u1EB7\u1EB9\u1EBB\u1EBD\u1EBF\u1EC1\u1EC3\u1EC5\u1EC7\u1EC9\u1ECB\u1ECD\u1ECF\u1ED1\u1ED3\u1ED5\u1ED7\u1ED9\u1EDB\u1EDD\u1EDF\u1EE1\u1EE3\u1EE5\u1EE7\u1EE9\u1EEB\u1EED\u1EEF\u1EF1\u1EF3\u1EF5\u1EF7\u1EF9\u1EFB\u1EFD\u1EFF-\u1F07\u1F10-\u1F15\u1F20-\u1F27\u1F30-\u1F37\u1F40-\u1F45\u1F50-\u1F57\u1F60-\u1F67\u1F70-\u1F7D\u1F80-\u1F87\u1F90-\u1F97\u1FA0-\u1FA7\u1FB0-\u1FB4\u1FB6\u1FB7\u1FBE\u1FC2-\u1FC4\u1FC6\u1FC7\u1FD0-\u1FD3\u1FD6\u1FD7\u1FE0-\u1FE7\u1FF2-\u1FF4\u1FF6\u1FF7\u210A\u210E\u210F\u2113\u212F\u2134\u2139\u213C\u213D\u2146-\u2149\u214E\u2184\u2C30-\u2C5E\u2C61\u2C65\u2C66\u2C68\u2C6A\u2C6C\u2C71\u2C73\u2C74\u2C76-\u2C7B\u2C81\u2C83\u2C85\u2C87\u2C89\u2C8B\u2C8D\u2C8F\u2C91\u2C93\u2C95\u2C97\u2C99\u2C9B\u2C9D\u2C9F\u2CA1\u2CA3\u2CA5\u2CA7\u2CA9\u2CAB\u2CAD\u2CAF\u2CB1\u2CB3\u2CB5\u2CB7\u2CB9\u2CBB\u2CBD\u2CBF\u2CC1\u2CC3\u2CC5\u2CC7\u2CC9\u2CCB\u2CCD\u2CCF\u2CD1\u2CD3\u2CD5\u2CD7\u2CD9\u2CDB\u2CDD\u2CDF\u2CE1\u2CE3\u2CE4\u2CEC\u2CEE\u2CF3\u2D00-\u2D25\u2D27\u2D2D\uA641\uA643\uA645\uA647\uA649\uA64B\uA64D\uA64F\uA651\uA653\uA655\uA657\uA659\uA65B\uA65D\uA65F\uA661\uA663\uA665\uA667\uA669\uA66B\uA66D\uA681\uA683\uA685\uA687\uA689\uA68B\uA68D\uA68F\uA691\uA693\uA695\uA697\uA699\uA69B\uA723\uA725\uA727\uA729\uA72B\uA72D\uA72F-\uA731\uA733\uA735\uA737\uA739\uA73B\uA73D\uA73F\uA741\uA743\uA745\uA747\uA749\uA74B\uA74D\uA74F\uA751\uA753\uA755\uA757\uA759\uA75B\uA75D\uA75F\uA761\uA763\uA765\uA767\uA769\uA76B\uA76D\uA76F\uA771-\uA778\uA77A\uA77C\uA77F\uA781\uA783\uA785\uA787\uA78C\uA78E\uA791\uA793-\uA795\uA797\uA799\uA79B\uA79D\uA79F\uA7A1\uA7A3\uA7A5\uA7A7\uA7A9\uA7B5\uA7B7\uA7FA\uAB30-\uAB5A\uAB60-\uAB65\uAB70-\uABBF\uFB00-\uFB06\uFB13-\uFB17\uFF41-\uFF5A])/g
 
 
 /***/ },
-/* 212 */
+/* 217 */
 /***/ function(module, exports) {
 
 	module.exports = /[^A-Za-z\xAA\xB5\xBA\xC0-\xD6\xD8-\xF6\xF8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0370-\u0374\u0376\u0377\u037A-\u037D\u037F\u0386\u0388-\u038A\u038C\u038E-\u03A1\u03A3-\u03F5\u03F7-\u0481\u048A-\u052F\u0531-\u0556\u0559\u0561-\u0587\u05D0-\u05EA\u05F0-\u05F2\u0620-\u064A\u066E\u066F\u0671-\u06D3\u06D5\u06E5\u06E6\u06EE\u06EF\u06FA-\u06FC\u06FF\u0710\u0712-\u072F\u074D-\u07A5\u07B1\u07CA-\u07EA\u07F4\u07F5\u07FA\u0800-\u0815\u081A\u0824\u0828\u0840-\u0858\u08A0-\u08B4\u0904-\u0939\u093D\u0950\u0958-\u0961\u0971-\u0980\u0985-\u098C\u098F\u0990\u0993-\u09A8\u09AA-\u09B0\u09B2\u09B6-\u09B9\u09BD\u09CE\u09DC\u09DD\u09DF-\u09E1\u09F0\u09F1\u0A05-\u0A0A\u0A0F\u0A10\u0A13-\u0A28\u0A2A-\u0A30\u0A32\u0A33\u0A35\u0A36\u0A38\u0A39\u0A59-\u0A5C\u0A5E\u0A72-\u0A74\u0A85-\u0A8D\u0A8F-\u0A91\u0A93-\u0AA8\u0AAA-\u0AB0\u0AB2\u0AB3\u0AB5-\u0AB9\u0ABD\u0AD0\u0AE0\u0AE1\u0AF9\u0B05-\u0B0C\u0B0F\u0B10\u0B13-\u0B28\u0B2A-\u0B30\u0B32\u0B33\u0B35-\u0B39\u0B3D\u0B5C\u0B5D\u0B5F-\u0B61\u0B71\u0B83\u0B85-\u0B8A\u0B8E-\u0B90\u0B92-\u0B95\u0B99\u0B9A\u0B9C\u0B9E\u0B9F\u0BA3\u0BA4\u0BA8-\u0BAA\u0BAE-\u0BB9\u0BD0\u0C05-\u0C0C\u0C0E-\u0C10\u0C12-\u0C28\u0C2A-\u0C39\u0C3D\u0C58-\u0C5A\u0C60\u0C61\u0C85-\u0C8C\u0C8E-\u0C90\u0C92-\u0CA8\u0CAA-\u0CB3\u0CB5-\u0CB9\u0CBD\u0CDE\u0CE0\u0CE1\u0CF1\u0CF2\u0D05-\u0D0C\u0D0E-\u0D10\u0D12-\u0D3A\u0D3D\u0D4E\u0D5F-\u0D61\u0D7A-\u0D7F\u0D85-\u0D96\u0D9A-\u0DB1\u0DB3-\u0DBB\u0DBD\u0DC0-\u0DC6\u0E01-\u0E30\u0E32\u0E33\u0E40-\u0E46\u0E81\u0E82\u0E84\u0E87\u0E88\u0E8A\u0E8D\u0E94-\u0E97\u0E99-\u0E9F\u0EA1-\u0EA3\u0EA5\u0EA7\u0EAA\u0EAB\u0EAD-\u0EB0\u0EB2\u0EB3\u0EBD\u0EC0-\u0EC4\u0EC6\u0EDC-\u0EDF\u0F00\u0F40-\u0F47\u0F49-\u0F6C\u0F88-\u0F8C\u1000-\u102A\u103F\u1050-\u1055\u105A-\u105D\u1061\u1065\u1066\u106E-\u1070\u1075-\u1081\u108E\u10A0-\u10C5\u10C7\u10CD\u10D0-\u10FA\u10FC-\u1248\u124A-\u124D\u1250-\u1256\u1258\u125A-\u125D\u1260-\u1288\u128A-\u128D\u1290-\u12B0\u12B2-\u12B5\u12B8-\u12BE\u12C0\u12C2-\u12C5\u12C8-\u12D6\u12D8-\u1310\u1312-\u1315\u1318-\u135A\u1380-\u138F\u13A0-\u13F5\u13F8-\u13FD\u1401-\u166C\u166F-\u167F\u1681-\u169A\u16A0-\u16EA\u16F1-\u16F8\u1700-\u170C\u170E-\u1711\u1720-\u1731\u1740-\u1751\u1760-\u176C\u176E-\u1770\u1780-\u17B3\u17D7\u17DC\u1820-\u1877\u1880-\u18A8\u18AA\u18B0-\u18F5\u1900-\u191E\u1950-\u196D\u1970-\u1974\u1980-\u19AB\u19B0-\u19C9\u1A00-\u1A16\u1A20-\u1A54\u1AA7\u1B05-\u1B33\u1B45-\u1B4B\u1B83-\u1BA0\u1BAE\u1BAF\u1BBA-\u1BE5\u1C00-\u1C23\u1C4D-\u1C4F\u1C5A-\u1C7D\u1CE9-\u1CEC\u1CEE-\u1CF1\u1CF5\u1CF6\u1D00-\u1DBF\u1E00-\u1F15\u1F18-\u1F1D\u1F20-\u1F45\u1F48-\u1F4D\u1F50-\u1F57\u1F59\u1F5B\u1F5D\u1F5F-\u1F7D\u1F80-\u1FB4\u1FB6-\u1FBC\u1FBE\u1FC2-\u1FC4\u1FC6-\u1FCC\u1FD0-\u1FD3\u1FD6-\u1FDB\u1FE0-\u1FEC\u1FF2-\u1FF4\u1FF6-\u1FFC\u2071\u207F\u2090-\u209C\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2183\u2184\u2C00-\u2C2E\u2C30-\u2C5E\u2C60-\u2CE4\u2CEB-\u2CEE\u2CF2\u2CF3\u2D00-\u2D25\u2D27\u2D2D\u2D30-\u2D67\u2D6F\u2D80-\u2D96\u2DA0-\u2DA6\u2DA8-\u2DAE\u2DB0-\u2DB6\u2DB8-\u2DBE\u2DC0-\u2DC6\u2DC8-\u2DCE\u2DD0-\u2DD6\u2DD8-\u2DDE\u2E2F\u3005\u3006\u3031-\u3035\u303B\u303C\u3041-\u3096\u309D-\u309F\u30A1-\u30FA\u30FC-\u30FF\u3105-\u312D\u3131-\u318E\u31A0-\u31BA\u31F0-\u31FF\u3400-\u4DB5\u4E00-\u9FD5\uA000-\uA48C\uA4D0-\uA4FD\uA500-\uA60C\uA610-\uA61F\uA62A\uA62B\uA640-\uA66E\uA67F-\uA69D\uA6A0-\uA6E5\uA717-\uA71F\uA722-\uA788\uA78B-\uA7AD\uA7B0-\uA7B7\uA7F7-\uA801\uA803-\uA805\uA807-\uA80A\uA80C-\uA822\uA840-\uA873\uA882-\uA8B3\uA8F2-\uA8F7\uA8FB\uA8FD\uA90A-\uA925\uA930-\uA946\uA960-\uA97C\uA984-\uA9B2\uA9CF\uA9E0-\uA9E4\uA9E6-\uA9EF\uA9FA-\uA9FE\uAA00-\uAA28\uAA40-\uAA42\uAA44-\uAA4B\uAA60-\uAA76\uAA7A\uAA7E-\uAAAF\uAAB1\uAAB5\uAAB6\uAAB9-\uAABD\uAAC0\uAAC2\uAADB-\uAADD\uAAE0-\uAAEA\uAAF2-\uAAF4\uAB01-\uAB06\uAB09-\uAB0E\uAB11-\uAB16\uAB20-\uAB26\uAB28-\uAB2E\uAB30-\uAB5A\uAB5C-\uAB65\uAB70-\uABE2\uAC00-\uD7A3\uD7B0-\uD7C6\uD7CB-\uD7FB\uF900-\uFA6D\uFA70-\uFAD9\uFB00-\uFB06\uFB13-\uFB17\uFB1D\uFB1F-\uFB28\uFB2A-\uFB36\uFB38-\uFB3C\uFB3E\uFB40\uFB41\uFB43\uFB44\uFB46-\uFBB1\uFBD3-\uFD3D\uFD50-\uFD8F\uFD92-\uFDC7\uFDF0-\uFDFB\uFE70-\uFE74\uFE76-\uFEFC\uFF21-\uFF3A\uFF41-\uFF5A\uFF66-\uFFBE\uFFC2-\uFFC7\uFFCA-\uFFCF\uFFD2-\uFFD7\uFFDA-\uFFDC0-9\xB2\xB3\xB9\xBC-\xBE\u0660-\u0669\u06F0-\u06F9\u07C0-\u07C9\u0966-\u096F\u09E6-\u09EF\u09F4-\u09F9\u0A66-\u0A6F\u0AE6-\u0AEF\u0B66-\u0B6F\u0B72-\u0B77\u0BE6-\u0BF2\u0C66-\u0C6F\u0C78-\u0C7E\u0CE6-\u0CEF\u0D66-\u0D75\u0DE6-\u0DEF\u0E50-\u0E59\u0ED0-\u0ED9\u0F20-\u0F33\u1040-\u1049\u1090-\u1099\u1369-\u137C\u16EE-\u16F0\u17E0-\u17E9\u17F0-\u17F9\u1810-\u1819\u1946-\u194F\u19D0-\u19DA\u1A80-\u1A89\u1A90-\u1A99\u1B50-\u1B59\u1BB0-\u1BB9\u1C40-\u1C49\u1C50-\u1C59\u2070\u2074-\u2079\u2080-\u2089\u2150-\u2182\u2185-\u2189\u2460-\u249B\u24EA-\u24FF\u2776-\u2793\u2CFD\u3007\u3021-\u3029\u3038-\u303A\u3192-\u3195\u3220-\u3229\u3248-\u324F\u3251-\u325F\u3280-\u3289\u32B1-\u32BF\uA620-\uA629\uA6E6-\uA6EF\uA830-\uA835\uA8D0-\uA8D9\uA900-\uA909\uA9D0-\uA9D9\uA9F0-\uA9F9\uAA50-\uAA59\uABF0-\uABF9\uFF10-\uFF19]+/g
 
 
 /***/ },
-/* 213 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var camelCase = __webpack_require__(207)
-	var upperCaseFirst = __webpack_require__(214)
+	var camelCase = __webpack_require__(210)
+	var upperCaseFirst = __webpack_require__(219)
 	
 	/**
 	 * Pascal case a string.
@@ -24073,7 +24391,7 @@
 
 
 /***/ },
-/* 214 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var upperCase = __webpack_require__(81)
@@ -24096,210 +24414,7 @@
 
 
 /***/ },
-/* 215 */
-/***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
-
-	'use strict';
-	
-	const createNaming = __webpack_require__(__webpack_module_template_argument_0__);
-	
-	const originalNaming = createNaming();
-	
-	Object.keys(originalNaming).forEach(key => {
-	    createNaming[key] = originalNaming[key];
-	});
-	
-	module.exports = createNaming;
-
-
-/***/ },
-/* 216 */
-/***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__, __webpack_module_template_argument_1__, __webpack_module_template_argument_2__) {
-
-	'use strict';
-	
-	/**
-	 * Delims of bem entity, elem and/or mod.
-	 *
-	 * @typedef {Object} BemNamingDelims
-	 * @param {String} [elem='__'] — separates element's name from block.
-	 * @param {String|Object} [mod='_'] — separates modifiers from blocks and elements.
-	 * @param {String} [mod.name='_'] — separates name of modifier from blocks and elements.
-	 * @param {String} [mod.val='_'] — separates value of modifier from name of modifier.
-	 */
-	
-	 /**
-	  * BEM naming convention options.
-	  *
-	  * @typedef {Object} BemNamingConvention
-	  * @param {BemNamingDelims} delims — separates entity names from each other.
-	  * @param {String|Object} [wordPattern='[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*'] — defines which symbols can be used for block,
-	  *                                                                         element and modifier's names.
-	  */
-	
-	const createStringify = __webpack_require__(__webpack_module_template_argument_0__);
-	const createParse = __webpack_require__(__webpack_module_template_argument_1__);
-	const presets = __webpack_require__(__webpack_module_template_argument_2__);
-	
-	/**
-	 * It is necessary not to create new instances for the same custom naming.
-	 * @readonly
-	 */
-	const cache = {};
-	
-	/**
-	 * Creates namespace with methods which allows getting information about BEM entity using string as well
-	 * as forming string representation based on naming object.
-	 *
-	 * @param {BemNamingConvention} [options] - options for naming convention.
-	 * @return {Object}
-	 */
-	function createNaming(options) {
-	    const opts = init(options);
-	    const id = JSON.stringify(opts);
-	
-	    if (cache[id]) {
-	        return cache[id];
-	    }
-	
-	    const delims = opts.delims;
-	    const namespace = {
-	        parse: createParse(opts),
-	        stringify: createStringify(opts),
-	        /**
-	         * String to separate elem from block.
-	         *
-	         * @type {String}
-	         */
-	        delims
-	    };
-	
-	    cache[id] = namespace;
-	
-	    return namespace;
-	}
-	
-	/**
-	 * Returns delims and wordPattern.
-	 *
-	 * @param {Object} options - user options
-	 * @returns {BemNamingDelims}
-	 */
-	function init(options) {
-	    if (!options) {
-	        return presets.origin;
-	    }
-	
-	    if (typeof options === 'string') {
-	        const preset = presets[options];
-	
-	        if (!preset) {
-	            throw new Error('The `' + options + '` naming is unknown.');
-	        }
-	
-	        return preset;
-	    }
-	
-	    const defaults = presets.origin;
-	    const defaultDelims = defaults.delims;
-	    const defaultModDelims = defaultDelims.mod;
-	    const optionsDelims = options.delims || {};
-	    const mod = optionsDelims.mod || defaultDelims.mod;
-	
-	    return {
-	        delims: {
-	            elem: optionsDelims.elem || defaultDelims.elem,
-	            mod: typeof mod === 'string'
-	                ? { name: mod, val: mod }
-	                : {
-	                    name: mod.name || defaultModDelims.name,
-	                    val: mod.val || defaultModDelims.val
-	                }
-	        },
-	        wordPattern: options.wordPattern || defaults.wordPattern
-	    };
-	}
-	
-	module.exports = createNaming;
-
-
-/***/ },
-/* 217 */
-/***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
-
-	'use strict';
-	
-	const BemEntityName = __webpack_require__(__webpack_module_template_argument_0__);
-	
-	/**
-	 * Builds regex for specified naming convention.
-	 *
-	 * @param {BemNamingDelims} delims — separates entity names from each other.
-	 * @param {String} wordPattern — defines which symbols can be used for block, element and modifier's names.
-	 * @returns {RegExp}
-	 */
-	function buildRegex(delims, wordPattern) {
-	    const block = '(' + wordPattern + ')';
-	    const elem = '(?:' + delims.elem + '(' + wordPattern + '))?';
-	    const modName = '(?:' + delims.mod.name + '(' + wordPattern + '))?';
-	    const modVal = '(?:' + delims.mod.val + '(' + wordPattern + '))?';
-	    const mod = modName + modVal;
-	
-	    return new RegExp('^' + block + mod + '$|^' + block + elem + mod + '$');
-	}
-	
-	/**
-	 * Parses string into object representation.
-	 *
-	 * @param {String} str - string representation of BEM entity.
-	 * @param {RegExp} regex - build regex for specified naming.
-	 * @returns {BemEntityName|undefined}
-	 */
-	function parse(str, regex) {
-	    const executed = regex.exec(str);
-	
-	    if (!executed) { return undefined; }
-	
-	    const modName = executed[2] || executed[6];
-	
-	    return new BemEntityName({
-	        block: executed[1] || executed[4],
-	        elem: executed[5],
-	        mod: modName && {
-	            name: modName,
-	            val: executed[3] || executed[7] || true
-	        }
-	    });
-	}
-	
-	/**
-	 * Creates `parse` function for specified naming convention.
-	 *
-	 * @param {BemNamingConvention} convention - options for naming convention.
-	 * @returns {Function}
-	 */
-	module.exports = (convention) => {
-	    const regex = buildRegex(convention.delims, convention.wordPattern);
-	
-	    return (str) => parse(str, regex);
-	};
-
-
-/***/ },
-/* 218 */
-/***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__, __webpack_module_template_argument_1__, __webpack_module_template_argument_2__) {
-
-	'use strict';
-	
-	module.exports = {
-	    origin: __webpack_require__(__webpack_module_template_argument_0__),
-	    react: __webpack_require__(__webpack_module_template_argument_1__),
-	    'two-dashes': __webpack_require__(__webpack_module_template_argument_2__)
-	};
-
-
-/***/ },
-/* 219 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
@@ -24414,6 +24529,209 @@
 	
 	module.exports = PooledClass;
 
+/***/ },
+/* 221 */
+/***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
+
+	'use strict';
+	
+	const createNaming = __webpack_require__(__webpack_module_template_argument_0__);
+	
+	const originalNaming = createNaming();
+	
+	Object.keys(originalNaming).forEach(key => {
+	    createNaming[key] = originalNaming[key];
+	});
+	
+	module.exports = createNaming;
+
+
+/***/ },
+/* 222 */
+/***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__, __webpack_module_template_argument_1__, __webpack_module_template_argument_2__) {
+
+	'use strict';
+	
+	/**
+	 * Delims of bem entity, elem and/or mod.
+	 *
+	 * @typedef {Object} BemNamingDelims
+	 * @param {String} [elem='__'] — separates element's name from block.
+	 * @param {String|Object} [mod='_'] — separates modifiers from blocks and elements.
+	 * @param {String} [mod.name='_'] — separates name of modifier from blocks and elements.
+	 * @param {String} [mod.val='_'] — separates value of modifier from name of modifier.
+	 */
+	
+	 /**
+	  * BEM naming convention options.
+	  *
+	  * @typedef {Object} BemNamingConvention
+	  * @param {BemNamingDelims} delims — separates entity names from each other.
+	  * @param {String|Object} [wordPattern='[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*'] — defines which symbols can be used for block,
+	  *                                                                         element and modifier's names.
+	  */
+	
+	const createStringify = __webpack_require__(__webpack_module_template_argument_0__);
+	const createParse = __webpack_require__(__webpack_module_template_argument_1__);
+	const presets = __webpack_require__(__webpack_module_template_argument_2__);
+	
+	/**
+	 * It is necessary not to create new instances for the same custom naming.
+	 * @readonly
+	 */
+	const cache = {};
+	
+	/**
+	 * Creates namespace with methods which allows getting information about BEM entity using string as well
+	 * as forming string representation based on naming object.
+	 *
+	 * @param {BemNamingConvention} [options] - options for naming convention.
+	 * @return {Object}
+	 */
+	function createNaming(options) {
+	    const opts = init(options);
+	    const id = JSON.stringify(opts);
+	
+	    if (cache[id]) {
+	        return cache[id];
+	    }
+	
+	    const delims = opts.delims;
+	    const namespace = {
+	        parse: createParse(opts),
+	        stringify: createStringify(opts),
+	        /**
+	         * String to separate elem from block.
+	         *
+	         * @type {String}
+	         */
+	        delims
+	    };
+	
+	    cache[id] = namespace;
+	
+	    return namespace;
+	}
+	
+	/**
+	 * Returns delims and wordPattern.
+	 *
+	 * @param {Object} options - user options
+	 * @returns {BemNamingDelims}
+	 */
+	function init(options) {
+	    if (!options) {
+	        return presets.origin;
+	    }
+	
+	    if (typeof options === 'string') {
+	        const preset = presets[options];
+	
+	        if (!preset) {
+	            throw new Error('The `' + options + '` naming is unknown.');
+	        }
+	
+	        return preset;
+	    }
+	
+	    const defaults = presets.origin;
+	    const defaultDelims = defaults.delims;
+	    const defaultModDelims = defaultDelims.mod;
+	    const optionsDelims = options.delims || {};
+	    const mod = optionsDelims.mod || defaultDelims.mod;
+	
+	    return {
+	        delims: {
+	            elem: optionsDelims.elem || defaultDelims.elem,
+	            mod: typeof mod === 'string'
+	                ? { name: mod, val: mod }
+	                : {
+	                    name: mod.name || defaultModDelims.name,
+	                    val: mod.val || defaultModDelims.val
+	                }
+	        },
+	        wordPattern: options.wordPattern || defaults.wordPattern
+	    };
+	}
+	
+	module.exports = createNaming;
+
+
+/***/ },
+/* 223 */
+/***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
+
+	'use strict';
+	
+	const BemEntityName = __webpack_require__(__webpack_module_template_argument_0__);
+	
+	/**
+	 * Builds regex for specified naming convention.
+	 *
+	 * @param {BemNamingDelims} delims — separates entity names from each other.
+	 * @param {String} wordPattern — defines which symbols can be used for block, element and modifier's names.
+	 * @returns {RegExp}
+	 */
+	function buildRegex(delims, wordPattern) {
+	    const block = '(' + wordPattern + ')';
+	    const elem = '(?:' + delims.elem + '(' + wordPattern + '))?';
+	    const modName = '(?:' + delims.mod.name + '(' + wordPattern + '))?';
+	    const modVal = '(?:' + delims.mod.val + '(' + wordPattern + '))?';
+	    const mod = modName + modVal;
+	
+	    return new RegExp('^' + block + mod + '$|^' + block + elem + mod + '$');
+	}
+	
+	/**
+	 * Parses string into object representation.
+	 *
+	 * @param {String} str - string representation of BEM entity.
+	 * @param {RegExp} regex - build regex for specified naming.
+	 * @returns {BemEntityName|undefined}
+	 */
+	function parse(str, regex) {
+	    const executed = regex.exec(str);
+	
+	    if (!executed) { return undefined; }
+	
+	    const modName = executed[2] || executed[6];
+	
+	    return new BemEntityName({
+	        block: executed[1] || executed[4],
+	        elem: executed[5],
+	        mod: modName && {
+	            name: modName,
+	            val: executed[3] || executed[7] || true
+	        }
+	    });
+	}
+	
+	/**
+	 * Creates `parse` function for specified naming convention.
+	 *
+	 * @param {BemNamingConvention} convention - options for naming convention.
+	 * @returns {Function}
+	 */
+	module.exports = (convention) => {
+	    const regex = buildRegex(convention.delims, convention.wordPattern);
+	
+	    return (str) => parse(str, regex);
+	};
+
+
+/***/ },
+/* 224 */
+/***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__, __webpack_module_template_argument_1__, __webpack_module_template_argument_2__) {
+
+	'use strict';
+	
+	module.exports = {
+	    origin: __webpack_require__(__webpack_module_template_argument_0__),
+	    react: __webpack_require__(__webpack_module_template_argument_1__),
+	    'two-dashes': __webpack_require__(__webpack_module_template_argument_2__)
+	};
+
+
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.3bac3b0a.js.map
+//# sourceMappingURL=main.93388889.js.map
