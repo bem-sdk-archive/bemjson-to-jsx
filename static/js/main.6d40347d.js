@@ -22545,7 +22545,9 @@
 	var valToStr = helpers.valToStr;
 	
 	module.exports.copyMods = () => function copyMods(jsx, bemjson) {
-	    bemjson.mods && Object.assign(jsx.props, bemjson.mods);
+	    bemjson.elem
+	        ? bemjson.elemMods && Object.assign(jsx.props, bemjson.elemMods)
+	        : bemjson.mods && Object.assign(jsx.props, bemjson.mods);
 	};
 	
 	module.exports.camelCaseProps = () => function camelCaseProps(jsx) {
@@ -22556,7 +22558,7 @@
 	};
 	
 	module.exports.copyCustomFields = () => function copyCustomFields(jsx, bemjson) {
-	    var blackList = ['content', 'block', 'elem', 'mods', 'tag', 'js'];
+	    var blackList = ['content', 'block', 'elem', 'mods', 'elemMods', 'tag', 'js'];
 	
 	    Object.keys(bemjson).forEach(k => {
 	        if(~blackList.indexOf(k)) { return; }
@@ -24743,4 +24745,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.d72b6ff3.js.map
+//# sourceMappingURL=main.6d40347d.js.map
