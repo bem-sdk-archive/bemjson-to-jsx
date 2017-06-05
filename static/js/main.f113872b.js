@@ -22395,6 +22395,8 @@
 	var propsToStr = props => Object.keys(props).reduce((acc, k) => {
 	    if (typeof props[k] === 'string') {
 	        return acc + ` ${k}=${valToStr(props[k])}`
+	    } else if (props[k] instanceof JSXNode) {
+	        return acc + ` ${k}={${render(props[k])}}`
 	    } else {
 	        return acc + ` ${k}={${valToStr(props[k])}}`
 	    }
@@ -22434,6 +22436,26 @@
 	    var root = nodes[0];
 	
 	    var node;
+	
+	    var setJsx = (json) => {
+	        var jsx = new JSXNode();
+	        var _blockName = json.block || node.blockName;
+	
+	        if (typeof json === 'string') {
+	            jsx.isText = true;
+	            jsx.simpleText = json;
+	        }
+	
+	        if (json.tag) {
+	            jsx.tag = json.tag;
+	        } else if (json.block || json.elem) {
+	            jsx.bemEntity = new BemEntity({ block: _blockName, elem: json.elem });
+	            jsx.tag = this.bemNaming.stringify(jsx.bemEntity);
+	        }
+	
+	        return jsx;
+	    };
+	
 	    while((node = nodes.shift())) {
 	        var json = node.json, i;
 	
@@ -22443,19 +22465,20 @@
 	            }
 	        } else {
 	            var res = undefined;
-	            var jsx = new JSXNode();
 	            var blockName = json.block || node.blockName;
 	
-	            if (typeof json === 'string') {
-	                jsx.isText = true;
-	                jsx.simpleText = json;
-	            }
+	            var jsx = setJsx(json);
 	
-	            if (json.tag) {
-	                jsx.tag = json.tag;
-	            } else if (json.block || json.elem) {
-	                jsx.bemEntity = new BemEntity({ block: blockName, elem: json.elem });
-	                jsx.tag = this.bemNaming.stringify(jsx.bemEntity);
+	            for (var key in json) {
+	                if (!~['mix', 'content', 'attrs'].indexOf(key) && typeof Object(json[key]).block === 'string') {
+	                    var nestedJSX = setJsx(json[key]);
+	
+	                    for (i = 0; i < this.plugins.length; i++) {
+	                        this.plugins[i](nestedJSX, Object.assign({ block: json[key].block }, json[key]));
+	                    }
+	
+	                    json[key] = nestedJSX;
+	                }
 	            }
 	
 	            for (i = 0; i < this.plugins.length; i++) {
@@ -24745,4 +24768,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.6d40347d.js.map
+//# sourceMappingURL=main.f113872b.js.map
