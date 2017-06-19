@@ -91,6 +91,17 @@ describe('transform', () => {
     it('should content with several blocks', () => {
         expect(
             transform([
+                { content: [
+                    { block: 'button2', text: 'hello' },
+                    { block: 'button2', text: 'world' }
+                ]}
+            ]).JSX
+        ).to.equal(`<div>\n<Button2 text='hello'/>\n<Button2 text='world'/>\n</div>`);
+    });
+
+    it('should tag with several blocks', () => {
+        expect(
+            transform([
                 { tag: 'span', content: [
                     { block: 'button2', text: 'hello' },
                     { block: 'button2', text: 'world' }
@@ -142,8 +153,18 @@ describe('transform', () => {
 
     it('should provide custom prop[] as jsx', () => {
         expect(
-            transform({ block: 'button2', custom: [42, true, { val: 42 }, 'Hello world', { block: 'header', elem: 'button' }] }).JSX
-        ).to.equal(`<Button2 custom={[42, true, { 'val': 42 }, 'Hello world', <HeaderButton/>]}/>`);
+            transform({
+                block: 'button2',
+                custom: [
+                    42,
+                    true,
+                    { val: 42 },
+                    'Hello world',
+                    { block: 'header', elem: 'button' },
+                    { elem: 'text', text: 'hello' }
+                ]
+            }).JSX
+        ).to.equal(`<Button2 custom={[42, true, { 'val': 42 }, 'Hello world', <HeaderButton/>, <Button2Text text='hello'/>]}/>`);
     });
 
     it('should provide custom with nested blocks as jsx', () => {
@@ -155,6 +176,17 @@ describe('transform', () => {
                 ]
             }).JSX
         ).to.equal(`<Menu2 items={[{ 'icon': <Icon type='kz'/> }]}/>`);
+    });
+
+    it('should provide custom prop with mods as json', () => {
+        expect(
+            transform({
+                block: 'menu2',
+                items: [
+                    { icon: { mods: { type: 'kz' }, elemMods: { type: 'ru' } } }
+                ]
+            }).JSX
+        ).to.equal(`<Menu2 items={[{ 'icon': { 'mods': { 'type': 'kz' }, 'elemMods': { 'type': 'ru' } } }]}/>`);
     });
 
     it('should treat strings as text', () => {
