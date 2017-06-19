@@ -9750,6 +9750,7 @@
 	    this.children = children || [];
 	    this.bemEntity = null;
 	    this.isJSON = false;
+	    this._json = {};
 	    this.isSimple = false;
 	    this.isText = false;
 	    this.simpleVal = undefined;
@@ -9773,7 +9774,11 @@
 	        return this.simpleVal;
 	    }
 	    if (this.isJSON) {
-	        return valToStr(this.props);
+	        // TODO: actually we need jsx-to-bemjson transform here >__<
+	        return valToStr(Object.keys(this._json).reduce((acc, k) => {
+	            acc[k] = this.props[k] || this._json[k];
+	            return acc;
+	        }, {}));
 	    }
 	
 	    var tag = tagToClass(this.tag);
@@ -22484,8 +22489,9 @@
 	                    } else if (json.block || json.elem) {
 	                        jsx.bemEntity = new BemEntity({ block: blockName, elem: json.elem });
 	                        jsx.tag = this.bemNaming.stringify(jsx.bemEntity);
-	                    } else {
+	                    } else if (!json.content) {
 	                        jsx.isJSON = true;
+	                        jsx._json = json;
 	                    }
 	                break;
 	            }
@@ -24789,4 +24795,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.dcafa4df.js.map
+//# sourceMappingURL=main.a2880fdc.js.map
