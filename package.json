@@ -32,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/bem-sdk/bemjson-to-jsx/issues"
   },
-  "homepage": "https://github.com/bem-sdk/bemjson-to-jsx#readme",
+  "homepage": "https://bem-sdk.github.io/bemjson-to-jsx",
   "dependencies": {
     "@bem/entity-name": "github:bem-sdk/bem-entity-name",
     "@bem/naming": "^2.0.0-6",
