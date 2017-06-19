@@ -118,25 +118,48 @@ describe('transform', () => {
 
     it('should treat mods as props', () => {
         expect(
-            transform({ block: 'button2',  mods: {theme: 'normal', size: 's'} }).JSX
+            transform({ block: 'button2', mods: { theme: 'normal', size: 's' } }).JSX
         ).to.equal(`<Button2 theme='normal' size='s'/>`);
     });
 
     it('should provide mix as obj', () => {
         expect(
-            transform({ block: 'button2',  mix: {block: 'header', elem: 'button' } }).JSX
+            transform({ block: 'button2', mix: { block: 'header', elem: 'button' } }).JSX
         ).to.equal(`<Button2 mix={{ 'block': 'header', 'elem': 'button' }}/>`);
     });
 
-    it('should provide custom prop as jsx', () => {
+    it('should provide custom prop with block as jsx', () => {
         expect(
-            transform({ block: 'button2',  custom: {block: 'header', elem: 'button' } }).JSX
+            transform({ block: 'button2', custom: { block: 'header', elem: 'button' } }).JSX
         ).to.equal(`<Button2 custom={<HeaderButton/>}/>`);
+    });
+
+    it('should provide custom prop with elem as jsx', () => {
+        expect(
+            transform({ block: 'button2', custom: { elem: 'text' } }).JSX
+        ).to.equal(`<Button2 custom={<Button2Text/>}/>`);
+    });
+
+    it('should provide custom prop[] as jsx', () => {
+        expect(
+            transform({ block: 'button2', custom: [42, true, { val: 42 }, 'Hello world', { block: 'header', elem: 'button' }] }).JSX
+        ).to.equal(`<Button2 custom={[42, true, { 'val': 42 }, 'Hello world', <HeaderButton/>]}/>`);
+    });
+
+    it('should provide custom with nested blocks as jsx', () => {
+        expect(
+            transform({
+                block: 'menu2',
+                items: [
+                    { icon: { block: 'icon', mods: { type: 'kz' } } }
+                ]
+            }).JSX
+        ).to.equal(`<Menu2 items={[{ 'icon': <Icon type='kz'/> }]}/>`);
     });
 
     it('should treat strings as text', () => {
         expect(
-            transform(['Hello I am a string', { block: 'button2', content: 'Hello I am a string'}]).JSX
+            transform(['Hello I am a string', { block: 'button2', content: 'Hello I am a string' }]).JSX
         ).to.equal(`Hello I am a string\n<Button2>\nHello I am a string\n</Button2>`);
     });
 });
