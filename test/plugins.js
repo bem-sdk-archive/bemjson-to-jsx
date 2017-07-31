@@ -34,6 +34,32 @@ describe('pluginis', () => {
         });
     });
 
+    describe('processJsParams', () => {
+        it('should merge props with params', () => {
+            var res = T().process({
+                    block: 'button2',
+                    js: {ext: 'txt'},
+                    mods: {size: 'm', theme: 'normal'}
+                });
+
+            expect(res.JSX).to.equal(
+                `<Button2 size='m' theme='normal' ext='txt'/>`
+            );
+        });
+
+        it(`should not accept boolean`, () => {
+            var res = T().process({
+                    block: 'button2',
+                    js: true,
+                    mods: {size: 'm', theme: 'normal'}
+                });
+
+            expect(res.JSX).to.equal(
+                `<Button2 size='m' theme='normal'/>`
+            );
+        });
+    });
+
     describe('whiteList', () => {
         it('without opts', () => {
             var res = T()
