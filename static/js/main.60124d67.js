@@ -22601,6 +22601,12 @@
 	        : bemjson.mods && Object.assign(jsx.props, bemjson.mods);
 	};
 	
+	module.exports.processJsParams = () => function processJsParams(jsx, bemjson) {
+	    if(typeof bemjson.js === 'object') {
+	        Object.assign(jsx.props, bemjson.js);
+	    }
+	};
+	
 	module.exports.camelCaseProps = () => function camelCaseProps(jsx) {
 	    jsx.props = Object.keys(jsx.props).reduce((acc, propKey) => {
 	        acc[camelCase(propKey)] = jsx.props[propKey];
@@ -22641,6 +22647,7 @@
 	module.exports.defaultPlugins = [
 	    module.exports.keepWhiteSpaces,
 	    module.exports.copyMods,
+	    module.exports.processJsParams,
 	    module.exports.camelCaseProps,
 	    module.exports.copyCustomFields,
 	    module.exports.stylePropToObj
@@ -24795,4 +24802,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.a2880fdc.js.map
+//# sourceMappingURL=main.60124d67.js.map
