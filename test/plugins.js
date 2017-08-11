@@ -34,6 +34,22 @@ describe('pluginis', () => {
         });
     });
 
+    describe('processMixElemMods', () => {
+        it('transform elemMods into mods', () => {
+            var res = T()
+                .process({
+                    block: 'button2',
+                    mods: {size: 'm', theme: 'normal'},
+                    mix: {block: 'button2', elem: 'icon', elemMods: {modName: 'modVal'}}
+                });
+
+            expect(res.JSX).to.equal(
+                `<Button2 size='m' theme='normal' mix={{ 'block': 'button2', 'elem': 'icon', ` + 
+                `'elemMods': { 'modName': 'modVal' }, 'mods': { 'modName': 'modVal' } }}/>`
+            );
+        });
+    });
+
     describe('processJsParams', () => {
         it('should merge props with params', () => {
             var res = T().process({
