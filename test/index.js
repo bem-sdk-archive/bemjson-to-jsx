@@ -77,6 +77,22 @@ describe('transform', () => {
                 '<Button2 text=\'hello\' val={{ \'42\': { \'42\': 42 } }}/>'
             );
         });
+
+        it('should transform blocks with kebab-case propName', () => {
+            expect(
+                transform({
+                    block: 'select2',
+                    mods: {
+                        'with-icon': 'yes',
+                        'item-icon-hidden': 'yes-yes'
+                    },
+                    'prop-icon': 'one',
+                    'prop-icon-hidden': 'one-two'
+                }).JSX
+            ).to.equal(
+                '<Select2 withIcon=\'yes\' itemIconHidden=\'yes-yes\' propIcon=\'one\' propIconHidden=\'one-two\'/>'
+            );
+        });
     });
 
     it('should transform several blocks', () => {
