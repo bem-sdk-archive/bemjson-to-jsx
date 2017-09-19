@@ -22648,20 +22648,21 @@
 	    module.exports.keepWhiteSpaces,
 	    module.exports.copyMods,
 	    module.exports.processJsParams,
-	    module.exports.camelCaseProps,
 	    module.exports.copyCustomFields,
+	    module.exports.camelCaseProps,
 	    module.exports.stylePropToObj
 	];
 	
-	module.exports.whiteList = function(options) {
+	module.exports.whiteList = options => {
 	    options = options || {};
+	
 	    return function(jsx) {
 	        if (options.entities && jsx.bemEntity) {
 	            if (!options.entities.some(white => jsx.bemEntity.isEqual(white))) {
 	                return '';
 	            }
 	        }
-	    }
+	    };
 	};
 
 
@@ -24802,4 +24803,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.60124d67.js.map
+//# sourceMappingURL=main.d80e93ef.js.map
