@@ -22601,6 +22601,18 @@
 	        : bemjson.mods && Object.assign(jsx.props, bemjson.mods);
 	};
 	
+	module.exports.processMixElemMods = () => function processMixElemMods(jsx, bemjson) {
+	    if(!bemjson.mix) {
+	        return;
+	    }
+	
+	    [].concat(bemjson.mix).forEach(mixBlock => {
+	        if(mixBlock.elemMods) {
+	            mixBlock.mods = mixBlock.elemMods;
+	        }
+	    });
+	};
+	
 	module.exports.processJsParams = () => function processJsParams(jsx, bemjson) {
 	    if(typeof bemjson.js === 'object') {
 	        Object.assign(jsx.props, bemjson.js);
@@ -22647,6 +22659,7 @@
 	module.exports.defaultPlugins = [
 	    module.exports.keepWhiteSpaces,
 	    module.exports.copyMods,
+	    module.exports.processMixElemMods,
 	    module.exports.processJsParams,
 	    module.exports.copyCustomFields,
 	    module.exports.camelCaseProps,
@@ -24803,4 +24816,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.d80e93ef.js.map
+//# sourceMappingURL=main.5ea20227.js.map
