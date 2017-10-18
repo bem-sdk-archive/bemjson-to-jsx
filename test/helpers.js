@@ -63,7 +63,7 @@ describe('helpers: objToStr', () => {
 
 describe('helpers: styleToObj', () => {
     it('should transform style string to style obj', () => {
-        var obj = styleToObj('width:200px;height:100px;');
+        var obj = styleToObj('width: 200px; height: 100px;');
         expect(obj).to.eql({ width: '200px', height: '100px' });
     });
 
