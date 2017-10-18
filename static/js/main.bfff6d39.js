@@ -6707,7 +6707,7 @@
 	    if (typeof style === 'string') {
 	        return style.split(';').reduce((acc, st) => {
 	            if (st.length) {
-	                var prop = st.split(':');
+	                var prop = st.split(':').map(str => str.trim());
 	                acc[prop[0]] = prop[1];
 	            }
 	            return acc;
@@ -24816,4 +24816,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.5ea20227.js.map
+//# sourceMappingURL=main.bfff6d39.js.map
