@@ -30,7 +30,7 @@ describe('transform', () => {
             expect(
                 transform({ block: 'button2', text: 'hello' }).JSX
             ).to.equal(
-                '<Button2 text=\'hello\'/>'
+                '<Button2 text="hello"/>'
             );
         });
 
@@ -66,7 +66,7 @@ describe('transform', () => {
             expect(
                 transform({ block: 'button2', text: 'hello', val: { 42: 42 } }).JSX
             ).to.equal(
-                '<Button2 text=\'hello\' val={{ \'42\': 42 }}/>'
+                '<Button2 text="hello" val={{ \'42\': 42 }}/>'
             );
         });
 
@@ -74,7 +74,7 @@ describe('transform', () => {
             expect(
                 transform({ block: 'button2', text: 'hello', val: { 42: { 42: 42 } } }).JSX
             ).to.equal(
-                '<Button2 text=\'hello\' val={{ \'42\': { \'42\': 42 } }}/>'
+                '<Button2 text="hello" val={{ \'42\': { \'42\': 42 } }}/>'
             );
         });
 
@@ -90,7 +90,7 @@ describe('transform', () => {
                     'prop-icon-hidden': 'one-two'
                 }).JSX
             ).to.equal(
-                '<Select2 withIcon=\'yes\' itemIconHidden=\'yes-yes\' propIcon=\'one\' propIconHidden=\'one-two\'/>'
+                '<Select2 withIcon="yes" itemIconHidden="yes-yes" propIcon="one" propIconHidden="one-two"/>'
             );
         });
     });
@@ -101,7 +101,7 @@ describe('transform', () => {
                 { block: 'button2', text: 'hello' },
                 { block: 'button2', text: 'world' }
             ]).JSX
-        ).to.equal(`<Button2 text='hello'/>\n<Button2 text='world'/>`);
+        ).to.equal(`<Button2 text="hello"/>\n<Button2 text="world"/>`);
     });
 
     it('should content with several blocks', () => {
@@ -112,7 +112,7 @@ describe('transform', () => {
                     { block: 'button2', text: 'world' }
                 ]}
             ]).JSX
-        ).to.equal(`<div>\n<Button2 text='hello'/>\n<Button2 text='world'/>\n</div>`);
+        ).to.equal(`<div>\n<Button2 text="hello"/>\n<Button2 text="world"/>\n</div>`);
     });
 
     it('should tag with several blocks', () => {
@@ -123,7 +123,7 @@ describe('transform', () => {
                     { block: 'button2', text: 'world' }
                 ]}
             ]).JSX
-        ).to.equal(`<span>\n<Button2 text='hello'/>\n<Button2 text='world'/>\n</span>`);
+        ).to.equal(`<span>\n<Button2 text="hello"/>\n<Button2 text="world"/>\n</span>`);
     });
 
     it('should content with several blocks inside nested arrays', () => {
@@ -134,7 +134,7 @@ describe('transform', () => {
                     { block: 'button2', text: 'world' }
                 ]}
             ],[]]).JSX
-        ).to.equal(`<span>\n<Button2 text='hello'/>\n<Button2 text='world'/>\n</span>`);
+        ).to.equal(`<span>\n<Button2 text="hello"/>\n<Button2 text="world"/>\n</span>`);
     });
 
     it('should transform elem in context of block', () => {
@@ -146,13 +146,13 @@ describe('transform', () => {
     it('should treat mods as props', () => {
         expect(
             transform({ block: 'button2', mods: { theme: 'normal', size: 's' } }).JSX
-        ).to.equal(`<Button2 theme='normal' size='s'/>`);
+        ).to.equal(`<Button2 theme="normal" size="s"/>`);
     });
 
     it('should provide mix as obj', () => {
         expect(
             transform({ block: 'button2', mix: { block: 'header', elem: 'button' } }).JSX
-        ).to.equal(`<Button2 mix={{ 'block': 'header', 'elem': 'button' }}/>`);
+        ).to.equal(`<Button2 mix={{ 'block': "header", 'elem': "button" }}/>`);
     });
 
     it('should provide custom prop with block as jsx', () => {
@@ -180,7 +180,7 @@ describe('transform', () => {
                     { elem: 'text', text: 'hello' }
                 ]
             }).JSX
-        ).to.equal(`<Button2 custom={[42, true, { 'val': 42 }, 'Hello world', <HeaderButton/>, <Button2Text text='hello'/>]}/>`);
+        ).to.equal(`<Button2 custom={[42, true, { 'val': 42 }, 'Hello world', <HeaderButton/>, <Button2Text text="hello"/>]}/>`);
     });
 
     it('should provide custom with nested blocks as jsx', () => {
@@ -191,7 +191,7 @@ describe('transform', () => {
                     { icon: { block: 'icon', mods: { type: 'kz' } } }
                 ]
             }).JSX
-        ).to.equal(`<Menu2 items={[{ 'icon': <Icon type='kz'/> }]}/>`);
+        ).to.equal(`<Menu2 items={[{ 'icon': <Icon type="kz"/> }]}/>`);
     });
 
     it('should provide custom prop with mods as json', () => {
@@ -202,7 +202,7 @@ describe('transform', () => {
                     { icon: { mods: { type: 'kz' }, elemMods: { type: 'ru' } } }
                 ]
             }).JSX
-        ).to.equal(`<Menu2 items={[{ 'icon': { 'mods': { 'type': 'kz' }, 'elemMods': { 'type': 'ru' } } }]}/>`);
+        ).to.equal(`<Menu2 items={[{ 'icon': { 'mods': { 'type': "kz" }, 'elemMods': { 'type': "ru" } } }]}/>`);
     });
 
     it('should treat strings as text', () => {

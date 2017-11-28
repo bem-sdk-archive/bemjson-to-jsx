@@ -7,7 +7,7 @@ const styleToObj = helpers.styleToObj;
 
 describe('helpers: objToStr', () => {
     it('should stringify object', () => {
-        expect(objToStr({ hello: 'world' })).to.equal('{ \'hello\': \'world\' }');
+        expect(objToStr({ hello: 'world' })).to.equal('{ \'hello\': "world" }');
     });
 
     it('should return empty obj for empty obj', () => {
@@ -15,7 +15,7 @@ describe('helpers: objToStr', () => {
     });
 
     it('should process many keys', () => {
-        expect(objToStr({ 42: 42, hello: 'world' })).to.equal('{ \'42\': 42, \'hello\': \'world\' }');
+        expect(objToStr({ 42: 42, hello: 'world' })).to.equal('{ \'42\': 42, \'hello\': "world" }');
     });
 
     it('should process property names as strings', () => {
@@ -28,7 +28,7 @@ describe('helpers: objToStr', () => {
 
     describe('value', () => {
         it('::string', () => {
-            expect(objToStr({ hello: 'string' })).to.equal('{ \'hello\': \'string\' }');
+            expect(objToStr({ hello: 'string' })).to.equal('{ \'hello\': "string" }');
         });
 
         it('::number', () => {
