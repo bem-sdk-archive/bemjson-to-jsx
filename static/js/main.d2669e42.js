@@ -6676,7 +6676,7 @@
 	function valToStr(val) {
 	    switch(typeof val) {
 	        case 'string':
-	            return `'${val}'`;
+	            return JSON.stringify(val);
 	        case 'object':
 	            return val === null ?
 	                null : Array.isArray(val) ?
@@ -22647,9 +22647,11 @@
 	    }
 	};
 	
+	const isChar = (c) => c && c.toLowerCase() !== c.toUpperCase();
+	
 	module.exports.keepWhiteSpaces = () => function keepWhiteSpaces(jsx) {
-	    if (jsx.isText) {
-	        if (jsx.simpleVal[0] === ' ' || jsx.simpleVal[jsx.simpleVal.length - 1] === ' ') {
+	    if (jsx.isText && jsx.simpleVal[0]) {
+	        if (!isChar(jsx.simpleVal[0]) || !isChar(jsx.simpleVal[jsx.simpleVal.length - 1])) {
 	            // wrap to {} to keep spaces
 	            jsx.simpleVal = `{${valToStr(jsx.simpleVal)}}`;
 	        }
@@ -24816,4 +24818,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.bfff6d39.js.map
+//# sourceMappingURL=main.d2669e42.js.map
