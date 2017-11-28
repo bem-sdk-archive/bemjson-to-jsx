@@ -167,11 +167,19 @@ describe('pluginis', () => {
             );
         });
 
-        it('should keep spaces in only spaces simple text', ()  => {
-            var res = T().process({ block: 'button2', content: [' ', '  ', '   ']});
+        it('should keep spaces and unicode symblols', ()  => {
+            var res = T().process({ block: 'button2', content: '\u00a0space before & after ' });
 
             expect(res.JSX).to.equal(
-                `<Button2>\n{" "}\n{"  "}\n{"   "}\n</Button2>`
+                `<Button2>\n{"\u00a0space before & after "}\n</Button2>`
+            );
+        });
+
+        it('should keep spaces in only spaces simple text', ()  => {
+            var res = T().process({ block: 'button2', content: [' ', '\u00a0', '  ', '   ']});
+
+            expect(res.JSX).to.equal(
+                `<Button2>\n{" "}\n{"\u00a0"}\n{"  "}\n{"   "}\n</Button2>`
             );
         });
     });
