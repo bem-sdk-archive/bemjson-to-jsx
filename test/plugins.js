@@ -15,7 +15,7 @@ describe('pluginis', () => {
                 });
 
             expect(res.JSX).to.equal(
-                `<Button2 size='m' theme='normal'/>`
+                `<Button2 size="m" theme="normal"/>`
             );
         });
 
@@ -29,7 +29,7 @@ describe('pluginis', () => {
                 });
 
             expect(res.JSX).to.equal(
-                `<Button2Text size='l' theme='dark'/>`
+                `<Button2Text size="l" theme="dark"/>`
             );
         });
     });
@@ -44,8 +44,8 @@ describe('pluginis', () => {
                 });
 
             expect(res.JSX).to.equal(
-                `<Button2 size='m' theme='normal' mix={{ 'block': 'button2', 'elem': 'icon', ` + 
-                `'elemMods': { 'modName': 'modVal' }, 'mods': { 'modName': 'modVal' } }}/>`
+                `<Button2 size="m" theme="normal" mix={{ 'block': "button2", 'elem': "icon", ` + 
+                `'elemMods': { 'modName': "modVal" }, 'mods': { 'modName': "modVal" } }}/>`
             );
         });
     });
@@ -59,7 +59,7 @@ describe('pluginis', () => {
                 });
 
             expect(res.JSX).to.equal(
-                `<Button2 size='m' theme='normal' ext='txt'/>`
+                `<Button2 size="m" theme="normal" ext="txt"/>`
             );
         });
 
@@ -71,7 +71,7 @@ describe('pluginis', () => {
                 });
 
             expect(res.JSX).to.equal(
-                `<Button2 size='m' theme='normal'/>`
+                `<Button2 size="m" theme="normal"/>`
             );
         });
     });
@@ -103,7 +103,7 @@ describe('pluginis', () => {
             var res = T().process({ block: 'button2', mods: { 'has-clear': 'yes' } });
 
             expect(res.JSX).to.equal(
-                `<Button2 hasClear='yes'/>`
+                `<Button2 hasClear="yes"/>`
             );
         });
 
@@ -111,7 +111,7 @@ describe('pluginis', () => {
             var res = T().process({ block: 'button2', mods: { 'has-clear': 'yes', 'has-tick': 'too' } });
 
             expect(res.JSX).to.equal(
-                `<Button2 hasClear='yes' hasTick='too'/>`
+                `<Button2 hasClear="yes" hasTick="too"/>`
             );
         });
 
@@ -119,7 +119,7 @@ describe('pluginis', () => {
             var res = T().process({ block: 'button2', mods: { 'has-clear': 'yes', 'hasclear': 'yes' } });
 
             expect(res.JSX).to.equal(
-                `<Button2 hasClear='yes' hasclear='yes'/>`
+                `<Button2 hasClear="yes" hasclear="yes"/>`
             );
         });
     });
@@ -129,7 +129,7 @@ describe('pluginis', () => {
             var res = T().process({ block: 'button2', style: 'width:200px' });
 
             expect(res.JSX).to.equal(
-                `<Button2 style={{ 'width': '200px' }}/>`
+                `<Button2 style={{ 'width': "200px" }}/>`
             );
         });
 
@@ -137,7 +137,7 @@ describe('pluginis', () => {
             var res = T().process({ block: 'button2', attrs: { style: 'width:200px' } });
 
             expect(res.JSX).to.equal(
-                `<Button2 style={{ 'width': '200px' }} attrs={{ 'style': { 'width': '200px' } }}/>`
+                `<Button2 style={{ 'width': "200px" }} attrs={{ 'style': { 'width': "200px" } }}/>`
             );
         });
     });
@@ -147,7 +147,7 @@ describe('pluginis', () => {
             var res = T().process({ block: 'button2', content: ' space before' });
 
             expect(res.JSX).to.equal(
-                `<Button2>\n{' space before'}\n</Button2>`
+                `<Button2>\n{" space before"}\n</Button2>`
             );
         });
 
@@ -155,7 +155,7 @@ describe('pluginis', () => {
             var res = T().process({ block: 'button2', content: 'space after ' });
 
             expect(res.JSX).to.equal(
-                `<Button2>\n{'space after '}\n</Button2>`
+                `<Button2>\n{"space after "}\n</Button2>`
             );
         });
 
@@ -163,7 +163,7 @@ describe('pluginis', () => {
             var res = T().process({ block: 'button2', content: ' space before & after ' });
 
             expect(res.JSX).to.equal(
-                `<Button2>\n{' space before & after '}\n</Button2>`
+                `<Button2>\n{" space before & after "}\n</Button2>`
             );
         });
 
@@ -171,7 +171,7 @@ describe('pluginis', () => {
             var res = T().process({ block: 'button2', content: [' ', '  ', '   ']});
 
             expect(res.JSX).to.equal(
-                `<Button2>\n{' '}\n{'  '}\n{'   '}\n</Button2>`
+                `<Button2>\n{" "}\n{"  "}\n{"   "}\n</Button2>`
             );
         });
     });
