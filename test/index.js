@@ -175,12 +175,12 @@ describe('transform', () => {
                     42,
                     true,
                     { val: 42 },
-                    'Hello world',
+                    'Hello\u0020world',
                     { block: 'header', elem: 'button' },
                     { elem: 'text', text: 'hello' }
                 ]
             }).JSX
-        ).to.equal(`<Button2 custom={[42, true, { 'val': 42 }, 'Hello world', <HeaderButton/>, <Button2Text text="hello"/>]}/>`);
+        ).to.equal(`<Button2 custom={[42, true, { 'val': 42 }, '{"Hello world"}', <HeaderButton/>, <Button2Text text="hello"/>]}/>`);
     });
 
     it('should provide custom with nested blocks as jsx', () => {
@@ -207,7 +207,7 @@ describe('transform', () => {
 
     it('should treat strings as text', () => {
         expect(
-            transform(['Hello I am a string', { block: 'button2', content: 'Hello I am a string' }]).JSX
-        ).to.equal(`Hello I am a string\n<Button2>\nHello I am a string\n</Button2>`);
+            transform(['Hello\u0020I am a string', { block: 'button2', content: 'Hello I am a string' }]).JSX
+        ).to.equal(`{"Hello I am a string"}\n<Button2>\n{"Hello I am a string"}\n</Button2>`);
     });
 });
