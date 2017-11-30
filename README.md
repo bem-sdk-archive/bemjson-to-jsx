@@ -45,3 +45,26 @@ console.log(jsxTree.JSX);
 // → "<Button2 theme={'normal'} size={'m'} text={'hello world'}/>"
 ```
 
+## Options
+
+### isNameSpacedElems
+
+`isNameSpacedElems` Change generation of JSX Class
+
+* `true` — Block.Elem
+* `false` — BlockElem ( default )
+
+```js
+const bemjsonToJSX = require('bemjson-to-jsx')({ isNameSpacedElems: true });
+
+var bemjson = {
+    block: 'button2',
+    elem: 'text'
+    text: 'hello world'
+};
+
+var jsxTree = bemjsonToJSX.process(bemjson);
+
+console.log(jsxTree.JSX);
+// → "<Button2.Text text={'hello world'}/>"
+```
