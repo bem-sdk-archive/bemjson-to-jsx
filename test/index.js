@@ -1,4 +1,4 @@
-const expect = require('chai').expect;
+var expect = require('chai').expect;
 
 var transformer = require('../lib')();
 var transform = transformer.process.bind(transformer);

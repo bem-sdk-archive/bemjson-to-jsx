@@ -1,8 +1,7 @@
-const expect = require('chai').expect;
+var BemEntity = require('@bem/sdk.entity-name');
+var expect = require('chai').expect;
 
 var T = require('../lib');
-
-var BemEntity = require('@bem/entity-name');
 
 describe('pluginis', () => {
 

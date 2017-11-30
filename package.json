@@ -8,7 +8,13 @@
   "files": [
     "lib/"
   ],
+  "engines": {
+    "node": ">= 6"
+  },
   "scripts": {
+    "demo-deploy": "npm run deploy --prefix=demo",
+    "demo-start": "npm start --prefix=demo",
+    "demo-install": "npm i --prefix=demo",
     "pretest": "npm run lint",
     "test": "npm run specs",
     "specs": "nyc mocha",
@@ -34,8 +40,7 @@
   },
   "homepage": "https://bem-sdk.github.io/bemjson-to-jsx",
   "dependencies": {
-    "@bem/entity-name": "github:bem-sdk/bem-entity-name",
-    "@bem/naming": "^2.0.0-6",
+    "@bem/sdk.entity-name": "^0.2.2",
     "camel-case": "^3.0.0",
     "pascal-case": "^2.0.1"
   }
