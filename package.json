@@ -8,7 +8,13 @@
   "files": [
     "lib/"
   ],
+  "engines": {
+    "node": ">= 6"
+  },
   "scripts": {
+    "demo-deploy": "npm run deploy --prefix=demo",
+    "demo-start": "npm start --prefix=demo",
+    "demo-install": "npm i --prefix=demo",
     "pretest": "npm run lint",
     "test": "npm run specs",
     "specs": "nyc mocha",

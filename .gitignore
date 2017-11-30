@@ -2,6 +2,8 @@
 # Created by https://www.gitignore.io/api/node
 
 ### Node ###
+demo/package-lock.json
+
 # Logs
 logs
 *.log
