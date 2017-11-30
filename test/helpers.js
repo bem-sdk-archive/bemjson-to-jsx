@@ -1,8 +1,8 @@
-const expect = require('chai').expect;
+var expect = require('chai').expect;
 
-const helpers = require('../lib/helpers');
-const objToStr = helpers.objToStr;
-const styleToObj = helpers.styleToObj;
+var helpers = require('../lib/helpers');
+var objToStr = helpers.objToStr;
+var styleToObj = helpers.styleToObj;
 
 
 describe('helpers: objToStr', () => {
