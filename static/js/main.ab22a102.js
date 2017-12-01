@@ -9747,7 +9747,7 @@
 	var reactMappings = __webpack_require__(190);
 	var valToStr = __webpack_require__(81).valToStr;
 	
-	function JSXNode({ tag, props, children, opts }) {
+	function JSXNode({ tag, props, children, opts, isProp }) {
 	    this.tag = tag || 'div';
 	    this.props = props || {};
 	    this.children = children || [];
@@ -9758,6 +9758,7 @@
 	    this.isText = false;
 	    this.simpleVal = undefined;
 	    this.opts = opts;
+	    this.isProp = Boolean(isProp);
 	}
 	
 	var propsToStr = props => Object.keys(props).reduce((acc, k) => {
@@ -22994,11 +22995,17 @@
 	
 	        if (Array.isArray(json)) {
 	            for (i = 0; i < json.length; i++) {
-	                nodes.push({ json: json[i], id: i, tree: node.tree, blockName: node.blockName });
+	                nodes.push({
+	                    json: json[i],
+	                    id: i,
+	                    tree: node.tree,
+	                    blockName: node.blockName,
+	                    customField: node.customField
+	                });
 	            }
 	        } else {
 	            var res = undefined;
-	            var jsx = new JSXNode({ opts: this._opts });
+	            var jsx = new JSXNode({ opts: this._opts, isProp: node.customField });
 	            var blockName = json.block || node.blockName;
 	
 	            switch (typeof json) {
@@ -23026,7 +23033,7 @@
 	
 	            for (i = 0; i < this.plugins.length; i++) {
 	                var plugin = this.plugins[i];
-	                res = plugin(jsx, Object.assign({ block: blockName }, json));
+	                res = plugin(jsx, jsx.isSimple ? json : Object.assign({ block: blockName }, json));
 	                if (res !== undefined) {
 	                    json = res;
 	                    node.json = json;
@@ -23037,14 +23044,16 @@
 	            }
 	
 	            // Nested JSX in custom fields
-	            for (var key in json) {
-	                if (!~['mix', 'content', 'attrs', 'block', 'elem', 'mods', 'elemMods', 'tag', 'js'].indexOf(key)) {
-	                    var prop = jsx.props[key];
-	                    if (typeof prop === 'object') {
-	                        if (Array.isArray(prop)) {
-	                            nodes.push({ json: prop, id: key, tree: prop, blockName: blockName });
-	                        } else {
-	                            nodes.push({ json: prop, id: key, tree: jsx.props, blockName: blockName });
+	            if (!jsx.isSimple) {
+	                for (var key in json) {
+	                    if (!~['mix', 'content', 'attrs', 'block', 'elem', 'mods', 'elemMods', 'tag', 'js'].indexOf(key)) {
+	                        var prop = jsx.props[key];
+	                        if (typeof prop === 'object') {
+	                            if (Array.isArray(prop)) {
+	                                nodes.push({ json: prop, id: key, tree: prop, blockName, customField: true });
+	                            } else {
+	                                nodes.push({ json: prop, id: key, tree: jsx.props, blockName, customField: true });
+	                            }
 	                        }
 	                    }
 	                }
@@ -23175,7 +23184,7 @@
 	var isChar = (c) => c && c.toLowerCase() !== c.toUpperCase();
 	
 	module.exports.keepWhiteSpaces = () => function keepWhiteSpaces(jsx) {
-	    if(!jsx.isText) { return; }
+	    if(!jsx.isText || jsx.isProp) { return; }
 	
 	    for(var i = 0; i < jsx.simpleVal.length; i++) {
 	        if(!isChar(jsx.simpleVal[i])) {
@@ -24458,4 +24467,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.d4a3a084.js.map
+//# sourceMappingURL=main.ab22a102.js.map
