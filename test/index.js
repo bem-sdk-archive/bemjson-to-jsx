@@ -180,7 +180,7 @@ describe('transform', () => {
                     { elem: 'text', text: 'hello' }
                 ]
             }).JSX
-        ).to.equal(`<Button2 custom={[42, true, { 'val': 42 }, '{"Hello world"}', <HeaderButton/>, <Button2Text text="hello"/>]}/>`);
+        ).to.equal(`<Button2 custom={[42, true, { 'val': 42 }, 'Hello world', <HeaderButton/>, <Button2Text text="hello"/>]}/>`);
     });
 
     it('should provide custom with nested blocks as jsx', () => {

@@ -181,6 +181,23 @@ describe('pluginis', () => {
                 `<Button2>\n{" "}\n{"\u00a0"}\n{"  "}\n{"   "}\n</Button2>`
             );
         });
+
+        it('should not change strings inside custom fields', () => {
+            var res = T().process([
+                {
+                    block: 'menu2',
+                    items: [
+                        '2string+plus+wtf?',
+                        { icon: '3string+plus+wtf?' }
+                    ]
+                },
+                '6string+plus+wtf?'
+            ]);
+
+            expect(res.JSX).to.equal(
+                `<Menu2 items={['2string+plus+wtf?', { 'icon': "3string+plus+wtf?" }]}/>\n{"6string+plus+wtf?"}`
+            );
+        });
     });
 
 });
