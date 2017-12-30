@@ -136,7 +136,15 @@ describe('pluginis', () => {
             var res = T().process({ block: 'button2', attrs: { style: 'width:200px' } });
 
             expect(res.JSX).to.equal(
-                `<Button2 style={{ 'width': "200px" }} attrs={{ 'style': { 'width': "200px" } }}/>`
+                `<Button2 style={{ 'width': "200px" }}/>`
+            );
+        });
+
+        it('BEM Simple attrs style to obj', () => {
+            var res = T({ useSimpleComponent: true }).process({ block: 'button2', attrs: { style: 'width:200px' } });
+
+            expect(res.JSX).to.equal(
+                `<BEM block="button2" attrs={{ 'style': { 'width': "200px" } }}/>`
             );
         });
     });

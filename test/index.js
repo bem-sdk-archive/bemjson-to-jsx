@@ -38,7 +38,7 @@ describe('transform', () => {
             expect(
                 transform({ block: 'button2', text: true}).JSX
             ).to.equal(
-                '<Button2 text={true}/>'
+                '<Button2 text/>'
             );
         });
 
