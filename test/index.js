@@ -194,6 +194,19 @@ describe('transform', () => {
         ).to.equal(`<Menu2 items={[{ 'icon': <Icon type="kz"/> }]}/>`);
     });
 
+    it('should provide custom with nested arrays and blocks as jsx', () => {
+        expect(
+            transform({
+                block: 'buttonator',
+                items: [
+                    [{block: 'button1'}, {block: 'popup1'}],
+                    [{block: 'button2'}, {block: 'popup2'}],
+                    [{block: 'button3'}, {block: 'popup3'}]
+                ]
+            }).JSX
+        ).to.equal(`<Buttonator items={[[<Button1/>, <Popup1/>], [<Button2/>, <Popup2/>], [<Button3/>, <Popup3/>]]}/>`);
+    });
+
     it('should provide custom prop with mods as json', () => {
         expect(
             transform({
