@@ -71,4 +71,9 @@ describe('helpers: styleToObj', () => {
         var obj = styleToObj({ width: '200px', height: '100px' });
         expect(obj).to.eql({ width: '200px', height: '100px' });
     });
+
+    it('should camelCase propNames', () => {
+        var obj = styleToObj('margin-right: 20px; margin-top: 10px');
+        expect(obj).to.eql({ marginRight: '20px', marginTop: '10px' });
+    });
 });
