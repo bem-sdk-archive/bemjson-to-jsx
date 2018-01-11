@@ -140,11 +140,11 @@ describe('pluginis', () => {
             );
         });
 
-        it('BEM Simple attrs style to obj', () => {
+        it('Bem Simple attrs style to obj', () => {
             var res = T({ useSimpleComponent: true }).process({ block: 'button2', attrs: { style: 'width:200px' } });
 
             expect(res.JSX).to.equal(
-                `<BEM block="button2" attrs={{ 'style': { 'width': "200px" } }}/>`
+                `<Bem block="button2" attrs={{ 'style': { 'width': "200px" } }}/>`
             );
         });
     });
