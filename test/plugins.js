@@ -136,7 +136,7 @@ describe('pluginis', () => {
             var res = T().process({ block: 'button2', attrs: { style: 'width:200px' } });
 
             expect(res.JSX).to.equal(
-                `<Button2 style={{ 'width': "200px" }}/>`
+                `<Button2 style={{ 'width': "200px" }} attrs={{ 'style': { 'width': "200px" } }}/>`
             );
         });
 
