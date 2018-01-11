@@ -116,6 +116,12 @@ describe('bemjson', () => {
         ).to.equal(`<Bem block="b-page" attrs={{ 'visibility': "hidden" }}/>`);
     });
 
+    it('should transform bemjson with attrs and camelCase them', () => {
+        expect(
+            transform({ block: 'x-table', attrs: { colspan: 3} }).JSX
+        ).to.equal(`<Bem block="x-table" attrs={{ 'colSpan': 3 }}/>`);
+    });
+
     it('should transform bemjson with skip not valid attrs', () => {
         expect(
             transform([
@@ -164,8 +170,8 @@ describe('bemjson', () => {
 
         it('should transform bemjson with attrs only', () => {
             expect(
-                transform({ attrs: { visible: 'hidden'} }).JSX
-            ).to.equal(`<div visible="hidden"/>`);
+                transform({ attrs: { visibility: 'hidden'} }).JSX
+            ).to.equal(`<div visibility="hidden"/>`);
         });
 
         xit('should transform bemjson with cls only', () => {
