@@ -37,18 +37,18 @@ describe('known components', () => {
 
     it('Block', () => {
         expect(
-            T({ knowComponents: BemEntity.create({ block: 'button2' }) }).process([
+            T({ knownComponents: BemEntity.create({ block: 'button2' }) }).process([
                 { tag: 'span', content: [
                     { block: 'button2', text: 'hello' },
                     { block: 'textinput', text: 'world' }
                 ]}
             ]).JSX
-        ).to.equal(`<span>\n<Button2 text="hello"/>\n<BEM block="textinput" text="world"/>\n</span>`);
+        ).to.equal(`<span>\n<Button2 text="hello"/>\n<Bem block="textinput" text="world"/>\n</span>`);
     });
 
     it('Elem', () => {
         expect(
-            T({ knowComponents: BemEntity.create({ block: 'button2', elem: 'text' }) }).process([
+            T({ knownComponents: BemEntity.create({ block: 'button2', elem: 'text' }) }).process([
                 { tag: 'span', content: [
                     { block: 'button2', text: 'hello' },
                     { block: 'button2', content: { elem: 'text', content: 'hello' } },
@@ -57,23 +57,23 @@ describe('known components', () => {
                 ]}
             ]).JSX
         ).to.equal(`<span>` +
-            `\n<BEM block="button2" text="hello"/>` +
-            `\n<BEM block="button2">` +
+            `\n<Bem block="button2" text="hello"/>` +
+            `\n<Bem block="button2">` +
             `\n<Button2Text>` +
             `\nhello` +
             `\n</Button2Text>` +
-            `\n</BEM>` +
+            `\n</Bem>` +
             `\n<Button2Text>` +
             `\nhello` +
             `\n</Button2Text>` +
-            `\n<BEM block="textinput" text="world"/>` +
+            `\n<Bem block="textinput" text="world"/>` +
             `\n</span>`
         );
     });
 
     it('Mod', () => {
         expect(
-            T({ knowComponents: BemEntity.create({ block: 'button2' }) }).process([
+            T({ knownComponents: BemEntity.create({ block: 'button2' }) }).process([
                 { tag: 'span', content: [
                     { block: 'button2', text: 'hello' },
                     { block: 'button2', mods: { type: 'link' }, text: 'hello' },
@@ -87,7 +87,7 @@ describe('known components', () => {
         `\n<Button2 type="link" text="hello"/>` +
         `\n<Button2 type="action" text="hello"/>` +
         `\n<Button2 type text="hello"/>` +
-        `\n<BEM block="textinput" text="world"/>` +
+        `\n<Bem block="textinput" text="world"/>` +
         `\n</span>`);
     });
 
