@@ -92,3 +92,29 @@ describe('known components', () => {
     });
 
 });
+
+describe('useSimpleComponent', () => {
+
+    it('true', () => {
+        expect(
+            T({ useSimpleComponent: true }).process([
+                { tag: 'span', content: [
+                    { block: 'button2', text: 'hello' },
+                    { block: 'textinput', text: 'world' }
+                ]}
+            ]).JSX
+        ).to.equal(`<span>\n<Bem block="button2" text="hello"/>\n<Bem block="textinput" text="world"/>\n</span>`);
+    });
+
+    it('false', () => {
+        expect(
+            T({ useSimpleComponent: false }).process([
+                { tag: 'span', content: [
+                    { block: 'button2', text: 'hello' },
+                    { block: 'textinput', text: 'world' }
+                ]}
+            ]).JSX
+        ).to.equal(`<span>\n<Button2 text="hello"/>\n<Textinput text="world"/>\n</span>`);
+    });
+
+});
